@@ -11,7 +11,7 @@ namespace Fenogeno.WebUI
 {
 
 
-    public partial class About
+    public partial class Login
     {
     }
 }

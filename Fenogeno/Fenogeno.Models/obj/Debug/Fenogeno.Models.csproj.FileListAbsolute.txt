@@ -3,3 +3,8 @@ c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\bi
 c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.csprojResolveAssemblyReference.cache
 c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.dll
 c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.pdb
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.Models\bin\Debug\Fenogeno.Models.dll
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.Models\bin\Debug\Fenogeno.Models.pdb
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.dll
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.pdb
