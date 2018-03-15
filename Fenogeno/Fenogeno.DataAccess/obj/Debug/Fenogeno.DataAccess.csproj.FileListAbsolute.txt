@@ -1,0 +1,5 @@
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\bin\Debug\Fenogeno.DataAccess.dll
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\bin\Debug\Fenogeno.DataAccess.pdb
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.dll
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.pdb

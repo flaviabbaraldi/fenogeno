@@ -1,0 +1,5 @@
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\bin\Debug\Fenogeno.Models.dll
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\bin\Debug\Fenogeno.Models.pdb
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.csprojResolveAssemblyReference.cache
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.dll
+c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.Models\obj\Debug\Fenogeno.Models.pdb
