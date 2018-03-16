@@ -3,3 +3,8 @@ c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAcces
 c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.csprojResolveAssemblyReference.cache
 c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.dll
 c:\users\aluno\documents\visual studio 2015\Projects\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.pdb
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.DataAccess\bin\Debug\Fenogeno.DataAccess.dll
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.DataAccess\bin\Debug\Fenogeno.DataAccess.pdb
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.dll
+C:\Users\Aluno\Documents\GitHub\fenogeno\Fenogeno\Fenogeno.DataAccess\obj\Debug\Fenogeno.DataAccess.pdb

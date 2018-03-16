@@ -6,7 +6,7 @@
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
+      
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
@@ -60,16 +60,8 @@
                 <p>Quer saber qual a possibilidade de seu filho nascer com alguma doença genética? </p><br />
                 <p><a class="btn btn-danger" href="#" role="button">Clique aqui! &raquo;</a></p>
             </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="img-circle"  src="<%= ResolveUrl("~/Images/download.jpg") %>"  alt="Generic placeholder image" width="140" height="140">
-                <h2></h2>
-                <p>
-                    Saiba tudo sobre a feira das gestantes edição Curitiba!<br />
-                    Itens a partir de R$0,50 Aproveite!
-                </p>
-                <p><a class="btn btn-danger" href="#" role="button">Clique aqui!&raquo;</a></p>
-            </div>
+          
+         
             <!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="img-circle" src="<%= ResolveUrl("~/Images/especialista.jpg") %>" alt="Generic placeholder image" width="140" height="140">
