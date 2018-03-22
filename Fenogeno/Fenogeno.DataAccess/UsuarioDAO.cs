@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Fenogeno.DataAccess
 {
-    public class NoticiaDAO
+    public class UsuarioDAO
     {
 
     }
