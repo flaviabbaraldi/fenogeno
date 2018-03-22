@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fenogeno.DataAccess
+namespace Fenogeno.Models
 {
-    public class Class1
+    public class Noticia
     {
     }
 }
