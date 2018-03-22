@@ -10,151 +10,187 @@
 namespace Fenogeno.WebUI {
     
     
-    public partial class Teste {
+    public partial class TesteAnomalia {
         
         /// <summary>
-        /// lblOlhos control.
+        /// lblAnomalia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOlhos;
+        protected global::System.Web.UI.WebControls.Label lblAnomalia;
         
         /// <summary>
-        /// ddlOlhos control.
+        /// rdSim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOlhos;
+        protected global::System.Web.UI.WebControls.RadioButton rdSim;
         
         /// <summary>
-        /// lblOlhosP control.
+        /// rdNao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOlhosP;
+        protected global::System.Web.UI.WebControls.RadioButton rdNao;
         
         /// <summary>
-        /// ddlolhOlhosP control.
+        /// lblSeSim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlolhOlhosP;
+        protected global::System.Web.UI.WebControls.Label lblSeSim;
         
         /// <summary>
-        /// lblcabelo control.
+        /// txtAnomalia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblcabelo;
+        protected global::System.Web.UI.WebControls.TextBox txtAnomalia;
         
         /// <summary>
-        /// ddlCabelo control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCabelo;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// lblCabeloP control.
+        /// rdP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCabeloP;
+        protected global::System.Web.UI.WebControls.RadioButton rdP;
         
         /// <summary>
-        /// ddlCabeloP control.
+        /// rdPN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCabeloP;
+        protected global::System.Web.UI.WebControls.RadioButton rdPN;
         
         /// <summary>
-        /// lblPele control.
+        /// lblParceiro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPele;
+        protected global::System.Web.UI.WebControls.Label lblParceiro;
         
         /// <summary>
-        /// ddlPele control.
+        /// txtParceiro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPele;
+        protected global::System.Web.UI.WebControls.TextBox txtParceiro;
         
         /// <summary>
-        /// lblPeleP control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPeleP;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// ddlPeleP control.
+        /// rdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPeleP;
+        protected global::System.Web.UI.WebControls.RadioButton rdd;
         
         /// <summary>
-        /// lblAltura control.
+        /// rddd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAltura;
+        protected global::System.Web.UI.WebControls.RadioButton rddd;
         
         /// <summary>
-        /// txtAltura control.
+        /// lblexiste control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAltura;
+        protected global::System.Web.UI.WebControls.Label lblexiste;
         
         /// <summary>
-        /// lblAlturaP control.
+        /// txtexiste control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlturaP;
+        protected global::System.Web.UI.WebControls.TextBox txtexiste;
         
         /// <summary>
-        /// ddlAtp control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAtp;
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// rdSS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdSS;
+        
+        /// <summary>
+        /// rdNN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdNN;
+        
+        /// <summary>
+        /// lblL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblL;
+        
+        /// <summary>
+        /// txtT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtT;
         
         /// <summary>
         /// btnSalvar control.
