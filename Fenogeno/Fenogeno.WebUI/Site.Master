@@ -36,10 +36,10 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="noticias.html">Notícias</a></li>
-                    <li><a href="teste.html">Testes</a></li>
-                    <li><a href="especialistas.html">Especialistas</a></li>
+                    <li><a href="default.aspx">Home</a></li>
+                    <li><a href="noticia.aspx">Notícias</a></li>
+                    <li><a href="teste.aspx">Testes</a></li>
+                    <li><a href="especialista.aspx">Especialistas</a></li>
 
                 </ul>
                 <form class="navbar-form navbar-right">

@@ -29,8 +29,14 @@
                         <asp:Label CssClass="control-label" runat="server">Qual seu fator RH de seu parceiro?</asp:Label>
                         <asp:DropDownList ID="ddlRhParc" runat="server" CssClass="form-control" />
                     </div>
-
                 </div>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-right">
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
+                    </div>
+                </div>
+
             </form>
         </div>
     </div>

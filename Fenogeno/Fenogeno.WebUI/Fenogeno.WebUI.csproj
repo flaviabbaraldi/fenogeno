@@ -141,6 +141,7 @@
     <Content Include="Content\ie10-viewport-bug-workaround.css" />
     <Content Include="Content\navbar-fixed-top.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Especialista.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -158,12 +159,19 @@
     <Content Include="Images\download.jpg" />
     <Content Include="Images\ENG.jpg" />
     <Content Include="Images\especialista.jpg" />
+    <Content Include="Images\homens-gravata-slim.jpg" />
     <Content Include="Images\Logo Noticia.jpg" />
     <Content Include="Images\Logo Nsdfseoticia.jpg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\logo1.jpg" />
     <Content Include="Images\logo2.png" />
+    <Content Include="Images\medicagineco.jpg" />
+    <Content Include="Images\medicap.jpg" />
+    <Content Include="Images\medico.jpg" />
     <Content Include="Images\pediatra.jpg" />
+    <Content Include="Images\teste_carcfisicas.jpg" />
+    <Content Include="Images\teste_doençasgeneticas.jpg" />
+    <Content Include="Images\teste_sang.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Noticia.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -205,8 +213,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="Teste.aspx" />
     <Content Include="TesteAnomalia.aspx" />
+    <Content Include="TesteCarcFisica.aspx" />
+    <Content Include="Teste.aspx" />
     <Content Include="TesteSanguineo.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -229,6 +238,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Especialista.aspx.cs">
+      <DependentUpon>Especialista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Especialista.aspx.designer.cs">
+      <DependentUpon>Especialista.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -262,19 +278,26 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Teste.aspx.cs">
-      <DependentUpon>Teste.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Teste.aspx.designer.cs">
-      <DependentUpon>Teste.aspx</DependentUpon>
-    </Compile>
     <Compile Include="TesteAnomalia.aspx.cs">
       <DependentUpon>TesteAnomalia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TesteAnomalia.aspx.designer.cs">
       <DependentUpon>TesteAnomalia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TesteCarcFisica.aspx.cs">
+      <DependentUpon>TesteCarcFisica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TesteCarcFisica.aspx.designer.cs">
+      <DependentUpon>TesteCarcFisica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teste.aspx.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teste.aspx.designer.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
     </Compile>
     <Compile Include="TesteSanguineo.aspx.cs">
       <DependentUpon>TesteSanguineo.aspx</DependentUpon>

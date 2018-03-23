@@ -1,71 +1,83 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Teste.aspx.cs" Inherits="Fenogeno.WebUI.Teste" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Teste.aspx.cs" Inherits="Fenogeno.WebUI.Testes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row">
+     <div class="row">
         <div class="col-md-12">
             <form runat="server" class="form-horizontal">
-                <h2>Teste Fenótipo</h2>
-                <div class="form-group">
-                    <div class="col-md-6">
-                        <asp:Label ID="lblOlhos" runat="server"
-                            CssClass="control-label">Qual a cor dos seus olhos?</asp:Label>
-                        <asp:DropDownList ID="ddlOlhos" runat="server" CssClass="form-control" />
+                <h2>Testes</h2>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="Images/teste_carcfisicas.jpg" />
                     </div>
-                    <div class="col-md-6">
-                        <asp:Label ID="lblOlhosP" runat="server"
-                            CssClass="control-label">Qual a cor dos olhos de seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlolhOlhosP" runat="server" CssClass="form-control" />
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Características Físicas </h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5>Aqui você poderá saber as probabilidades em relação a cor dos olhos,
+                                    cabelo, pele e altura que o seu filho(a) tende a nascer.</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a class="btn btn-primary" href="TesteCarcFisica.aspx">Ver mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="Images/teste_sang.jpg" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Sanguíneo</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5>Aqui você poderá saber as probabilidades em relação a tipagem sanguínea que o seu filho tende a nascer.</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a class="btn btn-primary" href="TesteSanguineo.aspx">Ver mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="Images/teste_doençasgeneticas.jpg" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Doenças Genéticas</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5>Aqui você poderá saber as probabilidades que o seu filho tem de desenvolver algum tipo de doenças genéticas.</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a class="btn btn-primary" href="TesteAnomalia.aspx">Ver mais...</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-md-6">
-                        <asp:Label ID="lblcabelo" runat="server"
-                            CssClass="control-label">Qual a cor natural do seu cabelo?</asp:Label>
-                        <asp:DropDownList ID="ddlCabelo" runat="server" CssClass="form-control" />
-                    </div>
 
-                    <div class="col-md-6">
-                        <asp:Label ID="lblCabeloP" runat="server"
-                            CssClass="control-label">Qual a cor natural do cabelo do seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlCabeloP" runat="server" CssClass="form-control" />
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-md-6">
-                        <asp:Label ID="lblPele" runat="server"
-                            CssClass="control-label">Qual a sua cor de pele?</asp:Label>
-                        <asp:DropDownList ID="ddlPele" runat="server" CssClass="form-control" />
-                    </div>
-
-                    <div class="col-md-6">
-                        <asp:Label ID="lblPeleP" runat="server"
-                            CssClass="control-label"> Qual a cor de pele do seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlPeleP" runat="server" CssClass="form-control" />
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-6">
-                        <asp:Label ID="lblAltura" runat="server"
-                            CssClass="control-label">Qual sua altura?</asp:Label>
-                        <asp:TextBox ID="txtAltura" runat="server" CssClass="form-control" />
-                    </div>
-
-                    <div class="col-md-6">
-                        <asp:Label ID="lblAlturaP" runat="server"
-                            CssClass="control-label">Qual a altura de seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlAtp" runat="server" CssClass="form-control" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-12 text-right">
-                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
-                    </div>
-                </div>
             </form>
         </div>
+
     </div>
 </asp:Content>
-
