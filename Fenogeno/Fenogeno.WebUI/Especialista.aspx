@@ -35,24 +35,24 @@
                     </div>
                     <br />
                     <div class="form-group">
-                       <div class="col-md-12">
+                        <div class="col-md-12">
 
-                           <asp:Label CssClass="control-label" runat="server"><b>Tem alguma dúvida?Pergunte aos especialistas:</b></asp:Label>
-                           <br />
-                            <asp:Label ID="lblEspecialista" runat="server"
-                            CssClass="control-label"><b> Selecione um especialista:</b></asp:Label>
+                            <h4><b>Tem alguma dúvida?Pergunte aos especialistas:</b></h4>
+                            <h6><b>Selecione um especialista:</b></h6>
 
-                        <asp:DropDownList ID="ddlEspecialista" runat="server" CssClass="form-control" />
-                           <asp:TextBox Id="txtDuvida" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
 
-                       </div>
+                            <asp:DropDownList ID="ddlEspecialista" runat="server" CssClass="form-control" />
+                            <br />
+                            <asp:TextBox ID="txtDuvida" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+
+                        </div>
                     </div>
 
-                       <div class="form-group">
-                    <div class="col-md-12 text-right">
-                        <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-primary" />
+                    <div class="form-group">
+                        <div class="col-md-12 text-right">
+                            <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-primary" />
+                        </div>
                     </div>
-                </div>
 
                 </div>
             </form>
