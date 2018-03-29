@@ -141,6 +141,7 @@
     <Content Include="Content\ie10-viewport-bug-workaround.css" />
     <Content Include="Content\navbar-fixed-top.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DadosDoEspecialista.aspx" />
     <Content Include="Especialista.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -232,6 +233,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="DadosDoEspecialista.aspx.cs">
+      <DependentUpon>DadosDoEspecialista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DadosDoEspecialista.aspx.designer.cs">
+      <DependentUpon>DadosDoEspecialista.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

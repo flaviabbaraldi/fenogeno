@@ -30,9 +30,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                    <img src="Images/logo2.png"  width="100px"/>
-                  
+                <a class="navbar-brand" href="Default.aspx">
+                    <img src="Images/logo2.png" style="width: 100px;" />
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -45,7 +44,7 @@
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group" style="padding-right: 20px; text-decoration: underline;">
-                        <a href="#">Faça seu login</a>
+                        <a href="Login.aspx">Faça seu login</a>
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="O que você procura?">

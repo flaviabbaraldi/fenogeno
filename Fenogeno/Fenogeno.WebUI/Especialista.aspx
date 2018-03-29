@@ -38,7 +38,7 @@
                         <div class="col-md-12">
 
                             <h4><b>Tem alguma dúvida?Pergunte aos especialistas:</b></h4>
-                            <h6><b>Selecione um especialista:</b></h6>
+                            <h6><b>Selecione o especialista que deseja fazer uma pergunta:</b></h6>
 
 
                             <asp:DropDownList ID="ddlEspecialista" runat="server" CssClass="form-control" />
