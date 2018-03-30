@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Cadastro.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -173,6 +174,7 @@
     <Content Include="Images\teste_carcfisicas.jpg" />
     <Content Include="Images\teste_doençasgeneticas.jpg" />
     <Content Include="Images\teste_sang.jpg" />
+    <Content Include="Images\vacinas-gravidez.jpeg" />
     <Content Include="Login.aspx" />
     <Content Include="Noticia.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -184,7 +186,7 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Noticias.aspx" />
+    <Content Include="Noticia1.aspx" />
     <Content Include="Scripts\noticias.html" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -233,6 +235,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DadosDoEspecialista.aspx.cs">
       <DependentUpon>DadosDoEspecialista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -272,12 +281,12 @@
       <DependentUpon>Noticia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Noticias.aspx.cs">
-      <DependentUpon>Noticias.aspx</DependentUpon>
+    <Compile Include="Noticia1.aspx.cs">
+      <DependentUpon>Noticia1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Noticias.aspx.designer.cs">
-      <DependentUpon>Noticias.aspx</DependentUpon>
+    <Compile Include="Noticia1.aspx.designer.cs">
+      <DependentUpon>Noticia1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

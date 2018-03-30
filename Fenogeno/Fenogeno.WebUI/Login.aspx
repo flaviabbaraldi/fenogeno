@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                              <a href="#">Já possui cadastro? Clique aqui para se cadastrar!</a>
+                              <a href="cadastro.aspx">Não possui cadastro? Clique aqui para se cadastrar!</a>
                             </div>
                         </div>
                         <div class="form-group">

@@ -13,15 +13,6 @@ namespace Fenogeno.WebUI {
     public partial class Especialista {
         
         /// <summary>
-        /// lblmedico control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmedico;
-        
-        /// <summary>
         /// lblmedica control.
         /// </summary>
         /// <remarks>
@@ -47,32 +38,5 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// ddlEspecialista control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEspecialista;
-        
-        /// <summary>
-        /// txtDuvida control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDuvida;
-        
-        /// <summary>
-        /// btnEnviar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviar;
     }
 }

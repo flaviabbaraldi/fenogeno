@@ -10,151 +10,115 @@
 namespace Fenogeno.WebUI {
     
     
-    public partial class TesteCarcFisica {
+    public partial class Cadastro {
         
         /// <summary>
-        /// lblOlhos control.
+        /// lblNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOlhos;
+        protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
-        /// ddlOlhos control.
+        /// txtNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOlhos;
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
-        /// lblOlhosP control.
+        /// lblCidade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOlhosP;
+        protected global::System.Web.UI.WebControls.Label lblCidade;
         
         /// <summary>
-        /// ddlolhOlhosP control.
+        /// txtCidade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlolhOlhosP;
+        protected global::System.Web.UI.WebControls.TextBox txtCidade;
         
         /// <summary>
-        /// lblcabelo control.
+        /// lblBairro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblcabelo;
+        protected global::System.Web.UI.WebControls.Label lblBairro;
         
         /// <summary>
-        /// ddlCabelo control.
+        /// txtBairro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCabelo;
+        protected global::System.Web.UI.WebControls.TextBox txtBairro;
         
         /// <summary>
-        /// lblCabeloP control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCabeloP;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// ddlCabeloP control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCabeloP;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// lblPele control.
+        /// lblSenha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPele;
+        protected global::System.Web.UI.WebControls.Label lblSenha;
         
         /// <summary>
-        /// ddlPele control.
+        /// txtSenha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPele;
+        protected global::System.Web.UI.WebControls.TextBox txtSenha;
         
         /// <summary>
-        /// lblPeleP control.
+        /// lblSenhaConf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPeleP;
+        protected global::System.Web.UI.WebControls.Label lblSenhaConf;
         
         /// <summary>
-        /// ddlPeleP control.
+        /// txtSenhaConf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPeleP;
-        
-        /// <summary>
-        /// lblAltura control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAltura;
-        
-        /// <summary>
-        /// txtAltura control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAltura;
-        
-        /// <summary>
-        /// lblAlturaP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlturaP;
-        
-        /// <summary>
-        /// ddlAtp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAtp;
+        protected global::System.Web.UI.WebControls.TextBox txtSenhaConf;
         
         /// <summary>
         /// btnSalvar control.

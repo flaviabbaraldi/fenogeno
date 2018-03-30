@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TesteCarcFisica.aspx.cs" Inherits="Fenogeno.WebUI.TesteCarcFisica" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <div class="row">
+    <div class="row">
         <div class="col-md-12">
             <form runat="server" class="form-horizontal">
                 <h2>Testes Características Físicas</h2>
@@ -61,6 +62,7 @@
                 <div class="form-group">
                     <div class="col-md-12 text-right">
                         <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
+                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
                     </div>
                 </div>
             </form>

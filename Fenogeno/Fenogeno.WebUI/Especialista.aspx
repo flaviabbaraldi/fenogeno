@@ -11,7 +11,28 @@
                         <div class="col-md-3 text-center">
                             <img class="img-circle" src="Images/medico.jpg" alt="Generic placeholder image" width="140" height="140" />
                             <h4>Victor Fernandes</h4>
-                            <asp:Label ID="lblmedico" CssClass="control-label" runat="server">Obstetra</asp:Label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Especialização:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Obstetra</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Formação:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Medicina</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-md-3 text-center">
@@ -33,28 +54,9 @@
                             <asp:Label ID="Label1" CssClass="control-label" runat="server">Engenheiro Genético</asp:Label>
                         </div>
                     </div>
-                    <br />
-                    <div class="form-group">
-                        <div class="col-md-12">
-
-                            <h4><b>Tem alguma dúvida?Pergunte aos especialistas:</b></h4>
-                            <h6><b>Selecione o especialista que deseja fazer uma pergunta:</b></h6>
-
-
-                            <asp:DropDownList ID="ddlEspecialista" runat="server" CssClass="form-control" />
-                            <br />
-                            <asp:TextBox ID="txtDuvida" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
-
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-12 text-right">
-                            <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-primary" />
-                        </div>
-                    </div>
 
                 </div>
+
             </form>
         </div>
     </div>
