@@ -19,7 +19,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <span>Obstetra</span>
+                                    <span>Obstetra/Ginecologista</span>
                                 </div>
                             </div>
                             <div class="row">
@@ -33,25 +33,108 @@
                                     <span>Medicina</span>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="#" class="btn btn-primary">Ver Mais...</a>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-md-3 text-center">
                             <img class="img-circle" src="Images/medicap.jpg" alt="Generic placeholder image" width="140" height="140" />
                             <h4>Mônica Sampaio</h4>
-                            <asp:Label ID="lblmedica" CssClass="control-label" runat="server">Pediatra</asp:Label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Especialização:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Pediatra</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Formação:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Medicina</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="#" class="btn btn-primary">Ver Mais...</a>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-md-3 text-center">
                             <img class="img-circle" src="Images/medicagineco.jpg" alt="Generic placeholder image" width="140" height="140" />
                             <h4>Ana Carolina Menezes</h4>
-                            <asp:Label ID="lblgineco" CssClass="control-label" runat="server">Ginecologista</asp:Label>
+                         <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Especialização:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Ginecologista/Obstetra</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Formação:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Medicina</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="#" class="btn btn-primary">Ver Mais...</a>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-md-3 text-center">
                             <img src="Images/homens-gravata-slim.jpg" class="img-circle" alt="Generic placeholder image" width="140" height="140" />
 
                             <h4>Gustavo Torres</h4>
-                            <asp:Label ID="Label1" CssClass="control-label" runat="server">Engenheiro Genético</asp:Label>
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Especialização:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Engenharia Génetica</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    <label class="control-label">Formação:</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span>Engenharia</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="#" class="btn btn-primary">Ver Mais...</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
