@@ -144,7 +144,7 @@
     <Content Include="Content\ie10-viewport-bug-workaround.css" />
     <Content Include="Content\navbar-fixed-top.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="DadosDoEspecialista.aspx" />
+    <Content Include="Victor.aspx" />
     <Content Include="Especialista.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -244,12 +244,12 @@
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DadosDoEspecialista.aspx.cs">
-      <DependentUpon>DadosDoEspecialista.aspx</DependentUpon>
+    <Compile Include="Victor.aspx.cs">
+      <DependentUpon>Victor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DadosDoEspecialista.aspx.designer.cs">
-      <DependentUpon>DadosDoEspecialista.aspx</DependentUpon>
+    <Compile Include="Victor.aspx.designer.cs">
+      <DependentUpon>Victor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
