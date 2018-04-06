@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fenogeno.WebUI
-{
-
-
-    public partial class Victor
-    {
-
+namespace Fenogeno.WebUI {
+    
+    
+    public partial class Gustavo {
+        
         /// <summary>
         /// txtDuvida control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Fenogeno.WebUI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDuvida;
-
+        
         /// <summary>
         /// btnEnviar control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace Fenogeno.WebUI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEnviar;
-
+        
         /// <summary>
         /// btnCancelar control.
         /// </summary>
