@@ -137,6 +137,8 @@
   <ItemGroup>
     <Content Include="Ana.aspx" />
     <Content Include="Cadastro.aspx" />
+    <Content Include="CadastroDeEspecialistas.aspx" />
+    <Content Include="CadastroNoticia.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -253,6 +255,20 @@
     </Compile>
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroDeEspecialistas.aspx.cs">
+      <DependentUpon>CadastroDeEspecialistas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroDeEspecialistas.aspx.designer.cs">
+      <DependentUpon>CadastroDeEspecialistas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroNoticia.aspx.cs">
+      <DependentUpon>CadastroNoticia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroNoticia.aspx.designer.cs">
+      <DependentUpon>CadastroNoticia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gustavo.aspx.cs">
       <DependentUpon>Gustavo.aspx</DependentUpon>
