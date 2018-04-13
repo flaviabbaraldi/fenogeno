@@ -27,6 +27,13 @@
                         <asp:TextBox ID="txtCorpo" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
                     </div>
                           </div>
+
+                    <div class="form-group"´>
+                        <div class="col-md-12 text-right">
+                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Text="Salvar" OnClick="btnSalvar_Click" />
+                            <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-primary" Text="Cancelar" OnClick="btnCancelar_Click" />
+                        </div>
+                    </div>
                 </div>
 
             </form>
