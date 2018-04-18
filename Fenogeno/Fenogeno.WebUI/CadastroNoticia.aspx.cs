@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using Fenogeno.Models;
+using Fenogeno.DataAccess;
 
 namespace Fenogeno.WebUI
 {
@@ -55,26 +57,10 @@ namespace Fenogeno.WebUI
         {
             var obj = new Noticia();
             obj.Titulo = txtTitulo.Text;
-            obj.Descricao = txtdescricao.Text;
-            obj.Corpo = txtCorpo.Text;
+            obj.Subtitulo = txtdescricao.Text;
+            obj.Texto = txtCorpo.Text;
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; 
-                                                             Data Source=localhost;
-                                                             Integrated Security=SSPI;"))
-            {
-                string strSQL = @"INSERT INTO NOTICIA (TITULO, DESCRICAO, CORPO_TEXTO, FOTO)
-                                    VALUES(@TITULO, @DESCRICAO, @CORPO_TEXTO, @FOTO)";
-
-                using (SqlCommand cmd = new SqlCommand(strSQL))
-                {
-                    cmd.Connection = conn;
-
-                    cmd.Parameters.Add("@TITULO", qlDbType.Varchar).Value = obj.
-                }
-            }
+            new NoticiaDAO().Inserir(obj);
         }
-
-
-
     }
 }

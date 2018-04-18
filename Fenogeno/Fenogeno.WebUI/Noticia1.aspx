@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Noticias" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Noticia1.aspx.cs" Inherits="Fenogeno.WebUI.Noticias" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Noticia1.aspx.cs" Inherits="Fenogeno.WebUI.Noticia1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">

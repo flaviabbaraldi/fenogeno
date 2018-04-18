@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Fenogeno.WebUI
 {
-    public partial class Noticia : System.Web.UI.Page
+    public partial class Noticias : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

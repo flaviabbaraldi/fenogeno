@@ -10,6 +10,7 @@
 namespace Fenogeno.WebUI {
     
     
-    public partial class Noticias {
+    public partial class Noticia1
+    {
     }
 }

@@ -15,6 +15,8 @@ namespace Fenogeno.Models
 
         public string Texto { get; set; }
 
+        public string Foto { get; set; }
+
         public DateTime DataHora { get; set; }
 
         public Usuario Usuario { get; set; }

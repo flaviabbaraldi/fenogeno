@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Especialista.aspx.cs" Inherits="Fenogeno.WebUI.Especialista" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Especialistas.aspx.cs" Inherits="Fenogeno.WebUI.Especialista" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
@@ -329,7 +329,7 @@
 
                 </div>
 
-            </form>
+           </form>
         </div>
     </div>
 </asp:Content>

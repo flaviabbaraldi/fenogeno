@@ -148,9 +148,10 @@
     <Content Include="Content\navbar-fixed-top.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Gustavo.aspx" />
+    <Content Include="ListaNoticias.aspx" />
     <Content Include="Monica.aspx" />
     <Content Include="Victor.aspx" />
-    <Content Include="Especialista.aspx" />
+    <Content Include="Especialistas.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -183,7 +184,7 @@
     <Content Include="Images\teste_sang.jpg" />
     <Content Include="Images\vacinas-gravidez.jpeg" />
     <Content Include="Login.aspx" />
-    <Content Include="Noticia.aspx" />
+    <Content Include="Noticias.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ie-emulation-modes-warning.js" />
@@ -277,6 +278,13 @@
     <Compile Include="Gustavo.aspx.designer.cs">
       <DependentUpon>Gustavo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ListaNoticias.aspx.cs">
+      <DependentUpon>ListaNoticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaNoticias.aspx.designer.cs">
+      <DependentUpon>ListaNoticias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Monica.aspx.cs">
       <DependentUpon>Monica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,12 +306,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Especialista.aspx.cs">
-      <DependentUpon>Especialista.aspx</DependentUpon>
+    <Compile Include="Especialistas.aspx.cs">
+      <DependentUpon>Especialistas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Especialista.aspx.designer.cs">
-      <DependentUpon>Especialista.aspx</DependentUpon>
+    <Compile Include="Especialistas.aspx.designer.cs">
+      <DependentUpon>Especialistas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -315,12 +323,12 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Noticia.aspx.cs">
-      <DependentUpon>Noticia.aspx</DependentUpon>
+    <Compile Include="Noticias.aspx.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Noticia.aspx.designer.cs">
-      <DependentUpon>Noticia.aspx</DependentUpon>
+    <Compile Include="Noticias.aspx.designer.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Noticia1.aspx.cs">
@@ -366,7 +374,16 @@
       <DependentUpon>TesteSanguineo.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Fenogeno.DataAccess\Fenogeno.DataAccess.csproj">
+      <Project>{80B1BAFE-1C17-403E-A3DF-23C6AD550AA6}</Project>
+      <Name>Fenogeno.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fenogeno.Models\Fenogeno.Models.csproj">
+      <Project>{40BF5F69-1280-4C0A-BF9F-DA85BF3A483F}</Project>
+      <Name>Fenogeno.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
