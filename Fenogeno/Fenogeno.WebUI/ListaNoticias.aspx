@@ -12,16 +12,16 @@
 
                 <div class="form-group">
                     <div class="col-md-12">
-                        <asp:Button ID="btnCadastrar" runat="server" CssClass="btn btn-primary" Text="Cadastrar" />
+                        <asp:Button ID="btnCadastrar" runat="server" CssClass="btn btn-primary" Text="Cadastrar" OnClick="btnCadastrar_Click" />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-md-12">
-                        <asp:GridView: ID="grdNoticias" runat="server" AutoGenerateColumns="false"
+                        <asp:GridView ID="grdNoticias" runat="server" AutoGenerateColumns="false"
                             Width="100%" CssClass="Grid"
                             AlternatingRowStyle-CssClass="alt"
-                            PagerStyle-CssClass="pgr">
+                            PagerStyle-CssClass="pgr" OnSelectedIndexChanged="grdNoticias_SelectedIndexChanged">
                             <Columns>
                                 <asp:TemplateField HeaderText="Título">
                                     <HeaderStyle Width="50%" />
@@ -37,7 +37,7 @@
                                     <ItemStyle Width="50%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblSubtitulo" runat="server"
-                                            Text='<%# Bind("Descricao") %>'></asp:Label>
+                                            Text='<%# Bind("Subtitulo") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>

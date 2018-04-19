@@ -132,9 +132,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Ana.aspx" />
     <Content Include="Cadastro.aspx" />
     <Content Include="CadastroDeEspecialistas.aspx" />
@@ -148,6 +145,7 @@
     <Content Include="Content\navbar-fixed-top.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Gustavo.aspx" />
+    <Content Include="ListaEspecialistas.aspx" />
     <Content Include="ListaNoticias.aspx" />
     <Content Include="Monica.aspx" />
     <Content Include="Victor.aspx" />
@@ -278,6 +276,13 @@
     <Compile Include="Gustavo.aspx.designer.cs">
       <DependentUpon>Gustavo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ListaEspecialistas.aspx.cs">
+      <DependentUpon>ListaEspecialistas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaEspecialistas.aspx.designer.cs">
+      <DependentUpon>ListaEspecialistas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListaNoticias.aspx.cs">
       <DependentUpon>ListaNoticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -383,6 +388,9 @@
       <Project>{40BF5F69-1280-4C0A-BF9F-DA85BF3A483F}</Project>
       <Name>Fenogeno.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

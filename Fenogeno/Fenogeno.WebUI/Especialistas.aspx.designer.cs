@@ -10,6 +10,6 @@
 namespace Fenogeno.WebUI {
     
     
-    public partial class Especialista {
+    public partial class Especialistas {
     }
 }

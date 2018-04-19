@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using Fenogeno.Models;
 using Fenogeno.DataAccess;
+using System.IO;
 
 namespace Fenogeno.WebUI
 {
@@ -23,13 +24,13 @@ namespace Fenogeno.WebUI
             {
                 Salvar();
                 LimparCampos();
-                Response.Redirect("~/Noticia.aspx");
+                Response.Redirect("~/ListaNoticias.aspx");
             }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Noticia.aspx");
+            Response.Redirect("~/ListaNoticias.aspx");
         }
 
         private void LimparCampos()
@@ -59,8 +60,19 @@ namespace Fenogeno.WebUI
             obj.Titulo = txtTitulo.Text;
             obj.Subtitulo = txtdescricao.Text;
             obj.Texto = txtCorpo.Text;
+            obj.Foto = fupArquivo.FileName;
+
+            if (fupArquivo.HasFile)
+            {
+                var fileName = Path.GetFileName(fupArquivo.FileName);
+                fupArquivo.SaveAs(Server.MapPath(string.Format("~/Uploads/{0}", fileName)));
+
+            }
+
 
             new NoticiaDAO().Inserir(obj);
         }
+
+       
     }
 }

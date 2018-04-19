@@ -8,15 +8,15 @@ namespace Fenogeno.Models
 {
     public class Especialista
     {
-        public int CRM { get; set; }
+        public string CRM { get; set; }
 
-        public int CPF { get; set; }
+        public string CPF { get; set; }
 
         public string Nome { get; set; }
 
         public string Email { get; set; }
 
-        public int Telefone { get; set; }
+        public string Telefone { get; set; }
 
         public string Curso_f { get; set; }
 

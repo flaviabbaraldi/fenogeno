@@ -96,12 +96,18 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <asp:FileUpload ID="fupArquivo" runat="server" />
+                        </div>
+                    </div>
+
 
 
                     <div class="form-group">
                         <div class="col-md-12 text-right">
-                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Text="Salvar" />
-                            <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-primary" Text="Cancelar" />
+                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Text="Salvar" OnClick="btnSalvar_Click"  />
+                            <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-primary" Text="Cancelar" OnClick="btnCancelar_Click"  />
                         </div>
                     </div>
 

@@ -79,11 +79,11 @@ namespace Fenogeno.DataAccess
                     {
                         var especialista = new Especialista()
                         {
-                            CRM = Convert.ToInt32(row["CRM"]),
-                            CPF = Convert.ToInt32(row["CPF"]),
+                            CRM =row["CRM"].ToString(),
+                            CPF = row["CPF"].ToString(),
                             Nome = row["NOME"].ToString(),
                             Email = row["EMAIL"].ToString(),
-                            Telefone = Convert.ToInt32(row["TELEFONE"]),
+                            Telefone = row["TELEFONE"].ToString(),
                             Curso_f = row["CURSO_F"].ToString(),
                             Universidade_c = row["UNIVERSIDADE_C"].ToString(),
                             Duracao_c = row["DURACAO_C"].ToString(),

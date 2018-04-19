@@ -10,7 +10,7 @@
 namespace Fenogeno.WebUI {
     
     
-    public partial class ListaNoticias {
+    public partial class ListaEspecialistas {
         
         /// <summary>
         /// btnCadastrar control.
@@ -22,12 +22,12 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Button btnCadastrar;
         
         /// <summary>
-        /// grdNoticias control.
+        /// grdEspecialistas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdNoticias;
+        protected global::System.Web.UI.WebControls.GridView grdEspecialistas;
     }
 }
