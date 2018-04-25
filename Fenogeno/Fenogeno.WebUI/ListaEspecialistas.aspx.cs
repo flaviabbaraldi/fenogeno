@@ -85,7 +85,7 @@ namespace Fenogeno.WebUI
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/CadastroDeEspecialista.aspx");
+            Response.Redirect("~/CadastroDeEspecialistas.aspx");
         }
     }
 }
