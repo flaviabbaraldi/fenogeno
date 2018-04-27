@@ -9,7 +9,7 @@
 
                     <div class="col-md-6">
                         <asp:Label CssClass="control-label" runat="server">Qual seu tipo sanguíneo?</asp:Label>
-                        <asp:DropDownList ID="ddlSangue" runat="server" CssClass="form-control" />
+                        <asp:DropDownList ID="ddlSangue" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlSangue_SelectedIndexChanged" />
 
 
                     </div>

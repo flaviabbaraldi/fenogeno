@@ -120,3 +120,18 @@ TEXTO		VARCHAR(MAX)
 )
 
 SELECT * FROM COMENTARIO;
+
+CREATE TABLE ANOMALIA(
+ID			INTEGER IDENTITY(1,1) PRIMARY KEY, 
+DESCRICAO	VARCHAR(100)
+)
+
+INSERT INTO ANOMALIA
+VALUES
+('Polidactila'),
+('Doença de Huntington'),
+('Doença de Hippel'),
+('Daltonismo'),
+('Albinismo'),
+('Hemofilia')
+

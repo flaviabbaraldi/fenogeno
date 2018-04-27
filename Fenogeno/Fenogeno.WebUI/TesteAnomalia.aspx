@@ -30,7 +30,7 @@
                                         <asp:Label ID="lblSeSim" runat="server" CssClass="control-label">*Se sim, qual?</asp:Label>
                                     </div>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtAnomalia" runat="server" CssClass="form-control" />
+                                        <asp:DropDownList ID="ddlAnomalia" runat="server" CssClass="form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                                         <asp:Label ID="lblParceiro" runat="server" CssClass="control-label">*Se sim, qual?</asp:Label>
                                     </div>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtParceiro" runat="server" CssClass="form-control" />
+                                       <asp:DropDownList ID="ddlAnomaliaP" runat="server" CssClass="form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                         <asp:Label ID="lblexiste" runat="server" CssClass="control-label">*Se sim, qual?</asp:Label>
                                     </div>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtexiste" runat="server" CssClass="form-control" />
+                                       <asp:DropDownList ID="ddlAnomaliaF" runat="server" CssClass="form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                                         <asp:Label ID="lblL" runat="server" CssClass="control-label">*Se sim, qual?</asp:Label>
                                     </div>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtT" runat="server" CssClass="form-control" />
+                                     <asp:DropDownList ID="ddlAnomaliaFP" runat="server" CssClass="form-control" />
                                     </div>
                                 </div>
                             </div>

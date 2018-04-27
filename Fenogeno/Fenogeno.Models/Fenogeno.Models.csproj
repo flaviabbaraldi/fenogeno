@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anomalia.cs" />
+    <Compile Include="Cabelo.cs" />
     <Compile Include="Comentario.cs" />
     <Compile Include="Especialista.cs" />
+    <Compile Include="FatorRh.cs" />
+    <Compile Include="GrupoSanguineo.cs" />
     <Compile Include="Noticia.cs" />
+    <Compile Include="Olho.cs" />
+    <Compile Include="Pele.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

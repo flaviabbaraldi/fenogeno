@@ -13,5 +13,10 @@ namespace Fenogeno.WebUI
         {
 
         }
+
+        protected void ddlSangue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

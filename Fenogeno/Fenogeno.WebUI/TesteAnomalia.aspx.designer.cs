@@ -49,13 +49,13 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label lblSeSim;
         
         /// <summary>
-        /// txtAnomalia control.
+        /// ddlAnomalia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAnomalia;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAnomalia;
         
         /// <summary>
         /// Label2 control.
@@ -94,13 +94,13 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label lblParceiro;
         
         /// <summary>
-        /// txtParceiro control.
+        /// ddlAnomaliaP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtParceiro;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAnomaliaP;
         
         /// <summary>
         /// Label1 control.
@@ -139,13 +139,13 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label lblexiste;
         
         /// <summary>
-        /// txtexiste control.
+        /// ddlAnomaliaF control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtexiste;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAnomaliaF;
         
         /// <summary>
         /// Label3 control.
@@ -184,13 +184,13 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label lblL;
         
         /// <summary>
-        /// txtT control.
+        /// ddlAnomaliaFP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtT;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAnomaliaFP;
         
         /// <summary>
         /// btnSalvar control.

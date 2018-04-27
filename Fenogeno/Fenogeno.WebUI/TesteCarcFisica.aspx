@@ -9,12 +9,12 @@
                     <div class="col-md-6">
                         <asp:Label ID="lblOlhos" runat="server"
                             CssClass="control-label">Qual a cor dos seus olhos?</asp:Label>
-                        <asp:DropDownList ID="ddlOlhos" runat="server" CssClass="form-control" />
+                        <asp:DropDownList ID="ddlOlhos" runat="server" CssClass="form-control"  />
                     </div>
                     <div class="col-md-6">
                         <asp:Label ID="lblOlhosP" runat="server"
                             CssClass="control-label">Qual a cor dos olhos de seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlolhOlhosP" runat="server" CssClass="form-control" />
+                        <asp:DropDownList ID="ddlOlhosP" runat="server" CssClass="form-control" />
                     </div>
                 </div>
 
