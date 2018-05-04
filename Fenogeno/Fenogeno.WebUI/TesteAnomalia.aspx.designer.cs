@@ -22,22 +22,22 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label lblAnomalia;
         
         /// <summary>
-        /// rdSim control.
+        /// rdoAnomaliaSim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdSim;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaSim;
         
         /// <summary>
-        /// rdNao control.
+        /// rdoAnomaliaNao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdNao;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaNao;
         
         /// <summary>
         /// lblSeSim control.
@@ -67,22 +67,22 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// rdP control.
+        /// rdoAnomaliaPSim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdP;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaPSim;
         
         /// <summary>
-        /// rdPN control.
+        /// rdoAnomaliaPNao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdPN;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaPNao;
         
         /// <summary>
         /// lblParceiro control.
@@ -112,22 +112,22 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// rdd control.
+        /// rdoAnomaliaFSim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdd;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaFSim;
         
         /// <summary>
-        /// rddd control.
+        /// rdoAnomaliaFNao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rddd;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaFNao;
         
         /// <summary>
         /// lblexiste control.
@@ -157,22 +157,22 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// rdSS control.
+        /// rdoAnomaliaFPSim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdSS;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaFPSim;
         
         /// <summary>
-        /// rdNN control.
+        /// rdoAnomaliaFPNao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdNN;
+        protected global::System.Web.UI.WebControls.RadioButton rdoAnomaliaFPNao;
         
         /// <summary>
         /// lblL control.
@@ -209,5 +209,14 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelar;
+        
+        /// <summary>
+        /// lblResultado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultado;
     }
 }

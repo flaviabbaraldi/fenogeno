@@ -9,13 +9,13 @@
 
                     <div class="col-md-6">
                         <asp:Label CssClass="control-label" runat="server">Qual seu tipo sanguíneo?</asp:Label>
-                        <asp:DropDownList ID="ddlSangue" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlSangue_SelectedIndexChanged" />
+                        <asp:DropDownList ID="ddlSangue" runat="server" CssClass="form-control" />
 
 
                     </div>
                     <div class="col-md-6">
                         <asp:Label CssClass="control-label" runat="server">Qual seu tipo sanguíneo de seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlSanguineo" runat="server" CssClass="form-control" />
+                        <asp:DropDownList ID="ddlSangueP" runat="server" CssClass="form-control" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -27,7 +27,7 @@
 
                     <div class="col-md-6">
                         <asp:Label CssClass="control-label" runat="server">Qual seu fator RH de seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlRhParc" runat="server" CssClass="form-control" />
+                        <asp:DropDownList ID="ddlRhP" runat="server" CssClass="form-control" />
                     </div>
                 </div>
 

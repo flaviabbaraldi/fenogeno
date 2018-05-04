@@ -17,9 +17,9 @@
                         <div class="row">
                             <div class="col-md-4">
 
-                                <asp:RadioButton ID="rdSim" runat="server" GroupName="anomalia" />
+                                <asp:RadioButton ID="rdoAnomaliaSim" runat="server" GroupName="anomalia" />
                                 Sim
-                                <asp:RadioButton ID="rdNao" runat="server" GroupName="anomalia" />
+                                <asp:RadioButton ID="rdoAnomaliaNao" runat="server" GroupName="anomalia" />
                                 Não
                                    
                                    
@@ -49,9 +49,9 @@
                         <div class="row">
                             <div class="col-md-4">
 
-                                <asp:RadioButton ID="rdP" runat="server" GroupName="parceiro" />
+                                <asp:RadioButton ID="rdoAnomaliaPSim" runat="server" GroupName="parceiro" />
                                 Sim
-                                <asp:RadioButton ID="rdPN" runat="server" GroupName="parceiro" />
+                                <asp:RadioButton ID="rdoAnomaliaPNao" runat="server" GroupName="parceiro" />
                                 Não
                                    
                                    
@@ -62,7 +62,7 @@
                                         <asp:Label ID="lblParceiro" runat="server" CssClass="control-label">*Se sim, qual?</asp:Label>
                                     </div>
                                     <div class="col-md-9">
-                                       <asp:DropDownList ID="ddlAnomaliaP" runat="server" CssClass="form-control" />
+                                        <asp:DropDownList ID="ddlAnomaliaP" runat="server" CssClass="form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -81,9 +81,9 @@
                         <div class="row">
                             <div class="col-md-4">
 
-                                <asp:RadioButton ID="rdd" runat="server" GroupName="genética" />
+                                <asp:RadioButton ID="rdoAnomaliaFSim" runat="server" GroupName="genética" />
                                 Sim
-                                <asp:RadioButton ID="rddd" runat="server" GroupName="genética" />
+                                <asp:RadioButton ID="rdoAnomaliaFNao" runat="server" GroupName="genética" />
                                 Não
                                    
                                    
@@ -94,7 +94,7 @@
                                         <asp:Label ID="lblexiste" runat="server" CssClass="control-label">*Se sim, qual?</asp:Label>
                                     </div>
                                     <div class="col-md-9">
-                                       <asp:DropDownList ID="ddlAnomaliaF" runat="server" CssClass="form-control" />
+                                        <asp:DropDownList ID="ddlAnomaliaF" runat="server" CssClass="form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -114,9 +114,9 @@
                         <div class="row">
                             <div class="col-md-4">
 
-                                <asp:RadioButton ID="rdSS" runat="server" GroupName="caso " />
+                                <asp:RadioButton ID="rdoAnomaliaFPSim" runat="server" GroupName="caso " />
                                 Sim
-                                <asp:RadioButton ID="rdNN" runat="server" GroupName="caso " />
+                                <asp:RadioButton ID="rdoAnomaliaFPNao" runat="server" GroupName="caso " />
                                 Não
                                    
                                    
@@ -127,7 +127,7 @@
                                         <asp:Label ID="lblL" runat="server" CssClass="control-label">*Se sim, qual?</asp:Label>
                                     </div>
                                     <div class="col-md-9">
-                                     <asp:DropDownList ID="ddlAnomaliaFP" runat="server" CssClass="form-control" />
+                                        <asp:DropDownList ID="ddlAnomaliaFP" runat="server" CssClass="form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -136,11 +136,19 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-12 text-right">
-                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
-                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click" />
+                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
                     </div>
 
                 </div>
+
+                      <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <asp:Label ID="lblResultado" runat="server" CssClass="control-label"></asp:Label>
+                    </div>
+
+                </div>
+                
 
             </form>
         </div>

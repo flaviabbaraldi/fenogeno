@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fenogeno.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,12 +12,44 @@ namespace Fenogeno.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+                return;
 
+            CarregarGrupoSanguineo();
+            CarregarFatorRh();
         }
 
-        protected void ddlSangue_SelectedIndexChanged(object sender, EventArgs e)
+      private void CarregarGrupoSanguineo()
         {
+            var lstGrupoSanguineo = new GrupoSanguineoDAO().BuscarTodos();
 
+            ddlSangue.DataTextField = "Descricao";
+            ddlSangue.DataValueField = "Id";
+            ddlSangue.DataSource = lstGrupoSanguineo.OrderBy(o => o.Descricao).ToList();
+            ddlSangue.DataBind(); 
+
+            ddlSangueP.DataTextField = "Descricao";
+            ddlSangueP.DataValueField = "Id";
+            ddlSangueP.DataSource = lstGrupoSanguineo.OrderBy(o => o.Descricao).ToList();
+            ddlSangueP.DataBind();
         }
+
+        private void CarregarFatorRh()
+        {
+            var lstFatorRh = new FatorRhDAO().BuscarTodos();
+
+            ddlRh.DataTextField = "Descricao";
+            ddlRh.DataValueField = "Id";
+            ddlRh.DataSource = lstFatorRh.OrderBy(o => o.Descricao).ToList();
+            ddlRh.DataBind();
+
+            ddlRhP.DataTextField = "Descricao";
+            ddlRhP.DataValueField = "Id";
+            ddlRhP.DataSource = lstFatorRh.OrderBy(o => o.Descricao).ToList();
+            ddlRhP.DataBind();
+        }
+
+
+       
     }
 }
