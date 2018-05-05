@@ -61,8 +61,55 @@ namespace Fenogeno.WebUI
 
             else if (rdoAnomaliaNao.Checked && rdoAnomaliaPSim.Checked && (campo2 == "Polidactila" || campo2 == "Doença de Huntington" || campo2 == "Doença de Hippel") && rdoAnomaliaFNao.Checked &&  rdoAnomaliaFPSim.Checked && (campo4 == "Polidactila" || campo4 == "Doença de Huntington" || campo4 == "Doença de Hippel"))
             {
-                lblResultado.Text = "Wellington é um nome estranho2: " + campo2 + " e " + campo4;
+                lblResultado.Text = "Wellington é um nome estranho3: " + campo2 + " e " + campo4;
             }
+
+            else if (rdoAnomaliaNao.Checked && rdoAnomaliaPNao.Checked && rdoAnomaliaFSim.Checked && (campo3 == "Polidactila" || campo3 == "Doença de Huntington" || campo3 == "Doença de Hippel") && rdoAnomaliaFPNao.Checked)
+            {
+                lblResultado.Text = "Wellington é um nome estranho4: " + campo3;
+            }
+
+            else if (rdoAnomaliaNao.Checked && rdoAnomaliaPNao.Checked && rdoAnomaliaFNao.Checked && rdoAnomaliaFPSim.Checked && (campo4 == "Polidactila" || campo4 == "Doença de Huntington" || campo4 == "Doença de Hippel"))
+            {
+                lblResultado.Text = "Wellington é um nome estranho5: " + campo4;
+            }
+
+            else if (rdoAnomaliaSim.Checked && (campo1 == "Polidactila" || campo1 == "Doença de Huntington" || campo1 == "Doença de Hippel") && rdoAnomaliaPSim.Checked && (campo2 == "Polidactila" || campo2 == "Doença de Huntington" || campo2 == "Doença de Hippel") && rdoAnomaliaFSim.Checked && (campo3 == "Polidactila" || campo3 == "Doença de Huntington" || campo3 == "Doença de Hippel") && rdoAnomaliaFPSim.Checked && (campo4 == "Polidactila" || campo4 == "Doença de Huntington" || campo4 == "Doença de Hippel"))
+            {
+                lblResultado.Text = "Wellington é um nome estranho6: " + campo1 + "," + campo2 + "," + campo3 + "e" + campo4 ;
+            }
+
+            else if (rdoAnomaliaSim.Checked && (campo1 == "Daltonismo" || campo1 == "Albinismo" || campo1 == "Hemofilia") && rdoAnomaliaPNao.Checked && rdoAnomaliaFSim.Checked && (campo3 == "Daltonismo" || campo3 == "Albinismo" || campo3 == "Hemofilia") && rdoAnomaliaFPNao.Checked)
+            {
+                lblResultado.Text = "Wellington é um nome estranho7: " + campo1 + " e " + campo3;
+            }
+
+            else if (rdoAnomaliaNao.Checked && rdoAnomaliaPSim.Checked && (campo2 == "Daltonismo" || campo2 == "Albinismo" || campo2 == "Hemofilia") && rdoAnomaliaFNao.Checked && rdoAnomaliaFPSim.Checked && (campo4 == "Daltonismo" || campo4 == "Albinismo" || campo4 == "Hemofilia"))
+            {
+                lblResultado.Text = "Wellington é um nome estranho8: " + campo2 + " e " + campo4;
+            }
+
+            else if (rdoAnomaliaNao.Checked && rdoAnomaliaPNao.Checked && rdoAnomaliaFSim.Checked && (campo3 == "Daltonismo" || campo3 == "Albinismo" || campo3 == "Hemofilia") && rdoAnomaliaFPNao.Checked)
+            {
+                lblResultado.Text = "Wellington é um nome estranho9: " + campo3;
+            }
+
+            else if (rdoAnomaliaNao.Checked && rdoAnomaliaPNao.Checked && rdoAnomaliaFNao.Checked && rdoAnomaliaFPSim.Checked && (campo4 == "Daltonismo" || campo4 == "Albinismo" || campo4 == "Hemofilia"))
+            {
+                lblResultado.Text = "Wellington é um nome estranho10: " + campo4;
+            }
+
+            else if (rdoAnomaliaSim.Checked && (campo1 == "Daltonismo" || campo1 == "Albinismo" || campo1 == "Hemofilia") && rdoAnomaliaPSim.Checked && (campo2 == "Daltonismo" || campo2 == "Albinismo" || campo2 == "Hemofilia") && rdoAnomaliaFSim.Checked && (campo3 == "Daltonismo" || campo3 == "Albinismo" || campo3 == "Hemofilia") && rdoAnomaliaFPSim.Checked && (campo4 == "Daltonismo" || campo4 == "Albinismo" || campo4 == "Hemofilia"))
+            {
+                lblResultado.Text = "Wellington é um nome estranho11: " + campo1 + "," + campo2 + "," + campo3 + "e" + campo4;
+            }
+
+            else if (rdoAnomaliaSim.Checked && (campo1 == "Polidactila" || campo1 == "Doença de Huntington" || campo1 == "Doença de Hippel") && rdoAnomaliaPSim.Checked && (campo2 == "Daltonismo" || campo2 == "Albinismo" || campo2 == "Hemofilia") && rdoAnomaliaFSim.Checked && (campo3 == "Polidactila" || campo3 == "Doença de Huntington" || campo3 == "Doença de Hippel") && rdoAnomaliaFPSim.Checked && (campo4 == "Daltonismo" || campo4 == "Albinismo" || campo4 == "Hemofilia"))
+            {
+                lblResultado.Text = "Wellington é um nome estranho12: " + campo1 + "," + campo2 + "," + campo3 + "e" + campo4;
+            }
+                
+
 
 
 
