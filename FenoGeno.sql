@@ -128,10 +128,11 @@ DESCRICAO	VARCHAR(100)
 
 INSERT INTO ANOMALIA
 VALUES
-('Polidactila'),
+('Polidactilia'),
 ('Doença de Huntington'),
 ('Doença de Hippel'),
 ('Daltonismo'),
 ('Albinismo'),
 ('Hemofilia')
+
 

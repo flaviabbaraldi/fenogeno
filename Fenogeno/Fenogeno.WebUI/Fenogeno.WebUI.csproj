@@ -144,10 +144,16 @@
     <Content Include="Content\ie10-viewport-bug-workaround.css" />
     <Content Include="Content\navbar-fixed-top.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DoencaDeHuntington.aspx" />
     <Content Include="Gustavo.aspx" />
+    <Content Include="Images\doença-de-Huntington-explicacao.jpg" />
+    <Content Include="Images\doença-de-Huntington-fotoreal.png" />
+    <Content Include="Images\polidactilia.jpg" />
+    <Content Include="Images\polidactilia_radiografia.jpg" />
     <Content Include="ListaEspecialistas.aspx" />
     <Content Include="ListaNoticias.aspx" />
     <Content Include="Monica.aspx" />
+    <Content Include="Polidactilia.aspx" />
     <Content Include="Victor.aspx" />
     <Content Include="Especialistas.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -269,6 +275,13 @@
     <Compile Include="CadastroNoticia.aspx.designer.cs">
       <DependentUpon>CadastroNoticia.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DoencaDeHuntington.aspx.cs">
+      <DependentUpon>DoencaDeHuntington.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoencaDeHuntington.aspx.designer.cs">
+      <DependentUpon>DoencaDeHuntington.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Gustavo.aspx.cs">
       <DependentUpon>Gustavo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -296,6 +309,13 @@
     </Compile>
     <Compile Include="Monica.aspx.designer.cs">
       <DependentUpon>Monica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Polidactilia.aspx.cs">
+      <DependentUpon>Polidactilia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Polidactilia.aspx.designer.cs">
+      <DependentUpon>Polidactilia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Victor.aspx.cs">
       <DependentUpon>Victor.aspx</DependentUpon>
