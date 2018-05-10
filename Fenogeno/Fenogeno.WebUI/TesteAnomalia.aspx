@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <asp:Label ID="lblAnomalia" runat="server"
-                                    CssClass="control-label">Você tem algum caso de anomalia genética na sua família?</asp:Label>
+                                    CssClass="control-label">Você é portador de alguma anomalia genética?</asp:Label>
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <asp:Label ID="Label2" runat="server"
-                                    CssClass="control-label">Seu parceiro tem algum caso de anomalia genética na família?</asp:Label>
+                                    CssClass="control-label">Seu parceiro é portador de alguma anomalia genética?</asp:Label>
                             </div>
                         </div>
 
@@ -74,7 +74,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <asp:Label ID="Label1" runat="server"
-                                    CssClass="control-label">Existem algum caso de doença genética na sua família?</asp:Label>
+                                    CssClass="control-label">Existe algum caso de anomalia genética na sua família?</asp:Label>
                             </div>
                         </div>
 
@@ -107,7 +107,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <asp:Label ID="Label3" runat="server"
-                                    CssClass="control-label">Seu parceiro tem algum caso de anomalia genética na família do seu parceiro?</asp:Label>
+                                    CssClass="control-label">Existe algum caso de anomalia genética na família de seu parceiro?</asp:Label>
                             </div>
                         </div>
 
