@@ -56,7 +56,7 @@
                     <div class="col-md-6">
                         <asp:Label ID="lblAlturaP" runat="server"
                             CssClass="control-label">Qual a altura de seu parceiro?</asp:Label>
-                        <asp:DropDownList ID="ddlAtp" runat="server" CssClass="form-control" />
+                        <asp:TextBox ID="txtAlturaP" runat="server" CssClass="form-control" />
                     </div>
                 </div>
                 <div class="form-group">
