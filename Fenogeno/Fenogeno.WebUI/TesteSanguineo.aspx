@@ -8,13 +8,13 @@
                 <div class="form-group">
 
                     <div class="col-md-6">
-                        <asp:Label CssClass="control-label" runat="server">Qual seu tipo sanguíneo?</asp:Label>
+                        <asp:Label CssClass="control-label" runat="server">Qual é o seu grupo sanguíneo?</asp:Label>
                         <asp:DropDownList ID="ddlSangue" runat="server" CssClass="form-control" />
 
 
                     </div>
                     <div class="col-md-6">
-                        <asp:Label CssClass="control-label" runat="server">Qual seu tipo sanguíneo de seu parceiro?</asp:Label>
+                        <asp:Label CssClass="control-label" runat="server">Qual é o grupo sanguíneo do seu parceiro?</asp:Label>
                         <asp:DropDownList ID="ddlSangueP" runat="server" CssClass="form-control" />
                     </div>
                 </div>
