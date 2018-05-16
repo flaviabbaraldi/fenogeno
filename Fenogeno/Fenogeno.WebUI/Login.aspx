@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <asp:Button ID="btnEntrar" runat="server" CssClass="btn btn-primary btn-block" Text="Entrar" />
+                                <asp:Button ID="btnEntrar" runat="server" CssClass="btn btn-primary btn-block" Text="Entrar" OnClick="btnEntrar_Click" />
                             </div>
                         </div>
                     </div>

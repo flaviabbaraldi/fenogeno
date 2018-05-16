@@ -198,7 +198,7 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Noticia1.aspx" />
+    <Content Include="LerNoticia.aspx" />
     <Content Include="Scripts\noticias.html" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -275,6 +275,7 @@
     <Compile Include="CadastroNoticia.aspx.designer.cs">
       <DependentUpon>CadastroNoticia.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomPrincipalSerializeModel.cs" />
     <Compile Include="DoencaDeHuntington.aspx.cs">
       <DependentUpon>DoencaDeHuntington.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +283,7 @@
     <Compile Include="DoencaDeHuntington.aspx.designer.cs">
       <DependentUpon>DoencaDeHuntington.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FormsAuthenticationUtil.cs" />
     <Compile Include="Gustavo.aspx.cs">
       <DependentUpon>Gustavo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -356,12 +358,12 @@
       <DependentUpon>Noticias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Noticia1.aspx.cs">
-      <DependentUpon>Noticia1.aspx</DependentUpon>
+    <Compile Include="LerNoticia.aspx.cs">
+      <DependentUpon>LerNoticia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Noticia1.aspx.designer.cs">
-      <DependentUpon>Noticia1.aspx</DependentUpon>
+    <Compile Include="LerNoticia.aspx.designer.cs">
+      <DependentUpon>LerNoticia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

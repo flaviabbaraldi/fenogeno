@@ -10,12 +10,9 @@ namespace Fenogeno.DataAccess
 {
     public class NoticiaDAO
     {
-
         public void Inserir(Noticia obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
             {
                 string strSQL = @"INSERT INTO NOTICIA (TITULO, DESCRICAO, CORPO_TEXTO, FOTO) VALUES (@TITULO, @DESCRICAO, @CORPO_TEXTO, @FOTO);";
 
@@ -35,14 +32,11 @@ namespace Fenogeno.DataAccess
             }
         }
 
-
         public List<Noticia> BuscarTodos()
         {
             var lstNoticias = new List<Noticia>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
             {
                 string strSQL = @"SELECT * FROM NOTICIA;";
 
@@ -61,7 +55,7 @@ namespace Fenogeno.DataAccess
                     {
                         var noticia = new Noticia()
                         {
-                            Id = Convert.ToInt32(row["ID"]),
+                            Id = Convert.ToInt32(row["COD"]),
                             Titulo = row["TITULO"].ToString(),
                             Subtitulo = row["DESCRICAO"].ToString(),
                             Texto = row["CORPO_TEXTO"].ToString(),
@@ -75,6 +69,42 @@ namespace Fenogeno.DataAccess
 
             return lstNoticias;
 
+        }
+
+        public Noticia BuscarPorId(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT * FROM NOTICIA WHERE COD = @COD;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@COD", SqlDbType.Int).Value = id;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var noticia = new Noticia()
+                    {
+                        Id = Convert.ToInt32(row["COD"]),
+                        Titulo = row["TITULO"].ToString(),
+                        Subtitulo = row["DESCRICAO"].ToString(),
+                        Texto = row["CORPO_TEXTO"].ToString(),
+                        Foto = row["FOTO"].ToString(),
+                    };
+
+                    return noticia;
+                }
+            }
         }
     }
 }
