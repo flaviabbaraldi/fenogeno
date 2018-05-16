@@ -2,87 +2,43 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style type="text/css">
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+            border: none !important;
+        }
+    </style>
     <div class="row">
         <div class="col-md-12">
             <form runat="server" class="form-horizontal">
                 <h2>Notícias</h2>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="img-responsive" src="Images/vacinas-gravidez.jpeg" />
-                    </div>
-                    <div class="col-md-8">
+                <asp:DataList ID="gridView" CssClass="table text-center" runat="server" RepeatColumns="1" RepeatLayout="Table">
+                    <ItemTemplate>
                         <div class="row">
-                            <div class="col-md-12">
-                                <h3>As vacinas indispensáveis na gravidez e no pós-parto</h3>
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="<%# ResolveUrl(string.Format("~/Uploads/{0}", (string)Eval("Foto"))) %>" />
+                            </div>
+                            <div class="col-md-8 text-left">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3><%# Eval("Titulo") %></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5><%# Eval("Subtitulo") %></h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="btn btn-primary" href="<%# ResolveUrl(string.Format("~/LerNoticia.aspx?id={0}", Eval("Id"))) %>">Ver mais...</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h5>É importante que a mulher esteja imunizada durante estes dois momentos, tanto para a saúde dela quanto para a do filho!</h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a class="btn btn-primary" href="noticia1.aspx">Ver mais...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="img-responsive" src="Images/pediatra.jpg" />
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Título da notícia</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h5>Apartamento vai a leilão público nos dias 15 e 22 de maio,
-                               por ordem do próprio juiz. Decisão atende a pedido do leiloeiro, que alegou que a 
-                               procura tem sido muito grande.</h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a class="btn btn-primary" href="#">Ver mais...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="img-responsive" src="Images/pediatra.jpg" />
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Título da notícia</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h5>Apartamento vai a leilão público nos dias 15 e 22 de maio,
-                               por ordem do próprio juiz. Decisão atende a pedido do leiloeiro, que alegou que a 
-                               procura tem sido muito grande.</h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a class="btn btn-primary" href="#">Ver mais...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+                        <br />
+                    </ItemTemplate>
+                </asp:DataList>
             </form>
         </div>
-
     </div>
 </asp:Content>

@@ -74,8 +74,44 @@ namespace Fenogeno.DataAccess
 
             }
 
-            return lstUsuarios;           
+            return lstUsuarios;
         }
 
+        public Usuario Logar(Usuario obj)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT TOP 1 * FROM USUARIO WHERE EMAIL = @EMAIL AND SENHA = @SENHA;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = strSQL;
+                    cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = obj.Email;
+                    cmd.Parameters.Add("@SENHA", SqlDbType.VarChar).Value = obj.Senha;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var usuario = new Usuario()
+                    {
+                        Id = Convert.ToInt32(row["ID"]),
+                        Nome = row["NOME"].ToString(),
+                        Login = row["LOGIN"].ToString(),
+                        Senha = row["SENHA"].ToString(),
+                        Email = row["EMAIL"].ToString(),
+                    };
+
+                    return usuario;
+                }
+            }
+        }
     }
 }
