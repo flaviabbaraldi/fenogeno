@@ -1,22 +1,17 @@
 ﻿using Fenogeno.DataAccess;
 using Fenogeno.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Fenogeno.WebUI
-{ 
-    public partial class CadastroDeEspecialistas : System.Web.UI.Page
 {
-   
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class CadastroDeEspecialistas : System.Web.UI.Page
     {
-
-    }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (IsPostBack)
+                return;
+        }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -24,18 +19,17 @@ namespace Fenogeno.WebUI
             {
                 Salvar();
                 LimparCampos();
-                Response.Redirect("~/ListaEspecialistas.aspx");
+                Response.Redirect("~/Admin/ListaEspecialistas.aspx");
             }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ListaEspecialistas.aspx");
+            Response.Redirect("~/Admin/ListaEspecialistas.aspx");
         }
 
         private void LimparCampos()
         {
-
             txtCRM.Text = string.Empty;
             txtCPF.Text = string.Empty;
             txtNome.Text = string.Empty;
@@ -100,13 +94,11 @@ namespace Fenogeno.WebUI
             if (string.IsNullOrWhiteSpace(txtAnoT.Text))
                 return false;
 
-
             return true;
         }
 
         private void Salvar()
         {
-
             var obj = new Especialista();
             obj.CRM = txtCRM.Text;
             obj.CPF = txtCPF.Text;
@@ -125,7 +117,6 @@ namespace Fenogeno.WebUI
             obj.Ano_termino_e = Convert.ToDateTime(txtAnoT.Text);
             obj.Foto = fupArquivo.FileName;
 
-
             if (fupArquivo.HasFile)
             {
                 var fileName = Path.GetFileName(fupArquivo.FileName);
@@ -133,10 +124,6 @@ namespace Fenogeno.WebUI
             }
 
             new EspecialistaDAO().Inserir(obj);
-
-
         }
-
-       
     }
 }

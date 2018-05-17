@@ -1,11 +1,9 @@
 ﻿using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fenogeno.DataAccess
 {
@@ -13,19 +11,14 @@ namespace Fenogeno.DataAccess
     {
         public void Inserir(Especialista obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"INSERT INTO ESPECIALISTA (CRM, CPF, NOME, EMAIL, TELEFONE, CURSO_F, UNIVERSIDADE_C, DURACAO_C, ANO_INICIO_C, ANO_TERMINO_C, AREA_E, 
-                                                            UNIVERSIDADE_E, DURACAO_E, ANO_INICIO_E, ANO_TERMINO_E, FOTO) 
-                                                                VALUES (@CRM, @CPF, @NOME, @EMAIL, @TELEFONE, @CURSO_F, @UNIVERSIDADE_C, @DURACAO_C, @ANO_INICIO_C, @ANO_TERMINO_C, @AREA_E, 
-                                                            @UNIVERSIDADE_E, @DURACAO_E, @ANO_INICIO_E, @ANO_TERMINO_E, @FOTO);";
+                string strSQL = @"INSERT INTO ESPECIALISTA (CRM, CPF, NOME, EMAIL, TELEFONE, CURSO_F, UNIVERSIDADE_C, DURACAO_C, ANO_INICIO_C, ANO_TERMINO_C, AREA_E, UNIVERSIDADE_E, DURACAO_E, ANO_INICIO_E, ANO_TERMINO_E, FOTO) 
+                                  VALUES (@CRM, @CPF, @NOME, @EMAIL, @TELEFONE, @CURSO_F, @UNIVERSIDADE_C, @DURACAO_C, @ANO_INICIO_C, @ANO_TERMINO_C, @AREA_E, @UNIVERSIDADE_E, @DURACAO_E, @ANO_INICIO_E, @ANO_TERMINO_E, @FOTO);";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-
                     cmd.Parameters.Add("@CRM", SqlDbType.VarChar).Value = obj.CRM;
                     cmd.Parameters.Add("@CPF", SqlDbType.VarChar).Value = obj.CPF;
                     cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = obj.Nome;
@@ -43,13 +36,28 @@ namespace Fenogeno.DataAccess
                     cmd.Parameters.Add("@ANO_TERMINO_E", SqlDbType.VarChar).Value = obj.Ano_termino_e;
                     cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto;
 
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
+        public void Excluir(Especialista obj)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"DELETE FROM ESPECIALISTA WHERE COD = @COD;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@COD", SqlDbType.Int).Value = obj.Cod;
+                    cmd.CommandText = strSQL;
 
                     conn.Open();
-
                     cmd.ExecuteNonQuery();
-
                     conn.Close();
-
                 }
             }
         }
@@ -58,9 +66,7 @@ namespace Fenogeno.DataAccess
         {
             var lstEspecialistas = new List<Especialista>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM ESPECIALISTA;";
 
@@ -79,7 +85,7 @@ namespace Fenogeno.DataAccess
                     {
                         var especialista = new Especialista()
                         {
-                            CRM =row["CRM"].ToString(),
+                            CRM = row["CRM"].ToString(),
                             CPF = row["CPF"].ToString(),
                             Nome = row["NOME"].ToString(),
                             Email = row["EMAIL"].ToString(),
@@ -103,7 +109,7 @@ namespace Fenogeno.DataAccess
             }
 
             return lstEspecialistas;
-            
+
         }
     }
 }

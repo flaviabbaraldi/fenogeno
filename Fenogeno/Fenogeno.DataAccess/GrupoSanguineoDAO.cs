@@ -1,23 +1,19 @@
 ﻿using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fenogeno.DataAccess
 {
     public class GrupoSanguineoDAO
     {
-        public List<GrupoSanguineo>BuscarTodos()
+        public List<GrupoSanguineo> BuscarTodos()
         {
             var lstGrupoSanguineo = new List<GrupoSanguineo>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM GRUPO_SANGUINEO;";
 
@@ -46,8 +42,6 @@ namespace Fenogeno.DataAccess
             }
 
             return lstGrupoSanguineo;
-
         }
-
     }
 }

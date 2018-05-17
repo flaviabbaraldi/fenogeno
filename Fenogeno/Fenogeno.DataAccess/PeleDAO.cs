@@ -1,23 +1,19 @@
 ﻿using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fenogeno.DataAccess
 {
     public class PeleDAO
     {
-        public List<Pele>BuscarTodos()
+        public List<Pele> BuscarTodos()
         {
             var lstPele = new List<Pele>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM PELE;";
 
@@ -47,6 +43,5 @@ namespace Fenogeno.DataAccess
 
             return lstPele;
         }
-
     }
 }

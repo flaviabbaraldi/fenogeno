@@ -1,11 +1,9 @@
 ﻿using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fenogeno.DataAccess
 {
@@ -15,9 +13,7 @@ namespace Fenogeno.DataAccess
         {
             var lstCabelo = new List<Cabelo>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM CABELO;";
 

@@ -1,11 +1,9 @@
 ﻿using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fenogeno.DataAccess
 {
@@ -15,9 +13,7 @@ namespace Fenogeno.DataAccess
         {
             var lstOlhos = new List<Olho>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM OLHOS;";
 
@@ -37,7 +33,7 @@ namespace Fenogeno.DataAccess
                         var olhos = new Olho()
                         {
                             Id = Convert.ToInt32(row["ID"]),
-                            Descricao = row["DESCRICAO"].ToString()                           
+                            Descricao = row["DESCRICAO"].ToString()
                         };
 
                         lstOlhos.Add(olhos);

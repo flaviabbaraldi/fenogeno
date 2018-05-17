@@ -2,15 +2,20 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-3">
+            <h1>
+                <asp:Label ID="lblTitulo" runat="server"></asp:Label>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-responsive" src="Images/vacinas-gravidez.jpeg" />
+        </div>
+        <div class="col-md-8">
             <form class="form-horizontal" runat="server">
-                <h1>
-                    <asp:Label ID="lblTitulo" runat="server"></asp:Label>
-                </h1>
-                <img class="img-responsive" src="Images/vacinas-gravidez.jpeg" />
-                <br />
                 <p>
-                    <asp:Label ID="lblConteudo" runat="server"></asp:Label>
+                    <asp:Literal ID="lblTexto" runat="server"></asp:Literal>
                 </p>
             </form>
         </div>

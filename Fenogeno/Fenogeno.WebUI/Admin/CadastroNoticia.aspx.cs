@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.SqlClient;
+﻿using Fenogeno.DataAccess;
 using Fenogeno.Models;
-using Fenogeno.DataAccess;
+using System;
 using System.IO;
 
 namespace Fenogeno.WebUI
@@ -15,7 +9,8 @@ namespace Fenogeno.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
@@ -24,13 +19,13 @@ namespace Fenogeno.WebUI
             {
                 Salvar();
                 LimparCampos();
-                Response.Redirect("~/ListaNoticias.aspx");
+                Response.Redirect("~/Admin/ListaNoticias.aspx");
             }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ListaNoticias.aspx");
+            Response.Redirect("~/Admin/ListaNoticias.aspx");
         }
 
         private void LimparCampos()
@@ -66,13 +61,9 @@ namespace Fenogeno.WebUI
             {
                 var fileName = Path.GetFileName(fupArquivo.FileName);
                 fupArquivo.SaveAs(Server.MapPath(string.Format("~/Uploads/{0}", fileName)));
-
             }
-
 
             new NoticiaDAO().Inserir(obj);
         }
-
-       
     }
 }

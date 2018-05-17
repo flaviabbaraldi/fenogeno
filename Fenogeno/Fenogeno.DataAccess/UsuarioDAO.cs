@@ -1,10 +1,9 @@
 ﻿using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 
 namespace Fenogeno.DataAccess
 {
@@ -12,27 +11,21 @@ namespace Fenogeno.DataAccess
     {
         public void Inserir(Usuario obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"INSERT INTO USUARIO (NOME, LOGIN, SENHA, EMAIL) VALUES (@NOME, @LOGIN, @SENHA, @EMAIL);";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-
                     cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = obj.Nome;
                     cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = obj.Login;
                     cmd.Parameters.Add("@SENHA", SqlDbType.VarChar).Value = obj.Senha;
                     cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = obj.Email;
 
                     conn.Open();
-
                     cmd.ExecuteNonQuery();
-
                     conn.Close();
-
                 }
             }
         }
@@ -41,9 +34,7 @@ namespace Fenogeno.DataAccess
         {
             var lstUsuarios = new List<Usuario>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO;
-                                                        Data source = localhost;
-                                                        Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM USUARIO;";
 
@@ -79,7 +70,7 @@ namespace Fenogeno.DataAccess
 
         public Usuario Logar(Usuario obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT TOP 1 * FROM USUARIO WHERE EMAIL = @EMAIL AND SENHA = @SENHA;";
 

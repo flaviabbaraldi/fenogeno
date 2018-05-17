@@ -132,10 +132,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ana.aspx" />
+    <Content Include="Content\images\buttons.gif" />
+    <Content Include="Content\images\toolbar.gif" />
+    <Content Include="Content\jquery.cleditor.css" />
+    <Content Include="Scripts\jquery.cleditor.js" />
+    <Content Include="Scripts\jquery.cleditor.min.js" />
+    <Content Include="Users\Ana.aspx" />
     <Content Include="Cadastro.aspx" />
-    <Content Include="CadastroDeEspecialistas.aspx" />
-    <Content Include="CadastroNoticia.aspx" />
+    <Content Include="Admin\CadastroDeEspecialistas.aspx" />
+    <Content Include="Admin\CadastroNoticia.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -145,16 +150,16 @@
     <Content Include="Content\navbar-fixed-top.css" />
     <Content Include="Content\Site.css" />
     <Content Include="DoencaDeHuntington.aspx" />
-    <Content Include="Gustavo.aspx" />
+    <Content Include="Users\Gustavo.aspx" />
     <Content Include="Images\doença-de-Huntington-explicacao.jpg" />
     <Content Include="Images\doença-de-Huntington-fotoreal.png" />
     <Content Include="Images\polidactilia.jpg" />
     <Content Include="Images\polidactilia_radiografia.jpg" />
-    <Content Include="ListaEspecialistas.aspx" />
-    <Content Include="ListaNoticias.aspx" />
-    <Content Include="Monica.aspx" />
+    <Content Include="Admin\ListaEspecialistas.aspx" />
+    <Content Include="Admin\ListaNoticias.aspx" />
+    <Content Include="Users\Monica.aspx" />
     <Content Include="Polidactilia.aspx" />
-    <Content Include="Victor.aspx" />
+    <Content Include="Users\Victor.aspx" />
     <Content Include="Especialistas.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -245,11 +250,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ana.aspx.cs">
+    <Compile Include="Users\Ana.aspx.cs">
       <DependentUpon>Ana.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Ana.aspx.designer.cs">
+    <Compile Include="Users\Ana.aspx.designer.cs">
       <DependentUpon>Ana.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -261,18 +266,18 @@
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CadastroDeEspecialistas.aspx.cs">
+    <Compile Include="Admin\CadastroDeEspecialistas.aspx.cs">
       <DependentUpon>CadastroDeEspecialistas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CadastroDeEspecialistas.aspx.designer.cs">
+    <Compile Include="Admin\CadastroDeEspecialistas.aspx.designer.cs">
       <DependentUpon>CadastroDeEspecialistas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CadastroNoticia.aspx.cs">
+    <Compile Include="Admin\CadastroNoticia.aspx.cs">
       <DependentUpon>CadastroNoticia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CadastroNoticia.aspx.designer.cs">
+    <Compile Include="Admin\CadastroNoticia.aspx.designer.cs">
       <DependentUpon>CadastroNoticia.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomPrincipalSerializeModel.cs" />
@@ -284,32 +289,32 @@
       <DependentUpon>DoencaDeHuntington.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormsAuthenticationUtil.cs" />
-    <Compile Include="Gustavo.aspx.cs">
+    <Compile Include="Users\Gustavo.aspx.cs">
       <DependentUpon>Gustavo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gustavo.aspx.designer.cs">
+    <Compile Include="Users\Gustavo.aspx.designer.cs">
       <DependentUpon>Gustavo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ListaEspecialistas.aspx.cs">
+    <Compile Include="Admin\ListaEspecialistas.aspx.cs">
       <DependentUpon>ListaEspecialistas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListaEspecialistas.aspx.designer.cs">
+    <Compile Include="Admin\ListaEspecialistas.aspx.designer.cs">
       <DependentUpon>ListaEspecialistas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ListaNoticias.aspx.cs">
+    <Compile Include="Admin\ListaNoticias.aspx.cs">
       <DependentUpon>ListaNoticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListaNoticias.aspx.designer.cs">
+    <Compile Include="Admin\ListaNoticias.aspx.designer.cs">
       <DependentUpon>ListaNoticias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Monica.aspx.cs">
+    <Compile Include="Users\Monica.aspx.cs">
       <DependentUpon>Monica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Monica.aspx.designer.cs">
+    <Compile Include="Users\Monica.aspx.designer.cs">
       <DependentUpon>Monica.aspx</DependentUpon>
     </Compile>
     <Compile Include="Polidactilia.aspx.cs">
@@ -319,11 +324,11 @@
     <Compile Include="Polidactilia.aspx.designer.cs">
       <DependentUpon>Polidactilia.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Victor.aspx.cs">
+    <Compile Include="Users\Victor.aspx.cs">
       <DependentUpon>Victor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Victor.aspx.designer.cs">
+    <Compile Include="Users\Victor.aspx.designer.cs">
       <DependentUpon>Victor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">

@@ -7,7 +7,7 @@ namespace Fenogeno.Models
 {
     public class Noticia
     {
-        public int Id { get; set; }
+        public int Cod { get; set; }
 
         public string Titulo { get; set; }
 

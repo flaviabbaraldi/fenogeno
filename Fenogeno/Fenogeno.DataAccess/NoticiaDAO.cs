@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Fenogeno.Models;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
+using System.Configuration;
 using System.Data;
-using Fenogeno.Models;
+using System.Data.SqlClient;
 
 namespace Fenogeno.DataAccess
 {
@@ -12,14 +11,13 @@ namespace Fenogeno.DataAccess
     {
         public void Inserir(Noticia obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"INSERT INTO NOTICIA (TITULO, DESCRICAO, CORPO_TEXTO, FOTO) VALUES (@TITULO, @DESCRICAO, @CORPO_TEXTO, @FOTO);";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-
                     cmd.Parameters.Add("@TITULO", SqlDbType.VarChar).Value = obj.Titulo;
                     cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = obj.Subtitulo;
                     cmd.Parameters.Add("@CORPO_TEXTO", SqlDbType.VarChar).Value = obj.Texto;
@@ -32,11 +30,29 @@ namespace Fenogeno.DataAccess
             }
         }
 
+        public void Excluir(Noticia obj)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"DELETE FROM NOTICIA WHERE COD = @COD;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@COD", SqlDbType.Int).Value = obj.Cod;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
         public List<Noticia> BuscarTodos()
         {
             var lstNoticias = new List<Noticia>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM NOTICIA;";
 
@@ -55,7 +71,7 @@ namespace Fenogeno.DataAccess
                     {
                         var noticia = new Noticia()
                         {
-                            Id = Convert.ToInt32(row["COD"]),
+                            Cod = Convert.ToInt32(row["COD"]),
                             Titulo = row["TITULO"].ToString(),
                             Subtitulo = row["DESCRICAO"].ToString(),
                             Texto = row["CORPO_TEXTO"].ToString(),
@@ -73,7 +89,7 @@ namespace Fenogeno.DataAccess
 
         public Noticia BuscarPorId(int id)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=FENOGENO; Data source = localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM NOTICIA WHERE COD = @COD;";
 
@@ -95,7 +111,7 @@ namespace Fenogeno.DataAccess
                     var row = dt.Rows[0];
                     var noticia = new Noticia()
                     {
-                        Id = Convert.ToInt32(row["COD"]),
+                        Cod = Convert.ToInt32(row["COD"]),
                         Titulo = row["TITULO"].ToString(),
                         Subtitulo = row["DESCRICAO"].ToString(),
                         Texto = row["CORPO_TEXTO"].ToString(),

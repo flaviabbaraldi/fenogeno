@@ -8,6 +8,8 @@ namespace Fenogeno.Models
 {
     public class Especialista
     {
+        public int Cod { get; set; }
+
         public string CRM { get; set; }
 
         public string CPF { get; set; }

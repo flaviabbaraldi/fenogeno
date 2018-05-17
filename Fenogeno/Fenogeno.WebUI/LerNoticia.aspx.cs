@@ -24,7 +24,7 @@ namespace Fenogeno.WebUI
                     if (noticia != null)
                     {
                         lblTitulo.Text = noticia.Titulo;
-                        lblConteudo.Text = noticia.Texto;
+                        lblTexto.Text = noticia.Texto;
                     }
                 }
             }
