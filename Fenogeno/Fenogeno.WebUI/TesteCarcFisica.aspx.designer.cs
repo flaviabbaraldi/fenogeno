@@ -49,6 +49,24 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.DropDownList ddlOlhosP;
         
         /// <summary>
+        /// btnOlhos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnOlhos;
+        
+        /// <summary>
+        /// lblResultadoO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultadoO;
+        
+        /// <summary>
         /// lblcabelo control.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,24 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCabeloP;
+        
+        /// <summary>
+        /// btnCabelo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCabelo;
+        
+        /// <summary>
+        /// lblResultadoC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultadoC;
         
         /// <summary>
         /// lblPele control.
@@ -121,40 +157,22 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.DropDownList ddlPeleP;
         
         /// <summary>
-        /// lblAltura control.
+        /// btnPele control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAltura;
+        protected global::System.Web.UI.WebControls.Button btnPele;
         
         /// <summary>
-        /// txtAltura control.
+        /// lblResultadoP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAltura;
-        
-        /// <summary>
-        /// lblAlturaP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlturaP;
-        
-        /// <summary>
-        /// txtAlturaP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAlturaP;
+        protected global::System.Web.UI.WebControls.Label lblResultadoP;
         
         /// <summary>
         /// btnSalvar control.

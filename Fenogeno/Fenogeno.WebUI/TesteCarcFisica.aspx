@@ -6,47 +6,66 @@
             <form runat="server" class="form-horizontal">
                 <h2>Testes Características Físicas</h2>
                 <div class="form-group">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <asp:Label ID="lblOlhos" runat="server"
                             CssClass="control-label">Qual a cor dos seus olhos?</asp:Label>
                         <asp:DropDownList ID="ddlOlhos" runat="server" CssClass="form-control"  />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <asp:Label ID="lblOlhosP" runat="server"
                             CssClass="control-label">Qual a cor dos olhos de seu parceiro?</asp:Label>
                         <asp:DropDownList ID="ddlOlhosP" runat="server" CssClass="form-control" />
                     </div>
+                    <div class="col-md-3">
+                        <asp:Button ID="btnOlhos" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnOlhos_Click" />
+                    </div>
+                    <div class="col-md-3">
+                        <asp:Label ID="lblResultadoO" runat="server" CssClass="control-label"></asp:Label>
+                    </div>
+
                 </div>
 
                 <div class="form-group">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <asp:Label ID="lblcabelo" runat="server"
                             CssClass="control-label">Qual a cor natural do seu cabelo?</asp:Label>
                         <asp:DropDownList ID="ddlCabelo" runat="server" CssClass="form-control" />
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <asp:Label ID="lblCabeloP" runat="server"
                             CssClass="control-label">Qual a cor natural do cabelo do seu parceiro?</asp:Label>
                         <asp:DropDownList ID="ddlCabeloP" runat="server" CssClass="form-control" />
                     </div>
+                    <div class="col-md-2">
+                        <asp:Button ID="btnCabelo" runat="server" Text="Calcular" CssClass="btn btn-primary" />
+                    </div>
+                    <div class="col-md-3">
+                        <asp:Label ID="lblResultadoC" runat="server" CssClass="control-label"></asp:Label>
+                    </div>
                 </div>
                 <div class="form-group">
 
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <asp:Label ID="lblPele" runat="server"
                             CssClass="control-label">Qual a sua cor de pele?</asp:Label>
                         <asp:DropDownList ID="ddlPele" runat="server" CssClass="form-control" />
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <asp:Label ID="lblPeleP" runat="server"
                             CssClass="control-label"> Qual a cor de pele do seu parceiro?</asp:Label>
                         <asp:DropDownList ID="ddlPeleP" runat="server" CssClass="form-control" />
                     </div>
+                    <div class="col-md-3">
+                        <asp:Button ID="btnPele" runat="server" Text="Calcular" CssClass="btn btn-primary" />
+                    </div>
+                    <div class="col-md-3">
+                        <asp:Label ID="lblResultadoP" runat="server" CssClass="control-label"></asp:Label>
+                    </div>
                 </div>
 
-                <div class="form-group">
+                <%--<div class="form-group">
                     <div class="col-md-6">
                         <asp:Label ID="lblAltura" runat="server"
                             CssClass="control-label">Qual sua altura?</asp:Label>
@@ -58,13 +77,15 @@
                             CssClass="control-label">Qual a altura de seu parceiro?</asp:Label>
                         <asp:TextBox ID="txtAlturaP" runat="server" CssClass="form-control" />
                     </div>
-                </div>
+                </div>--%>
                 <div class="form-group">
                     <div class="col-md-12 text-right">
-                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary"  />
                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
                     </div>
                 </div>
+
+            
             </form>
         </div>
     </div>
