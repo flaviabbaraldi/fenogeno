@@ -12,7 +12,6 @@ namespace Fenogeno.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (IsPostBack)
                 return;
 
@@ -26,13 +25,13 @@ namespace Fenogeno.WebUI
             var lstOlhos = new OlhoDAO().BuscarTodos();
 
             ddlOlhos.DataTextField = "Descricao";
-            ddlOlhos.DataValueField = "Id";
+            ddlOlhos.DataValueField = "Descricao";
             ddlOlhos.DataSource = lstOlhos.OrderBy(o => o.Descricao).ToList();
             ddlOlhos.DataBind();
 
 
             ddlOlhosP.DataTextField = "Descricao";
-            ddlOlhosP.DataValueField = "Id";
+            ddlOlhosP.DataValueField = "Descricao";
             ddlOlhosP.DataSource = lstOlhos.OrderBy(o => o.Descricao).ToList();
             ddlOlhosP.DataBind();
         }
@@ -42,12 +41,12 @@ namespace Fenogeno.WebUI
             var lstCabelo = new CabeloDAO().BuscarTodos();
 
             ddlCabelo.DataTextField = "Descricao";
-            ddlCabelo.DataValueField = "Id";
+            ddlCabelo.DataValueField = "Descricao";
             ddlCabelo.DataSource = lstCabelo.OrderBy(o => o.Descricao).ToList();
             ddlCabelo.DataBind();
 
             ddlCabeloP.DataTextField = "Descricao";
-            ddlCabeloP.DataValueField = "Id";
+            ddlCabeloP.DataValueField = "Descricao";
             ddlCabeloP.DataSource = lstCabelo.OrderBy(o => o.Descricao).ToList();
             ddlCabeloP.DataBind();
         }
@@ -57,17 +56,32 @@ namespace Fenogeno.WebUI
             var lstPele = new PeleDAO().BuscarTodos();
 
             ddlPele.DataTextField = "Descricao";
-            ddlPele.DataValueField = "Id";
+            ddlPele.DataValueField = "Descricao";
             ddlPele.DataSource = lstPele.OrderBy(o => o.Descricao).ToList();
             ddlPele.DataBind();
 
             ddlPeleP.DataTextField = "Descricao";
-            ddlPeleP.DataValueField = "Id";
+            ddlPeleP.DataValueField = "Descricao";
             ddlPeleP.DataSource = lstPele.OrderBy(o => o.Descricao).ToList();
             ddlPeleP.DataBind();
 
         }
 
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+           
+        }
 
+        protected void btnOlhos_Click(object sender, EventArgs e)
+        {
+            string campo1 = ddlOlhos.SelectedValue;
+            string campo2 = ddlOlhosP.SelectedValue;
+
+
+            if ((campo1 == "Azul") && (campo2 == "Castanho"))
+            {
+                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% castanho.";
+            }
+        }
     }
 }
