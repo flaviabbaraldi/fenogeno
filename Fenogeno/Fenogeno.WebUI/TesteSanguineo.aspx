@@ -33,8 +33,14 @@
 
                 <div class="form-group">
                     <div class="col-md-12 text-right">
-                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click" />
                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <asp:Label ID="lblResultado" runat="server" CssClass="control-label"></asp:Label>
                     </div>
                 </div>
 
