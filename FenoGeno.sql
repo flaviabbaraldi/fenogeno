@@ -10,7 +10,6 @@ INSERT INTO OLHOS
 VALUES
 ('Azul'),
 ('Castanho'),
-('Preto'),
 ('Verde')
 
 SELECT * FROM OLHOS;
