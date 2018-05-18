@@ -80,7 +80,43 @@ namespace Fenogeno.WebUI
 
             if ((campo1 == "Azul") && (campo2 == "Castanho"))
             {
-                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% castanho.";
+                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% castanhos.";
+            }
+            else if ((campo1 == "Azul")&& (campo2 == "Verde"))
+            {
+                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% verdes.";
+            }
+            else if ((campo1 == "Verde") && (campo2 == "Castanho"))
+            {
+                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos castanhos, 37,5% de chance de serem verdes e 12,5% de serem azuis.";
+            }
+            else if ((campo1 == "Castanho") && (campo2 == "Castanho"))
+            {
+                lblResultadoO.Text = "Seu filho tem 75% de chance de ter olhos castanhos, 18,75% de chance de serem verdes e 6,25% de serem azuis. ";
+            }
+            else if ((campo1 == "Verde") && (campo2 == "Verde"))
+            {
+                lblResultadoO.Text = "Seu filho tem 75% de chance de ter olhos verdes, 25% de chance de serem azuis e 1% de serem castanhos.";
+            }
+            else if ((campo1 == "Azul") && (campo2 == "Azul"))
+            {
+                lblResultadoO.Text = "Seu filho tem 99% de chance de ter olhos azuis e 1% de serem verdes.";
+            }
+            else if ((campo1 == "Castanho") && (campo2 == "Azul"))
+            {
+                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% castanhos.";
+            }
+            else if ((campo1 == "Verde") && (campo2 == "Azul"))
+            {
+                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% verdes.";
+            }
+            else if ((campo1 == "Castanho") && (campo2 == "Verde"))
+            {
+                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos castanhos, 37,5% de chance de serem verdes e 12,5% de serem azuis.";
+            }
+            else
+            {
+                lblResultadoO.Text = "Nenhum resultado encontrado.";
             }
         }
     }
