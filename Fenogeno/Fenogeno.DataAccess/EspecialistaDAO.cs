@@ -19,22 +19,22 @@ namespace Fenogeno.DataAccess
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-                    cmd.Parameters.Add("@CRM", SqlDbType.VarChar).Value = obj.CRM;
-                    cmd.Parameters.Add("@CPF", SqlDbType.VarChar).Value = obj.CPF;
-                    cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = obj.Nome;
-                    cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = obj.Email;
-                    cmd.Parameters.Add("@TELEFONE", SqlDbType.VarChar).Value = obj.Telefone;
-                    cmd.Parameters.Add("@CURSO_F", SqlDbType.VarChar).Value = obj.Curso_f;
-                    cmd.Parameters.Add("@UNIVERSIDADE_C", SqlDbType.VarChar).Value = obj.Universidade_c;
-                    cmd.Parameters.Add("@DURACAO_C", SqlDbType.VarChar).Value = obj.Duracao_c;
-                    cmd.Parameters.Add("@ANO_INICIO_C", SqlDbType.VarChar).Value = obj.Ano_inicio_c;
-                    cmd.Parameters.Add("@ANO_TERMINO_C", SqlDbType.VarChar).Value = obj.Ano_termino_c;
-                    cmd.Parameters.Add("@AREA_E", SqlDbType.VarChar).Value = obj.Area_e;
-                    cmd.Parameters.Add("@UNIVERSIDADE_E", SqlDbType.VarChar).Value = obj.Universidade_e;
+                    cmd.Parameters.Add("@CRM", SqlDbType.VarChar).Value = obj.CRM ?? string.Empty;
+                    cmd.Parameters.Add("@CPF", SqlDbType.VarChar).Value = obj.CPF ?? string.Empty;
+                    cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = obj.Nome ?? string.Empty;
+                    cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = obj.Email ?? string.Empty;
+                    cmd.Parameters.Add("@TELEFONE", SqlDbType.VarChar).Value = obj.Telefone ?? string.Empty;
+                    cmd.Parameters.Add("@CURSO_F", SqlDbType.VarChar).Value = obj.Curso_f ?? string.Empty;
+                    cmd.Parameters.Add("@UNIVERSIDADE_C", SqlDbType.VarChar).Value = obj.Universidade_c ?? string.Empty;
+                    cmd.Parameters.Add("@DURACAO_C", SqlDbType.VarChar).Value = obj.Duracao_c ?? string.Empty;
+                    cmd.Parameters.Add("@ANO_INICIO_C", SqlDbType.Int).Value = obj.Ano_inicio_c;
+                    cmd.Parameters.Add("@ANO_TERMINO_C", SqlDbType.Int).Value = obj.Ano_termino_c;
+                    cmd.Parameters.Add("@AREA_E", SqlDbType.VarChar).Value = obj.Area_e ?? string.Empty;
+                    cmd.Parameters.Add("@UNIVERSIDADE_E", SqlDbType.VarChar).Value = obj.Universidade_e ?? string.Empty;
                     cmd.Parameters.Add("@DURACAO_E", SqlDbType.VarChar).Value = obj.Duracao_e;
-                    cmd.Parameters.Add("@ANO_INICIO_E", SqlDbType.VarChar).Value = obj.Ano_inicio_e;
-                    cmd.Parameters.Add("@ANO_TERMINO_E", SqlDbType.VarChar).Value = obj.Ano_termino_e;
-                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto;
+                    cmd.Parameters.Add("@ANO_INICIO_E", SqlDbType.Int).Value = obj.Ano_inicio_e;
+                    cmd.Parameters.Add("@ANO_TERMINO_E", SqlDbType.Int).Value = obj.Ano_termino_e;
+                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto ?? string.Empty;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -62,6 +62,54 @@ namespace Fenogeno.DataAccess
             }
         }
 
+        public Especialista BuscarPorId(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"SELECT * FROM ESPECIALISTA WHERE COD = @COD;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@COD", SqlDbType.Int).Value = id;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var especialista = new Especialista()
+                    {
+                        Cod = Convert.ToInt32(row["COD"]),
+                        CRM = row["CRM"].ToString(),
+                        CPF = row["CPF"].ToString(),
+                        Nome = row["NOME"].ToString(),
+                        Email = row["EMAIL"].ToString(),
+                        Telefone = row["TELEFONE"].ToString(),
+                        Curso_f = row["CURSO_F"].ToString(),
+                        Universidade_c = row["UNIVERSIDADE_C"].ToString(),
+                        Duracao_c = row["DURACAO_C"].ToString(),
+                        Ano_inicio_c = row["ANO_INICIO_C"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_INICIO_C"]),
+                        Ano_termino_c = row["ANO_TERMINO_C"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_TERMINO_C"]),
+                        Area_e = row["AREA_E"].ToString(),
+                        Universidade_e = row["UNIVERSIDADE_E"].ToString(),
+                        Duracao_e = row["DURACAO_E"].ToString(),
+                        Ano_inicio_e = row["ANO_INICIO_E"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_INICIO_E"]),
+                        Ano_termino_e = row["ANO_TERMINO_E"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_TERMINO_E"]),
+                        Foto = row["FOTO"].ToString()
+                    };
+
+                    return especialista;
+                }
+            }
+        }
+
         public List<Especialista> BuscarTodos()
         {
             var lstEspecialistas = new List<Especialista>();
@@ -85,6 +133,7 @@ namespace Fenogeno.DataAccess
                     {
                         var especialista = new Especialista()
                         {
+                            Cod = Convert.ToInt32(row["COD"]),
                             CRM = row["CRM"].ToString(),
                             CPF = row["CPF"].ToString(),
                             Nome = row["NOME"].ToString(),
@@ -93,14 +142,14 @@ namespace Fenogeno.DataAccess
                             Curso_f = row["CURSO_F"].ToString(),
                             Universidade_c = row["UNIVERSIDADE_C"].ToString(),
                             Duracao_c = row["DURACAO_C"].ToString(),
-                            Ano_inicio_c = Convert.ToDateTime(row["ANO_INICIO_C"]),
-                            Ano_termino_c = Convert.ToDateTime(row["ANO_TERMINO_C"]),
+                            Ano_inicio_c = row["ANO_INICIO_C"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_INICIO_C"]),
+                            Ano_termino_c = row["ANO_TERMINO_C"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_TERMINO_C"]),
                             Area_e = row["AREA_E"].ToString(),
                             Universidade_e = row["UNIVERSIDADE_E"].ToString(),
                             Duracao_e = row["DURACAO_E"].ToString(),
-                            Ano_inicio_e = Convert.ToDateTime(row["ANO_INICIO_E"]),
-                            Ano_termino_e = Convert.ToDateTime(row["ANO_TERMINO_E"]),
-                            Foto = row["FOTO"].ToString(),
+                            Ano_inicio_e = row["ANO_INICIO_E"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_INICIO_E"]),
+                            Ano_termino_e = row["ANO_TERMINO_E"] is DBNull ? new Nullable<int>() : Convert.ToInt32(row["ANO_TERMINO_E"]),
+                            Foto = row["FOTO"].ToString()
                         };
 
                         lstEspecialistas.Add(especialista);
@@ -109,7 +158,6 @@ namespace Fenogeno.DataAccess
             }
 
             return lstEspecialistas;
-
         }
     }
 }

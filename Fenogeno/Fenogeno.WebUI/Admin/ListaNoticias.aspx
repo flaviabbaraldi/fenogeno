@@ -37,8 +37,8 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="&nbsp;" ShowHeader="False">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="15%" CssClass="text-center" />
+                                    <ItemStyle Width="15%" CssClass="text-center" />
                                     <ItemTemplate>
                                         <asp:LinkButton ID="btnEditar" runat="server" Width="16px" Height="16px" ToolTip="Editar" OnClick="btnEditar_Click" CommandArgument='<%# Eval("Cod") %>'>
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>

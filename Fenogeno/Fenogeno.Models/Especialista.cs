@@ -26,9 +26,9 @@ namespace Fenogeno.Models
 
         public string Duracao_c { get; set; }
 
-        public DateTime Ano_inicio_c { get; set; }
+        public int? Ano_inicio_c { get; set; }
 
-        public DateTime Ano_termino_c { get; set; }
+        public int? Ano_termino_c { get; set; }
 
         public string Area_e { get; set; }
 
@@ -36,9 +36,9 @@ namespace Fenogeno.Models
 
         public string Duracao_e { get; set; }
 
-        public DateTime Ano_inicio_e { get; set; }
+        public int? Ano_inicio_e { get; set; }
 
-        public DateTime Ano_termino_e { get; set; }
+        public int? Ano_termino_e { get; set; }
 
         public string Foto { get; set; }
 

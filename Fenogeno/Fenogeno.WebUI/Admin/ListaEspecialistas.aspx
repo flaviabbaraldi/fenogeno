@@ -23,33 +23,33 @@
                                     <HeaderStyle Width="10%" />
                                     <ItemStyle Width="10%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblTitulo" runat="server" Text='<%# Bind("CRM") %>'></asp:Label>
+                                        <asp:Label ID="lblCRM" runat="server" Text='<%# Bind("CRM") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Nome">
                                     <HeaderStyle Width="25%" />
                                     <ItemStyle Width="25%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblTitulo" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
+                                        <asp:Label ID="lblNome" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Formação">
                                     <HeaderStyle Width="25%" />
                                     <ItemStyle Width="25%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblTitulo" runat="server" Text='<%# Bind("Curso_f") %>'></asp:Label>
+                                        <asp:Label ID="lblCurso_f" runat="server" Text='<%# Bind("Curso_f") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Especialização">
                                     <HeaderStyle Width="25%" />
                                     <ItemStyle Width="25%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblTitulo" runat="server" Text='<%# Bind("Area_e") %>'></asp:Label>
+                                        <asp:Label ID="lblArea_e" runat="server" Text='<%# Bind("Area_e") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="&nbsp;" ShowHeader="False">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="15%" CssClass="text-center" />
+                                    <ItemStyle Width="15%" CssClass="text-center" />
                                     <ItemTemplate>
                                         <asp:LinkButton ID="btnEditar" runat="server" Width="16px" Height="16px" ToolTip="Editar" OnClick="btnEditar_Click" CommandArgument='<%# Eval("Cod") %>'>
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>

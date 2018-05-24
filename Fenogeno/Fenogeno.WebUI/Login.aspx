@@ -2,35 +2,38 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-4 col-md-offset-4">
             <form runat="server" class="form-horizontal">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Login
-                    </div>
                     <div class="panel-body">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <img class="img-circle" src="Images/avatar_2x.png" width="140" height="140" />
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                 <asp:Label ID="lblEmail" runat="server"
                                     CssClass="control-label">Email:</asp:Label>
-                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
+                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control input-lg" />
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                 <asp:Label ID="lblSenha" runat="server"
                                     CssClass="control-label">Senha:</asp:Label>
-                                <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control" TextMode="Password" />
+                                <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control input-lg" TextMode="Password" />
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                              <a href="cadastro.aspx">Não possui cadastro? Clique aqui para se cadastrar!</a>
+                                <a href="cadastro.aspx">Não possui cadastro?<br />
+                                    Clique aqui para se cadastrar!</a>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <asp:Button ID="btnEntrar" runat="server" CssClass="btn btn-primary btn-block" Text="Entrar" OnClick="btnEntrar_Click" />
+                                <asp:Button ID="btnEntrar" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Entrar" OnClick="btnEntrar_Click" />
                             </div>
                         </div>
                     </div>

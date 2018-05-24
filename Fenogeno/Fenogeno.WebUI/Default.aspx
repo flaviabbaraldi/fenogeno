@@ -1,17 +1,15 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Fenogeno.WebUI._Default" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Fenogeno.WebUI._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
     <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img  src="<%= ResolveUrl("~/Images/Logo Nsdfseoticia.jpg") %>" alt="First slide">
+                    <img src="<%= ResolveUrl("~/Images/Logo Nsdfseoticia.jpg") %>" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1></h1>
@@ -32,7 +30,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img class="third-slide"  src="<%= ResolveUrl("~/Images/ENG.jpg") %>"  alt="Third slide">
+                    <img class="third-slide" src="<%= ResolveUrl("~/Images/ENG.jpg") %>" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Engenharia Genética</h1>
@@ -51,18 +49,15 @@
             </a>
         </div>
     </div>
-
     <div class="container marketing">
         <div class="row">
             <div class="col-lg-4">
-                <img class="img-circle"  src="<%= ResolveUrl("~/Images/DNAA.jpg") %>" "  alt="Generic placeholder image" width="140" height="140"/>
+                <img class="img-circle" src="<%= ResolveUrl("~/Images/DNAA.jpg") %>" alt="Generic placeholder image" width="140" height="140" />
                 <h2></h2>
-                <p>Quer saber qual a possibilidade de seu filho nascer com alguma doença genética? </p><br />
+                <p>Quer saber qual a possibilidade de seu filho nascer com alguma doença genética? </p>
+                <br />
                 <p><a class="btn btn-danger" href="#" role="button">Clique aqui! &raquo;</a></p>
             </div>
-          
-         
-            <!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="img-circle" src="<%= ResolveUrl("~/Images/especialista.jpg") %>" alt="Generic placeholder image" width="140" height="140">
                 <h2></h2>
@@ -72,8 +67,6 @@
                 </p>
                 <p><a class="btn btn-danger" href="#" role="button">Clique aqui! &raquo;</a></p>
             </div>
-            <!-- /.col-lg-4 -->
         </div>
     </div>
-
 </asp:Content>

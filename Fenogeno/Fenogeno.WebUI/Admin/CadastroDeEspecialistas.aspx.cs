@@ -11,6 +11,33 @@ namespace Fenogeno.WebUI
         {
             if (IsPostBack)
                 return;
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+                if (id > 0)
+                {
+                    var obj = new EspecialistaDAO().BuscarPorId(id);
+                    if (obj != null)
+                    {
+                        txtCRM.Text = obj.CRM;
+                        txtCPF.Text = obj.CPF;
+                        txtNome.Text = obj.Nome;
+                        txtEmail.Text = obj.Email;
+                        txtTelefone.Text = obj.Telefone;
+                        txtFormacao.Text = obj.Curso_f;
+                        txtUniversidadeF.Text = obj.Universidade_c;
+                        txtDuracaoF.Text = obj.Duracao_c;
+                        txtAnoFI.Text = obj.Ano_inicio_c.HasValue ? obj.Ano_inicio_c.ToString() : string.Empty;
+                        txtAnoFT.Text = obj.Ano_termino_c.HasValue ? obj.Ano_termino_c.ToString() : string.Empty;
+                        txtArea.Text = obj.Area_e;
+                        txtUniversidadeE.Text = obj.Universidade_e;
+                        txtDuracaoE.Text = obj.Duracao_e;
+                        txtAnoIE.Text = obj.Ano_inicio_e.HasValue ? obj.Ano_inicio_e.ToString() : string.Empty; ;
+                        txtAnoT.Text = obj.Ano_termino_e.HasValue ? obj.Ano_termino_e.ToString() : string.Empty; ;
+                    }
+                }
+            }
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
@@ -108,13 +135,13 @@ namespace Fenogeno.WebUI
             obj.Curso_f = txtFormacao.Text;
             obj.Universidade_c = txtUniversidadeF.Text;
             obj.Duracao_c = txtDuracaoF.Text;
-            obj.Ano_inicio_c = Convert.ToDateTime(txtAnoFI.Text);
-            obj.Ano_termino_c = Convert.ToDateTime(txtAnoFT.Text);
+            obj.Ano_inicio_c = !string.IsNullOrWhiteSpace(txtAnoFI.Text) ? Convert.ToInt32(txtAnoFI.Text.OnlyNumbers()) : new Nullable<int>();
+            obj.Ano_termino_c = !string.IsNullOrWhiteSpace(txtAnoFT.Text) ? Convert.ToInt32(txtAnoFT.Text.OnlyNumbers()) : new Nullable<int>();
             obj.Area_e = txtArea.Text;
             obj.Universidade_e = txtUniversidadeE.Text;
             obj.Duracao_e = txtDuracaoE.Text;
-            obj.Ano_inicio_e = Convert.ToDateTime(txtAnoIE.Text);
-            obj.Ano_termino_e = Convert.ToDateTime(txtAnoT.Text);
+            obj.Ano_inicio_e = !string.IsNullOrWhiteSpace(txtAnoIE.Text) ? Convert.ToInt32(txtAnoIE.Text.OnlyNumbers()) : new Nullable<int>();
+            obj.Ano_termino_e = !string.IsNullOrWhiteSpace(txtAnoT.Text) ? Convert.ToInt32(txtAnoT.Text.OnlyNumbers()) : new Nullable<int>();
             obj.Foto = fupArquivo.FileName;
 
             if (fupArquivo.HasFile)

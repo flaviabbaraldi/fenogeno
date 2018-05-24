@@ -11,6 +11,21 @@ namespace Fenogeno.WebUI
         {
             if (IsPostBack)
                 return;
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+                if (id > 0)
+                {
+                    var obj = new NoticiaDAO().BuscarPorId(id);
+                    if (obj != null)
+                    {
+                        txtTitulo.Text = obj.Titulo;
+                        txtdescricao.Text = obj.Subtitulo;
+                        txtCorpo.Text = obj.Texto;
+                    }
+                }
+            }
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)

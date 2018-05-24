@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using Fenogeno.DataAccess;
+using System;
 
 namespace Fenogeno.WebUI
 {
@@ -11,7 +7,11 @@ namespace Fenogeno.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
+            var lst = new EspecialistaDAO().BuscarTodos();
+            gridView.DataSource = lst;
+            gridView.DataBind();
         }
     }
 }

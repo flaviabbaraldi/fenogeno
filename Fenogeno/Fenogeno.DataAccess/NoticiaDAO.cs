@@ -48,6 +48,42 @@ namespace Fenogeno.DataAccess
             }
         }
 
+        public Noticia BuscarPorId(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"SELECT * FROM NOTICIA WHERE COD = @COD;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@COD", SqlDbType.Int).Value = id;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var noticia = new Noticia()
+                    {
+                        Cod = Convert.ToInt32(row["COD"]),
+                        Titulo = row["TITULO"].ToString(),
+                        Subtitulo = row["DESCRICAO"].ToString(),
+                        Texto = row["CORPO_TEXTO"].ToString(),
+                        Foto = row["FOTO"].ToString(),
+                    };
+
+                    return noticia;
+                }
+            }
+        }
+
         public List<Noticia> BuscarTodos()
         {
             var lstNoticias = new List<Noticia>();
@@ -85,42 +121,6 @@ namespace Fenogeno.DataAccess
 
             return lstNoticias;
 
-        }
-
-        public Noticia BuscarPorId(int id)
-        {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
-            {
-                string strSQL = @"SELECT * FROM NOTICIA WHERE COD = @COD;";
-
-                using (SqlCommand cmd = new SqlCommand(strSQL))
-                {
-                    conn.Open();
-                    cmd.Connection = conn;
-                    cmd.Parameters.Add("@COD", SqlDbType.Int).Value = id;
-                    cmd.CommandText = strSQL;
-
-                    var dataReader = cmd.ExecuteReader();
-                    var dt = new DataTable();
-                    dt.Load(dataReader);
-                    conn.Close();
-
-                    if (!(dt != null && dt.Rows.Count > 0))
-                        return null;
-
-                    var row = dt.Rows[0];
-                    var noticia = new Noticia()
-                    {
-                        Cod = Convert.ToInt32(row["COD"]),
-                        Titulo = row["TITULO"].ToString(),
-                        Subtitulo = row["DESCRICAO"].ToString(),
-                        Texto = row["CORPO_TEXTO"].ToString(),
-                        Foto = row["FOTO"].ToString(),
-                    };
-
-                    return noticia;
-                }
-            }
         }
     }
 }

@@ -1,12 +1,7 @@
 ﻿using Fenogeno.DataAccess;
 using Fenogeno.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Script.Serialization;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Fenogeno.WebUI
 {
@@ -20,6 +15,9 @@ namespace Fenogeno.WebUI
 
         protected void btnEntrar_Click(object sender, EventArgs e)
         {
+            if (!Validar())
+                return;
+
             var usuarioLogado = new UsuarioDAO().Logar(new Usuario()
             {
                 Email = txtEmail.Text,
@@ -34,7 +32,20 @@ namespace Fenogeno.WebUI
             var userData = new JavaScriptSerializer().Serialize(usuarioLogado);
             FormsAuthenticationUtil.SetCustomAuthCookie(usuarioLogado.Email, userData, false);
 
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/Admin.aspx");
+        }
+
+        private bool Validar()
+        {
+            var aux = true;
+
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+                aux &= false;
+
+            if (!string.IsNullOrWhiteSpace(txtSenha.Text))
+                aux &= false;
+
+            return aux;
         }
     }
 }

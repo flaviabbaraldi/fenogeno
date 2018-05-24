@@ -45,6 +45,7 @@
     <Compile Include="Cabelo.cs" />
     <Compile Include="Comentario.cs" />
     <Compile Include="Especialista.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="FatorRh.cs" />
     <Compile Include="GrupoSanguineo.cs" />
     <Compile Include="ICustomPrincipal.cs" />
