@@ -11,6 +11,15 @@
                                 <img class="img-circle" src="Images/avatar_2x.png" width="140" height="140" />
                             </div>
                         </div>
+                        <asp:Panel ID="pnlMsg" runat="server" Visible="false">
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                                        <strong>Alerta!</strong> E-mail e/ou senha inválidos!
+                                    </div>
+                                </div>
+                            </div>
+                        </asp:Panel>
                         <div class="form-group">
                             <div class="col-md-12">
                                 <asp:Label ID="lblEmail" runat="server"

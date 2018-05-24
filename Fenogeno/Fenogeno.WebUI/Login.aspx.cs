@@ -16,7 +16,10 @@ namespace Fenogeno.WebUI
         protected void btnEntrar_Click(object sender, EventArgs e)
         {
             if (!Validar())
+            {
+                pnlMsg.Visible = true;
                 return;
+            }
 
             var usuarioLogado = new UsuarioDAO().Logar(new Usuario()
             {
@@ -39,10 +42,10 @@ namespace Fenogeno.WebUI
         {
             var aux = true;
 
-            if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
                 aux &= false;
 
-            if (!string.IsNullOrWhiteSpace(txtSenha.Text))
+            if (string.IsNullOrWhiteSpace(txtSenha.Text))
                 aux &= false;
 
             return aux;
