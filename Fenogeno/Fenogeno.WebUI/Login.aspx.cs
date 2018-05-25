@@ -29,13 +29,14 @@ namespace Fenogeno.WebUI
 
             if (usuarioLogado == null)
             {
-                Response.Redirect("~/Login.aspx");
+                pnlMsg.Visible = true;
+                return;
             }
 
             var userData = new JavaScriptSerializer().Serialize(usuarioLogado);
             FormsAuthenticationUtil.SetCustomAuthCookie(usuarioLogado.Email, userData, false);
 
-            Response.Redirect("~/Admin.aspx");
+            Response.Redirect("~/Default.aspx");
         }
 
         private bool Validar()

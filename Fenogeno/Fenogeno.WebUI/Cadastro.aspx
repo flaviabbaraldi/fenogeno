@@ -6,9 +6,30 @@
             <form runat="server" class="form-horizontal">
                 <h2>Cadastro</h2>
 
+                <asp:Panel ID="pnlMsg" runat="server" Visible="false">
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                                <strong>Alerta!</strong> Não foi possível cadastrar o usuário! Verifique se todos os campos obrigatórios estão preenchidos!
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+
+                 
+                <asp:Panel ID="pnlCadastro" runat="server" Visible="false">
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                                <strong>Parabéns!</strong> Usuário cadastrado com sucesso!
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+
                 <div class="form-group">
                     <div class="col-md-12">
-                        <asp:Label ID="lblNome" runat="server" CssClass-="control-label">*Nome:</asp:Label>
+                        <asp:Label ID="lblNome" runat="server" CssClass="control-label">*Nome:</asp:Label>
                         <asp:TextBox ID="txtNome" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                 </div>
@@ -41,10 +62,16 @@
                     </div>
                 </div>
 
+                    <div class="form-group">
+                    <div class="col-md-12">
+                        <asp:FileUpload ID="fupArquivo" runat="server" />
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-md-12 text-right">
-                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
-                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click"  />
+                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" OnClick="btnCancelar_Click" />
                     </div>
                 </div>
 

@@ -1,10 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroNoticia.aspx.cs" Inherits="Fenogeno.WebUI.CadastroNoticia" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAdm.Master" AutoEventWireup="true" CodeBehind="CadastroNoticia.aspx.cs" Inherits="Fenogeno.WebUI.CadastroNoticia" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <div class="col-md-12">
             <form runat="server" class="form-horizontal">
                 <h2>Cadastro de Notícias</h2>
+
+                <asp:Panel ID="pnlMsg" runat="server" Visible="false">
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                                <strong>Alerta!</strong> Não foi possível cadastrar a notícia! Verifique se todos os campos obrigatórios estão preenchidos!
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+
                 <div class="form-group">
                     <div class="col-md-12">
                         <asp:Label ID="lblTitulo" runat="server" CssClass="control-label">Título:</asp:Label>

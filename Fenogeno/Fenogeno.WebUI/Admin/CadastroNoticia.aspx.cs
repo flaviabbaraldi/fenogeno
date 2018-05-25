@@ -36,6 +36,13 @@ namespace Fenogeno.WebUI
                 LimparCampos();
                 Response.Redirect("~/Admin/ListaNoticias.aspx");
             }
+
+
+            if (!Validar())
+            {
+                pnlMsg.Visible = true;
+                return;
+            }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

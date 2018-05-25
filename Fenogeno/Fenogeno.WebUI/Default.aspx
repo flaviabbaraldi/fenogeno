@@ -52,20 +52,23 @@
     <div class="container marketing">
         <div class="row">
             <div class="col-lg-4">
-                <img class="img-circle" src="<%= ResolveUrl("~/Images/DNAA.jpg") %>" alt="Generic placeholder image" width="140" height="140" />
+                <img class="img-circle" src="<%= ResolveUrl("~/Images/teste_carcfisicas.jpg" )%>" alt="Generic placeholder image" width="140" height="140" />
                 <h2></h2>
-                <p>Quer saber qual a possibilidade de seu filho nascer com alguma doença genética? </p>
+                <p>Quer saber qual as possíveis características físicas de seu filho? </p>
                 <br />
-                <p><a class="btn btn-danger" href="#" role="button">Clique aqui! &raquo;</a></p>
+                <p><a class="btn btn-danger" href="TesteCarcFisica.aspx" role="button">Clique aqui! &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <img class="img-circle" src="<%= ResolveUrl("~/Images/especialista.jpg") %>" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="<%= ResolveUrl("~/Images/teste_doençasgeneticas.jpg") %>" alt="Generic placeholder image" width="140" height="140">
                 <h2></h2>
-                <p>
-                    Tem dúvidas sobre sua gestação e a saúde de seu bebê?<br />
-                    Entre em contato com nossos especialistas!!
-                </p>
-                <p><a class="btn btn-danger" href="#" role="button">Clique aqui! &raquo;</a></p>
+                <p>Quer saber quais as probabilidades que o seu filho tende a nascer com alguma anomalia genética?</p>
+                <p><a class="btn btn-danger" href="TesteAnomalia.aspx" role="button">Clique aqui! &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <img class="img-circle" src="<%= ResolveUrl("~/Images/teste_sang.jpg") %>" alt="Generic placeholder image" width="140" height="140">
+                <h2></h2>
+                <p>Quer saber qual será o tipo sanguíneo de seu filho?</p>
+                <p><a class="btn btn-danger" href="TesteSanguineo.aspx" role="button">Clique aqui! &raquo;</a></p>
             </div>
         </div>
     </div>

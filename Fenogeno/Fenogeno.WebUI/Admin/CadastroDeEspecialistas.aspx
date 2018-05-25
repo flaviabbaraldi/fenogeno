@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroDeEspecialistas.aspx.cs" Inherits="Fenogeno.WebUI.CadastroDeEspecialistas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAdm.Master" AutoEventWireup="true" CodeBehind="CadastroDeEspecialistas.aspx.cs" Inherits="Fenogeno.WebUI.CadastroDeEspecialistas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
@@ -9,11 +9,23 @@
                         <h2>Cadastro de Especialistas</h2>
                     </div>
                 </div>
+
+                <asp:Panel ID="pnlMsg" runat="server" Visible="false">
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                                <strong>Alerta!</strong> Não foi possível cadastrar o especialista! Verifique se todos os campos obrigatórios estão preenchidos!
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+
                 <div class="form-group">
                     <div class="col-md-12">
                         <h4><b>Dados pessoais</b></h4>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <div class="col-md-12">
                         <asp:Label ID="lblNome" runat="server" CssClass="control-label">Nome:</asp:Label>

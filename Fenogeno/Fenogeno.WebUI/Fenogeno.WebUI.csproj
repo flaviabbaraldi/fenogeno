@@ -247,6 +247,7 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="SiteAdm.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -255,6 +256,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SiteAdm.Master.cs">
+      <DependentUpon>SiteAdm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteAdm.Master.designer.cs">
+      <DependentUpon>SiteAdm.Master</DependentUpon>
+    </Compile>
     <Compile Include="Users\Ana.aspx.cs">
       <DependentUpon>Ana.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

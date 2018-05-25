@@ -13,6 +13,15 @@ namespace Fenogeno.WebUI {
     public partial class CadastroNoticia {
         
         /// <summary>
+        /// pnlMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlMsg;
+        
+        /// <summary>
         /// lblTitulo control.
         /// </summary>
         /// <remarks>

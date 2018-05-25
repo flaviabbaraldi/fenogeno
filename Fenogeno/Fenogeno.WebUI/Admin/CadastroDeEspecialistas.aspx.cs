@@ -48,6 +48,12 @@ namespace Fenogeno.WebUI
                 LimparCampos();
                 Response.Redirect("~/Admin/ListaEspecialistas.aspx");
             }
+
+            if (!Validar())
+            {
+                pnlMsg.Visible = true;
+                return;
+            }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

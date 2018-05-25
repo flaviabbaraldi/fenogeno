@@ -13,6 +13,24 @@ namespace Fenogeno.WebUI {
     public partial class Cadastro {
         
         /// <summary>
+        /// pnlMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlMsg;
+        
+        /// <summary>
+        /// pnlCadastro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCadastro;
+        
+        /// <summary>
         /// lblNome control.
         /// </summary>
         /// <remarks>
@@ -119,6 +137,15 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSenhaConf;
+        
+        /// <summary>
+        /// fupArquivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fupArquivo;
         
         /// <summary>
         /// btnSalvar control.

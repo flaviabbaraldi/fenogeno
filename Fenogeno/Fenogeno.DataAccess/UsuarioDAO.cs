@@ -13,15 +13,17 @@ namespace Fenogeno.DataAccess
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"INSERT INTO USUARIO (NOME, LOGIN, SENHA, EMAIL) VALUES (@NOME, @LOGIN, @SENHA, @EMAIL);";
+                string strSQL = @"INSERT INTO USUARIO (NOME,EMAIL, CIDADE, BAIRRO, SENHA, FOTO) VALUES (@NOME, @EMAIL, @CIDADE, @BAIRRO, @SENHA, @FOTO);";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = obj.Nome;
-                    cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = obj.Login;
-                    cmd.Parameters.Add("@SENHA", SqlDbType.VarChar).Value = obj.Senha;
                     cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = obj.Email;
+                    cmd.Parameters.Add("@CIDADE", SqlDbType.VarChar).Value = obj.Cidade;
+                    cmd.Parameters.Add("@BAIRRO", SqlDbType.VarChar).Value = obj.Bairro;
+                    cmd.Parameters.Add("@SENHA", SqlDbType.VarChar).Value = obj.Senha;
+                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto ?? string.Empty;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -55,9 +57,11 @@ namespace Fenogeno.DataAccess
                         {
                             Id = Convert.ToInt32(row["ID"]),
                             Nome = row["NOME"].ToString(),
-                            Login = row["LOGIN"].ToString(),
                             Senha = row["SENHA"].ToString(),
                             Email = row["EMAIL"].ToString(),
+                            Foto = row["FOTO"].ToString(),
+                            Cidade = row ["CIDADE"].ToString(),
+                            Bairro = row ["BAIRRO"].ToString(),
                         };
                         lstUsuarios.Add(usuario);
                     }
@@ -95,9 +99,11 @@ namespace Fenogeno.DataAccess
                     {
                         Id = Convert.ToInt32(row["ID"]),
                         Nome = row["NOME"].ToString(),
-                        Login = row["LOGIN"].ToString(),
                         Senha = row["SENHA"].ToString(),
                         Email = row["EMAIL"].ToString(),
+                        Foto = row["FOTO"].ToString(),
+                        Cidade = row["CIDADE"].ToString(),
+                        Bairro = row["BAIRRO"].ToString(),
                     };
 
                     return usuario;
