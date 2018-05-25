@@ -9,7 +9,7 @@
                     <div class="col-md-3">
                         <asp:Label ID="lblOlhos" runat="server"
                             CssClass="control-label">Qual a cor dos seus olhos?</asp:Label>
-                        <asp:DropDownList ID="ddlOlhos" runat="server" CssClass="form-control"  />
+                        <asp:DropDownList ID="ddlOlhos" runat="server" CssClass="form-control" />
                     </div>
                     <div class="col-md-3">
                         <asp:Label ID="lblOlhosP" runat="server"
@@ -80,12 +80,12 @@
                 </div>--%>
                 <div class="form-group">
                     <div class="col-md-12 text-right">
-                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary"  />
-                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
+                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" OnClick="btnCancelar_Click" />
                     </div>
                 </div>
 
-            
+
             </form>
         </div>
     </div>

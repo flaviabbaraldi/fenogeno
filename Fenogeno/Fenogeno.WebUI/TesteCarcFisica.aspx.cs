@@ -116,8 +116,13 @@ namespace Fenogeno.WebUI
             }
             else
             {
-                lblResultadoO.Text = "Nenhum resultado encontrado.";
+                lblResultadoO.Text = "Nenhuma combinação encontrada!";
             }
+                    }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Teste.aspx");
         }
     }
 }

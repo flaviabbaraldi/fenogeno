@@ -362,6 +362,9 @@ namespace Fenogeno.WebUI
             }
         }
 
-
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Teste.aspx");
+        }
     }
 }
