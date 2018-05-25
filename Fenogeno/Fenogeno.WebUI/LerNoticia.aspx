@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LerNoticia.aspx.cs" Inherits="Fenogeno.WebUI.LerNoticia" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LerNoticia.aspx.cs" Inherits="Fenogeno.WebUI.LerNoticia" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
@@ -13,11 +13,9 @@
             <img class="img-responsive" src="Images/vacinas-gravidez.jpeg" />
         </div>
         <div class="col-md-8">
-            <form class="form-horizontal" runat="server">
-                <p>
-                    <asp:Literal ID="lblTexto" runat="server"></asp:Literal>
-                </p>
-            </form>
+            <p>
+                <asp:Literal ID="lblTexto" runat="server"></asp:Literal>
+            </p>
         </div>
     </div>
 </asp:Content>

@@ -135,7 +135,9 @@
     <Content Include="Content\images\buttons.gif" />
     <Content Include="Content\images\toolbar.gif" />
     <Content Include="Content\jquery.cleditor.css" />
+    <Content Include="DefaultAdm.aspx" />
     <Content Include="FenoGeno.sql" />
+    <Content Include="Images\avatar_100px.png" />
     <Content Include="Images\avatar_2x.png" />
     <Content Include="Scripts\jquery.cleditor.js" />
     <Content Include="Scripts\jquery.cleditor.min.js" />
@@ -256,6 +258,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefaultAdm.aspx.cs">
+      <DependentUpon>DefaultAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultAdm.aspx.designer.cs">
+      <DependentUpon>DefaultAdm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SiteAdm.Master.cs">
       <DependentUpon>SiteAdm.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

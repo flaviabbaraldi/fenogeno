@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Polidactilia.aspx.cs" Inherits="Fenogeno.WebUI.Polidactilia" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Polidactilia.aspx.cs" Inherits="Fenogeno.WebUI.Polidactilia" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">

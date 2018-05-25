@@ -1,18 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ana.aspx.cs" Inherits="Fenogeno.WebUI.Ana" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ana.aspx.cs" Inherits="Fenogeno.WebUI.Ana" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <div class="col-md-12">
-            <form runat="server" class="form-horizontal">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="container">
-                            <div class="row">
-                                <div class="panel-body">
-                                    <div class="col-md-7 text-left">
-                                        <img class="img-responsive" src="Images/medicagineco.jpg" alt="Generic placeholder image" width="250" height="200" />
-                                         
-                                    </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="container">
+                        <div class="row">
+                            <div class="panel-body">
+                                <div class="col-md-7 text-left">
+                                    <img class="img-responsive" src="Images/medicagineco.jpg" alt="Generic placeholder image" width="250" height="200" />
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -32,9 +31,7 @@
                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
                     </div>
                 </div>
-
-            </form>
+            </div>
         </div>
     </div>
-
 </asp:Content>

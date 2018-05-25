@@ -121,22 +121,13 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.TextBox txtSenha;
         
         /// <summary>
-        /// lblSenhaConf control.
+        /// lblArquivo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSenhaConf;
-        
-        /// <summary>
-        /// txtSenhaConf control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSenhaConf;
+        protected global::System.Web.UI.WebControls.Label lblArquivo;
         
         /// <summary>
         /// fupArquivo control.

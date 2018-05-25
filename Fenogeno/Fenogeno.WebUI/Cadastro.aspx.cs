@@ -1,12 +1,7 @@
 ﻿using Fenogeno.DataAccess;
 using Fenogeno.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Fenogeno.WebUI
 {
@@ -14,10 +9,8 @@ namespace Fenogeno.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (IsPostBack)
                 return;
-
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
@@ -30,13 +23,12 @@ namespace Fenogeno.WebUI
 
             Salvar();
             LimparCampos();
-            //Response.Redirect("~/Default.aspx");
             pnlCadastro.Visible = true;
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/Login.aspx");
         }
 
         private void LimparCampos()
@@ -46,7 +38,6 @@ namespace Fenogeno.WebUI
             txtCidade.Text = string.Empty;
             txtBairro.Text = string.Empty;
             txtSenha.Text = string.Empty;
-            txtSenhaConf.Text = string.Empty;
         }
 
         private bool Validar()
@@ -66,9 +57,6 @@ namespace Fenogeno.WebUI
             if (string.IsNullOrWhiteSpace(txtSenha.Text))
                 return false;
 
-            if (string.IsNullOrWhiteSpace(txtSenhaConf.Text))
-                return false;
-
             return true;
         }
 
@@ -80,7 +68,6 @@ namespace Fenogeno.WebUI
             obj.Cidade = txtCidade.Text;
             obj.Bairro = txtBairro.Text;
             obj.Senha = txtSenha.Text;
-            obj.SenhaConf = txtSenhaConf.Text;
             obj.Foto = fupArquivo.FileName;
 
             if (fupArquivo.HasFile)
@@ -91,8 +78,5 @@ namespace Fenogeno.WebUI
 
             new UsuarioDAO().Inserir(obj);
         }
-
-
-
     }
 }

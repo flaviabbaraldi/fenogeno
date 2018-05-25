@@ -36,6 +36,10 @@ namespace Fenogeno.WebUI
             var userData = new JavaScriptSerializer().Serialize(usuarioLogado);
             FormsAuthenticationUtil.SetCustomAuthCookie(usuarioLogado.Email, userData, false);
 
+            if (usuarioLogado.Administrador)
+            {
+                Response.Redirect("~/DefaultAdm.aspx");
+            }
             Response.Redirect("~/Default.aspx");
         }
 
