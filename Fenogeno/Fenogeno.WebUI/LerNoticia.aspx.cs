@@ -24,6 +24,7 @@ namespace Fenogeno.WebUI
                     if (noticia != null)
                     {
                         lblTitulo.Text = noticia.Titulo;
+                        lblDescricao.Text = noticia.Subtitulo;
                         lblTexto.Text = noticia.Texto;
                         imgNoticia.Attributes.Add("src", ResolveUrl(string.Format("~/Uploads/{0}", noticia.Foto)));
 
