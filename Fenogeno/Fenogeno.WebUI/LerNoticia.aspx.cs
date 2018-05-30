@@ -26,6 +26,7 @@ namespace Fenogeno.WebUI
                         lblTitulo.Text = noticia.Titulo;
                         lblTexto.Text = noticia.Texto;
                         imgNoticia.Attributes.Add("src", ResolveUrl(string.Format("~/Uploads/{0}", noticia.Foto)));
+
                     }
                 }
             }

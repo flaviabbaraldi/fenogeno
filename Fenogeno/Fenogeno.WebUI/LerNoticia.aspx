@@ -18,4 +18,19 @@
             </p>
         </div>
     </div>
+     <br />
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-12">
+               <h3><b>Deseja fazer algum comentário?</b></h3>
+                <asp:TextBox ID="txtComentario" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12 text-right">
+                <asp:Button ID="btnEnviar" runat="server" CssClass="btn btn-primary" Text="Enviar" />
+                <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-primary" Text="Cancelar" />
+            </div>
+        </div>
+    </div>
 </asp:Content>

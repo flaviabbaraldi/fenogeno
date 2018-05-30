@@ -23,8 +23,10 @@ namespace Fenogeno.WebUI
                     var especialista = new EspecialistaDAO().BuscarPorId(id);
                     if (especialista != null)
                     {
-                        //lblNome.Text = especialista.Nome;
-
+                        lblNome.Text = especialista.Nome;
+                        //lblFormação.Text = especialista.Curso_f;
+                        imgEspecialista.Attributes.Add("src", ResolveUrl(string.Format("~/Uploads/{0}", especialista.Foto)));
+                        lblNomeEspecialista.Text = "Tem alguma dúvida? Pergunte ao Doutor(a) " + especialista.Nome;
                     }
                 }
             }
