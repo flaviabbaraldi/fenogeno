@@ -31,7 +31,7 @@
             <div class="form-group">
                 <div class="col-md-6">
                     <asp:Label ID="lblCPF" runat="server" CssClass="control-label">CPF:</asp:Label>
-                    <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" MaxLength="11"></asp:TextBox>
+                    <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" MaxLength="14"></asp:TextBox>
                 </div>
                 <div class="col-md-6">
                     <asp:Label ID="lblCRM" runat="server" CssClass="control-label">CRM:</asp:Label>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-6">
                     <asp:Label ID="lblTelefone" runat="server" CssClass="control-label">Telefone:</asp:Label>
-                    <asp:TextBox ID="txtTelefone" runat="server" CssClass="form-control" MaxLength="11"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefone" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
@@ -70,11 +70,11 @@
                 </div>
                 <div class="col-md-4">
                     <asp:Label ID="lblAnoFI" runat="server" CssClass="control-label">Ano Início:</asp:Label>
-                    <asp:TextBox ID="txtAnoFI" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                    <asp:TextBox ID="txtAnoFI" runat="server" CssClass="form-control" MaxLength="5"></asp:TextBox>
                 </div>
                 <div class="col-md-4">
                     <asp:Label ID="lblAnoFT" runat="server" CssClass="control-label">Ano Término:</asp:Label>
-                    <asp:TextBox ID="txtAnoFT" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                    <asp:TextBox ID="txtAnoFT" runat="server" CssClass="form-control" MaxLength="5"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
@@ -99,11 +99,11 @@
                 </div>
                 <div class="col-md-4">
                     <asp:Label ID="lblAnoIE" runat="server" CssClass="control-label">Ano Início:</asp:Label>
-                    <asp:TextBox ID="txtAnoIE" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                    <asp:TextBox ID="txtAnoIE" runat="server" CssClass="form-control" MaxLength="5"></asp:TextBox>
                 </div>
                 <div class="col-md-4">
                     <asp:Label ID="lblAnoIT" runat="server" CssClass="control-label">Ano Término:</asp:Label>
-                    <asp:TextBox ID="txtAnoT" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                    <asp:TextBox ID="txtAnoT" runat="server" CssClass="form-control" MaxLength="5"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
