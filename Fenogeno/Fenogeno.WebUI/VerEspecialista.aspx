@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <div class="col-md-12 text-right">
-                    <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-primary" />
+                    <asp:Button ID="btnSair" runat="server" Text="Sair" CssClass="btn btn-primary" />
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
                 </div>
             </div>
