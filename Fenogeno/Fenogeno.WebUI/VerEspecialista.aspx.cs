@@ -24,6 +24,7 @@ namespace Fenogeno.WebUI
                     if (especialista != null)
                     {
                         //lblNome.Text = especialista.Nome;
+
                     }
                 }
             }
