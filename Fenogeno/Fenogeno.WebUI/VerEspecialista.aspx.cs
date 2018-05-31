@@ -24,7 +24,12 @@ namespace Fenogeno.WebUI
                     if (especialista != null)
                     {
                         lblNome.Text = especialista.Nome;
-                        //lblFormação.Text = especialista.Curso_f;
+                        lblCurso.Text = "Formação: " + especialista.Curso_f;
+                        lblUniversidadeF.Text = "Universidade: " + especialista.Universidade_c;
+                        lblDuracaoF.Text = "Duração: " + especialista.Duracao_c;
+                        lblCursoE.Text = "Curso: " + especialista.Area_e;
+                        lblUniversidadeE.Text = "Universidade: " + especialista.Universidade_e;
+                        lblDuracaoE.Text = "Duração: " + especialista.Duracao_e;
                         imgEspecialista.Attributes.Add("src", ResolveUrl(string.Format("~/Uploads/{0}", especialista.Foto)));
                         lblNomeEspecialista.Text = "Tem alguma dúvida? Pergunte ao Doutor(a) " + especialista.Nome;
                     }
@@ -32,6 +37,19 @@ namespace Fenogeno.WebUI
             }
         }
 
-        
+        //private bool Validar()
+        //{
+        //    if (string.IsNullOrWhiteSpace(txtDuvida.Text))
+        //        return false;
+        //}
+
+        //protected void btnEnviar_Click(object sender, EventArgs e)
+        //{
+        //    if (!Validar())
+        //    {
+        //        pnlMsg.Visible = true;
+        //        return;
+        //    }
+        }
     }
 }

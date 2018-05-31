@@ -31,6 +31,78 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
+        /// lblFormacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFormacao;
+        
+        /// <summary>
+        /// lblCurso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurso;
+        
+        /// <summary>
+        /// lblUniversidadeF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUniversidadeF;
+        
+        /// <summary>
+        /// lblDuracaoF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDuracaoF;
+        
+        /// <summary>
+        /// lblEspecializacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEspecializacao;
+        
+        /// <summary>
+        /// lblCursoE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCursoE;
+        
+        /// <summary>
+        /// lblUniversidadeE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUniversidadeE;
+        
+        /// <summary>
+        /// lblDuracaoE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDuracaoE;
+        
+        /// <summary>
         /// lblNomeEspecialista control.
         /// </summary>
         /// <remarks>
@@ -49,13 +121,13 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.TextBox txtDuvida;
         
         /// <summary>
-        /// btnSair control.
+        /// btnEnviar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSair;
+        protected global::System.Web.UI.WebControls.Button btnEnviar;
         
         /// <summary>
         /// btnCancelar control.
@@ -65,5 +137,14 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelar;
+        
+        /// <summary>
+        /// pnlMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlMsg;
     }
 }

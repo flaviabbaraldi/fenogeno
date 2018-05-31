@@ -9,9 +9,40 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="panel-body">
-                                    <div class="col-md-7 text-left">
+                                    <div class="col-md-6 text-left">
                                         <img runat="server" id="imgEspecialista" class="img-responsive" alt="Generic placeholder image" width="250" height="200" />
-                                        <asp:Label ID="lblNome" runat="server" CssClass="control-label"></asp:Label>
+                                        <div class="row">
+                                            <div class="col-md-6 text-center">
+                                                <b>
+                                                    <asp:Label ID="lblNome" runat="server" CssClass="control-label" align="center"></asp:Label></b>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <b><asp:Label ID="lblFormacao" runat="server" CssClass="control-label" Text="Formação"></asp:Label></b>
+                                        </div>
+                                        <asp:Label ID="lblCurso" runat="server" CssClass="control-label"></asp:Label>
+                                        <div class="row">
+                                            <asp:Label ID="lblUniversidadeF" runat="server" CssClass="control-label"></asp:Label>
+                                        </div>
+                                        <div class="row">
+                                            <asp:Label ID="lblDuracaoF" runat="server" CssClass="control-label"></asp:Label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <b><asp:Label ID="lblEspecializacao" runat="server" CssClass="control-label" Text="Especilização"></asp:Label></b>
+                                        </div>
+                                        <asp:Label ID="lblCursoE" runat="server" CssClass="control-label"></asp:Label>
+                                        <div class="row">
+                                            <asp:Label ID="lblUniversidadeE" runat="server" CssClass="control-label"></asp:Label>
+                                        </div>
+                                        <div class="row">
+                                            <asp:Label ID="lblDuracaoE" runat="server" CssClass="control-label"></asp:Label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -28,10 +59,19 @@
             </div>
             <div class="form-group">
                 <div class="col-md-12 text-right">
-                    <asp:Button ID="btnSair" runat="server" Text="Sair" CssClass="btn btn-primary" />
+                    <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-primary" OnClick="btnEnviar_Click" />
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
                 </div>
             </div>
+              <asp:Panel ID="pnlMsg" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                            <strong>Alerta!</strong> Não foi possível enviar sua dúvida!Tente novamente mais tarde!
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
         </div>
     </div>
 </asp:Content>
