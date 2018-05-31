@@ -44,6 +44,7 @@
     <Compile Include="AnomaliaDAO.cs" />
     <Compile Include="CabeloDAO.cs" />
     <Compile Include="ComentarioDAO.cs" />
+    <Compile Include="DuvidaDAO.cs" />
     <Compile Include="EspecialistaDAO.cs" />
     <Compile Include="FatorRhDAO.cs" />
     <Compile Include="GrupoSanguineoDAO.cs" />
