@@ -24,7 +24,9 @@ namespace Fenogeno.WebUI
             var usuarioLogado = new UsuarioDAO().Logar(new Usuario()
             {
                 Email = txtEmail.Text,
-                Senha = txtSenha.Text
+                Senha = txtSenha.Text,
+
+
             });
 
             if (usuarioLogado == null)
