@@ -16,15 +16,14 @@ namespace Fenogeno.DataAccess
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"INSERT INTO DUVIDA (ID_ESPECIALISTA , ID_USUARIO, DATAHORA, TEXTO) 
-                                  VALUES (@ID_ESPECIALISTA, @ID_USUARIO, @DATAHORA, @TEXTO);";
+                string strSQL = @"INSERT INTO DUVIDA (ID_ESPECIALISTA , ID_USUARIO, TEXTO) 
+                                  VALUES (@ID_ESPECIALISTA, @ID_USUARIO, @TEXTO);";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-                    cmd.Parameters.Add("@ID_ESPECIALISTA", SqlDbType.VarChar).Value = obj.Especialista.Cod;
-                    cmd.Parameters.Add("@ID_USUARIO", SqlDbType.VarChar).Value = obj.Usuario.Id;
-                    cmd.Parameters.Add("@DATAHORA", SqlDbType.VarChar).Value = obj.DataHora;
+                    cmd.Parameters.Add("@ID_ESPECIALISTA", SqlDbType.Int).Value = obj.Especialista.Cod;
+                    cmd.Parameters.Add("@ID_USUARIO", SqlDbType.Int).Value = obj.Usuario.Id;                    
                     cmd.Parameters.Add("@TEXTO", SqlDbType.VarChar).Value = obj.Texto;
 
                     conn.Open();

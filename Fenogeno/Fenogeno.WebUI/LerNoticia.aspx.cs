@@ -45,7 +45,7 @@ namespace Fenogeno.WebUI
             {
                 Salvar();
                 LimparCampos();
-                Response.Redirect(string.Format("~/LerNoticia.aspx?id={0}", Request.QueryString["id"]));
+                //Response.Redirect(string.Format("~/LerNoticia.aspx?id={0}", Request.QueryString["id"]));
 
                 pnlMsg.Visible = true;
                 return;
@@ -72,7 +72,7 @@ namespace Fenogeno.WebUI
             obj.Texto = txtComentario.Text;
             obj.DataHora = DateTime.Now;
             obj.Noticia = new Noticia() { Cod = Convert.ToInt32(Request.QueryString["ID"]) };
-            obj.Usuario = new Usuario() { Id = ((Usuario)HttpContext.Current.User).Id };
+            obj.Usuario = new Usuario() { Id = ((Usuario)HttpContext.Current.User).Id };        
             
             new ComentarioDAO().Inserir(obj);
         }

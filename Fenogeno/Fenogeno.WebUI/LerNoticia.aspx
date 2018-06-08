@@ -44,7 +44,7 @@
 
          <asp:Panel ID="pnlMsg" runat="server" Visible="false">
                  <div class="col-md-12 text-center">
-                        <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                        <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
                             <strong>Comentário inserido com sucesso!</strong> 
                         </div>
                     </div>                

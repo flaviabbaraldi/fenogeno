@@ -59,11 +59,11 @@
             </div>
             <div class="form-group">
                 <div class="col-md-12 text-right">
-                    <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-primary" />
+                    <asp:Button ID="btnEnviar" runat="server" Text="Enviar" CssClass="btn btn-primary" OnClick="btnEnviar_Click" />
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
                 </div>
             </div>
-              <asp:Panel ID="pnlMsg" runat="server" Visible="false">
+              <asp:Panel ID="pnlMsgAlerta" runat="server" Visible="false">
                 <div class="form-group">
                     <div class="col-md-12 text-center">
                         <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
@@ -72,6 +72,46 @@
                     </div>
                 </div>
             </asp:Panel>
+
+            <asp:Panel ID="pnlMsg" runat="server" Visible="false">
+                 <div class="col-md-12 text-center">
+                        <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                            <strong>Comentário inserido com sucesso!</strong> 
+                        </div>
+                    </div>                
+            </asp:Panel>
         </div>
     </div>
+      <div class="form-group">
+            <div class="col-md-12">
+                <asp:DataList ID="grdComentario" CssClass="table text-center" runat="server" RepeatColumns="1" RepeatLayout="Table">
+                    <ItemTemplate>
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                <img class="img-circle" runat="server" src="Images/avatar_2x.png"  alt="Generic placeholder image" style="width: 100px;" />
+            
+                            </div>
+                            <div class="col-md-10 text-left">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label><%# Eval("Usuario.Nome") %></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label><%# Eval("DataHora") %></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <span><%# Eval("Texto") %></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
+        </div>
 </asp:Content>

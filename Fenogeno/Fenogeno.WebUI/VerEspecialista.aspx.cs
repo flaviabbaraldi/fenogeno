@@ -1,4 +1,5 @@
 ﻿using Fenogeno.DataAccess;
+using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,21 +36,55 @@ namespace Fenogeno.WebUI
                     }
                 }
             }
+
+            var lst = new DuvidaDAO().BuscarTodos();
+            grdComentario.DataSource = lst;
+            grdComentario.DataBind();
         }
 
-        //private bool Validar()
-        //{
-        //    if (string.IsNullOrWhiteSpace(txtDuvida.Text))
-        //        return false;
-        //}
 
-        //protected void btnEnviar_Click(object sender, EventArgs e)
-        //{
-        //    if (!Validar())
-        //    {
-        //        pnlMsg.Visible = true;
-        //        return;
-        //    }
-        //}
+        private bool Validar()
+        {
+            if (string.IsNullOrWhiteSpace(txtDuvida.Text))
+                return false;
+
+            return true;
+        }
+
+        private void Salvar()
+        {
+            var obj = new Duvida();
+            obj.Texto = txtDuvida.Text;
+            obj.DataHora = DateTime.Now;
+           // obj.Especialista = new Especialista() { Cod = Especialista.ToInt32(Request.QueryString["ID"]) };
+            obj.Usuario = new Usuario() { Id = ((Usuario)HttpContext.Current.User).Id };
+
+            new DuvidaDAO().Inserir(obj);
+        }
+
+        private void LimparCampos()
+        {
+            txtDuvida.Text = string.Empty;
+        }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+
+            if (Validar())
+            {
+                Salvar();
+                LimparCampos();
+                Response.Redirect(string.Format("~/VerEspecialista.aspx?id={0}", Request.QueryString["id"]));
+
+                pnlMsg.Visible = true;
+                return;
+            }
+
+            if (!Validar())
+            {
+                pnlMsgAlerta.Visible = true;
+                return;
+            }
+        }
     }
 }
