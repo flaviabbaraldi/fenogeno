@@ -107,6 +107,7 @@ namespace Fenogeno.DataAccess
                             Usuario = new Usuario()
                             {
                                 Id = Convert.ToInt32(row["ID_USUARIO"]),
+                              
                             },
                             DataHora = Convert.ToDateTime(row["DATAHORA"]),
                             Texto = row["TEXTO"].ToString()

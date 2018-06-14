@@ -33,13 +33,16 @@ namespace Fenogeno.WebUI
                         lblDuracaoE.Text = "Duração: " + especialista.Duracao_e;
                         imgEspecialista.Attributes.Add("src", ResolveUrl(string.Format("~/Uploads/{0}", especialista.Foto)));
                         lblNomeEspecialista.Text = "Tem alguma dúvida? Pergunte ao Doutor(a) " + especialista.Nome;
+
+
+
+                        var lst = new DuvidaDAO().BuscarPorEspecialista(especialista.Cod);
+                        grdComentario.DataSource = lst;
+                        grdComentario.DataBind();
                     }
                 }
             }
 
-            var lst = new DuvidaDAO().BuscarTodos();
-            grdComentario.DataSource = lst;
-            grdComentario.DataBind();
         }
 
 
@@ -56,7 +59,7 @@ namespace Fenogeno.WebUI
             var obj = new Duvida();
             obj.Texto = txtDuvida.Text;
             obj.DataHora = DateTime.Now;
-            //obj.Especialista = new Especialista() { Cod = Especialista.ToInt32(Request.QueryString["ID"]) };
+            obj.Especialista = new Especialista() { Cod = Convert.ToInt32(Request.QueryString["ID"]) };
             obj.Usuario = new Usuario() { Id = ((Usuario)HttpContext.Current.User).Id };
 
             new DuvidaDAO().Inserir(obj);
@@ -74,7 +77,7 @@ namespace Fenogeno.WebUI
             {
                 Salvar();
                 LimparCampos();
-                Response.Redirect(string.Format("~/VerEspecialista.aspx?id={0}", Request.QueryString["id"]));
+               // Response.Redirect(string.Format("~/VerEspecialista.aspx?id={0}", Request.QueryString["id"]));
 
                 pnlMsg.Visible = true;
                 return;
