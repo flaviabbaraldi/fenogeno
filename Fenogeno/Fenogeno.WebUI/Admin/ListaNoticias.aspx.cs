@@ -40,7 +40,7 @@ namespace Fenogeno.WebUI
                 {
                     var obj = new Noticia() { Cod = id };
                     new NoticiaDAO().Excluir(obj);
-                    Response.Redirect("~/ListaNoticias");
+                    Response.Redirect("~/Admin/ListaNoticias");
                 }
             }
         }

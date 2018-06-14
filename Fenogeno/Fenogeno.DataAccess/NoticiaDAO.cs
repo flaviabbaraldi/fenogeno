@@ -30,11 +30,33 @@ namespace Fenogeno.DataAccess
             }
         }
 
+        public void Atualizar(Noticia obj)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"UPDATE NOTICIA SET TITULO = @TITULO, DESCRICAO = @DESCRICAO, CORPO_TEXTO = @CORPO_TEXTO WHERE COD = @COD;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@TITULO", SqlDbType.VarChar).Value = obj.Titulo;
+                    cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = obj.Subtitulo;
+                    cmd.Parameters.Add("@CORPO_TEXTO", SqlDbType.VarChar).Value = obj.Texto;
+                    cmd.Parameters.Add("@COD", SqlDbType.Int).Value = obj.Cod;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
         public void Excluir(Noticia obj)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"DELETE FROM NOTICIA WHERE COD = @COD;";
+                string strSQL = @"DELETE FROM COMENTARIO WHERE ID_NOTICIA = @COD;
+                                  DELETE FROM NOTICIA WHERE COD = @COD;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {

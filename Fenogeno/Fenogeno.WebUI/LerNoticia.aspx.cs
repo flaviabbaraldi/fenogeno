@@ -29,14 +29,12 @@ namespace Fenogeno.WebUI
                         lblTexto.Text = noticia.Texto;
                         imgNoticia.Attributes.Add("src", ResolveUrl(string.Format("~/Uploads/{0}", noticia.Foto)));
 
+                        var lst = new ComentarioDAO().BuscarPorNoticia(noticia.Cod);
+                        grdComentario.DataSource = lst;
+                        grdComentario.DataBind();
                     }
                 }
             }
-
-            var lst = new ComentarioDAO().BuscarTodos();
-            grdComentario.DataSource = lst;
-            grdComentario.DataBind();
-
         }
 
         protected void btnEnviar_Click(object sender, EventArgs e)
@@ -80,6 +78,11 @@ namespace Fenogeno.WebUI
         private void LimparCampos()
         {
             txtComentario.Text = string.Empty;
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Noticias");
         }
     }
 }

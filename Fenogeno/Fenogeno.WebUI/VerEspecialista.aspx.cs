@@ -56,7 +56,7 @@ namespace Fenogeno.WebUI
             var obj = new Duvida();
             obj.Texto = txtDuvida.Text;
             obj.DataHora = DateTime.Now;
-           // obj.Especialista = new Especialista() { Cod = Especialista.ToInt32(Request.QueryString["ID"]) };
+            //obj.Especialista = new Especialista() { Cod = Especialista.ToInt32(Request.QueryString["ID"]) };
             obj.Usuario = new Usuario() { Id = ((Usuario)HttpContext.Current.User).Id };
 
             new DuvidaDAO().Inserir(obj);
@@ -85,6 +85,11 @@ namespace Fenogeno.WebUI
                 pnlMsgAlerta.Visible = true;
                 return;
             }
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Especialistas");
         }
     }
 }

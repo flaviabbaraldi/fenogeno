@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </asp:Panel>
-
+            <asp:HiddenField ID="hdfCod" runat="server" Value="0" />
             <div class="form-group">
                 <div class="col-md-12">
                     <asp:Label ID="lblTitulo" runat="server" CssClass="control-label">Título:</asp:Label>

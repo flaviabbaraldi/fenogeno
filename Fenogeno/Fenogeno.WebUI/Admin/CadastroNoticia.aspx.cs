@@ -20,6 +20,7 @@ namespace Fenogeno.WebUI
                     var obj = new NoticiaDAO().BuscarPorId(id);
                     if (obj != null)
                     {
+                        hdfCod.Value = obj.Cod.ToString();
                         txtTitulo.Text = obj.Titulo;
                         txtdescricao.Text = obj.Subtitulo;
                         txtCorpo.Text = obj.Texto;
@@ -52,6 +53,7 @@ namespace Fenogeno.WebUI
 
         private void LimparCampos()
         {
+            hdfCod.Value = "0";
             txtTitulo.Text = string.Empty;
             txtdescricao.Text = string.Empty;
             txtCorpo.Text = string.Empty;
@@ -74,6 +76,7 @@ namespace Fenogeno.WebUI
         private void Salvar()
         {
             var obj = new Noticia();
+            obj.Cod = Convert.ToInt32(hdfCod.Value);
             obj.Titulo = txtTitulo.Text;
             obj.Subtitulo = txtdescricao.Text;
             obj.Texto = txtCorpo.Text;
@@ -85,7 +88,10 @@ namespace Fenogeno.WebUI
                 fupArquivo.SaveAs(Server.MapPath(string.Format("~/Uploads/{0}", fileName)));
             }
 
-            new NoticiaDAO().Inserir(obj);
+            if (obj != null && obj.Cod > 0)
+                new NoticiaDAO().Atualizar(obj);
+            else
+                new NoticiaDAO().Inserir(obj);
         }
     }
 }

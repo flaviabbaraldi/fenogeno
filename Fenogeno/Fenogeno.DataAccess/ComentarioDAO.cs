@@ -80,12 +80,18 @@ namespace Fenogeno.DataAccess
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM COMENTARIO WHERE ID_NOTICIA = @ID_NOTICIA;";
+                string strSQL = @"SELECT 
+                                    C.*,
+                                    U.NOME AS NOME_USUARIO
+                                  FROM COMENTARIO C
+                                  INNER JOIN USUARIO U ON (U.ID = C.ID_USUARIO)
+                                  WHERE C.ID_NOTICIA = @ID_NOTICIA;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     conn.Open();
                     cmd.Connection = conn;
+                    cmd.Parameters.Add("@ID_NOTICIA", SqlDbType.Int).Value = codNoticia;
                     cmd.CommandText = strSQL;
 
                     var dataReader = cmd.ExecuteReader();
@@ -105,6 +111,7 @@ namespace Fenogeno.DataAccess
                             Usuario = new Usuario()
                             {
                                 Id = Convert.ToInt32(row["ID_USUARIO"]),
+                                Nome = row["NOME_USUARIO"].ToString()
                             },
                             DataHora = Convert.ToDateTime(row["DATAHORA"]),
                             Texto = row["TEXTO"].ToString()

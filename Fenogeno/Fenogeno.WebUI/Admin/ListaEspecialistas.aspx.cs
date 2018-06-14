@@ -40,7 +40,7 @@ namespace Fenogeno.WebUI
                 {
                     var obj = new Especialista() { Cod = id };
                     new EspecialistaDAO().Excluir(obj);
-                    Response.Redirect("~/ListaEspecialistas");
+                    Response.Redirect("~/Admin/ListaEspecialistas");
                 }
             }
         }
