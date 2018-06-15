@@ -68,22 +68,22 @@ namespace Fenogeno.WebUI
 
             else if ((campo1 == "O") && (campo2 == "O") && (campo3 == "+") && (campo4 == "-"))
             {
-                lblResultado.Text = "CASO 3";
+                lblResultado.Text = "Seu filho tem 100% de chances de nascer O+";
             }
 
             else if ((campo1 == "O") && (campo2 == "O") && (campo3 == "-") && (campo4 == "+"))
             {
-                lblResultado.Text = "CASO 4";
+                lblResultado.Text = "Seu filho tem 100% de chances de nascer O+";
             }
 
             else if ((campo1 == "O") && (campo2 == "A") && (campo3 == "+") && (campo4 == "+"))
             {
-                lblResultado.Text = "CASO 5";
+                lblResultado.Text = "Seu filho tem 75% de chances de nascer A+ e 25% de chances de nascer O+";
             }
 
             else if ((campo1 == "O") && (campo2 == "A") && (campo3 == "-") && (campo4 == "-"))
             {
-                lblResultado.Text = "CASO 6";
+                lblResultado.Text = "Seu filho tem 75% de chances de nascer A- e 25% de chances de nascer O-";
             }
 
             else if ((campo1 == "O") && (campo2 == "A") && (campo3 == "+") && (campo4 == "-"))

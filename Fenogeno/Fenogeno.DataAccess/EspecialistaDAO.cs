@@ -47,7 +47,8 @@ namespace Fenogeno.DataAccess
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"DELETE FROM ESPECIALISTA WHERE COD = @COD;";
+                string strSQL = @"DELETE FROM DUVIDA WHERE ID_ESPECIALISTA = @COD;
+                                  DELETE FROM ESPECIALISTA WHERE COD = @COD;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {

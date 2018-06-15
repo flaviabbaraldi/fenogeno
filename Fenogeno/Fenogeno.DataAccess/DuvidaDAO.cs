@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fenogeno.DataAccess
 {
@@ -23,7 +20,7 @@ namespace Fenogeno.DataAccess
                 {
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@ID_ESPECIALISTA", SqlDbType.Int).Value = obj.Especialista.Cod;
-                    cmd.Parameters.Add("@ID_USUARIO", SqlDbType.Int).Value = obj.Usuario.Id;                    
+                    cmd.Parameters.Add("@ID_USUARIO", SqlDbType.Int).Value = obj.Usuario.Id;
                     cmd.Parameters.Add("@TEXTO", SqlDbType.VarChar).Value = obj.Texto;
 
                     conn.Open();
@@ -76,18 +73,29 @@ namespace Fenogeno.DataAccess
 
             return lstDuvidas;
         }
+
         public List<Duvida> BuscarPorEspecialista(int codDuvida)
         {
             var lstDuvidas = new List<Duvida>();
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM DUVIDA WHERE ID_ESPECIALISTA = @ID_ESPECIALISTA;";
+                string strSQL = @"SELECT 
+                                       D.*,
+                                       E.NOME AS NOME_ESPECIALISTA,
+                                       U.NOME AS NOME_USUARIO
+                                 FROM DUVIDA D
+                                 INNER JOIN ESPECIALISTA E ON (E.COD = D.ID_ESPECIALISTA)
+                                 INNER JOIN USUARIO U ON (U.ID = D.ID_USUARIO)
+                       
+                                 WHERE D.ID_ESPECIALISTA = @ID_ESPECIALISTA;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     conn.Open();
                     cmd.Connection = conn;
+                    cmd.Parameters.Add("ID_ESPECIALISTA", SqlDbType.Int).Value = codDuvida;
+                    cmd.Parameters.Add("ID_USUARIO", SqlDbType.Int).Value = codDuvida;
                     cmd.CommandText = strSQL;
 
                     var dataReader = cmd.ExecuteReader();
@@ -103,10 +111,12 @@ namespace Fenogeno.DataAccess
                             Especialista = new Especialista()
                             {
                                 Cod = Convert.ToInt32(row["ID_ESPECIALISTA"]),
+                                Nome = row["NOME_ESPECIALISTA"].ToString()
                             },
                             Usuario = new Usuario()
                             {
                                 Id = Convert.ToInt32(row["ID_USUARIO"]),
+                                Nome = row["NOME_USUARIO"].ToString()
                             },
                             DataHora = Convert.ToDateTime(row["DATAHORA"]),
                             Texto = row["TEXTO"].ToString()
@@ -119,6 +129,5 @@ namespace Fenogeno.DataAccess
 
             return lstDuvidas;
         }
-
     }
 }

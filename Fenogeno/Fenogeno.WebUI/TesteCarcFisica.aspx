@@ -32,7 +32,7 @@
                     <asp:DropDownList ID="ddlCabeloP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnCabelo" runat="server" Text="Calcular" CssClass="btn btn-primary" />
+                    <asp:Button ID="btnCabelo" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCabelo_Click" />
                 </div>
                 <div class="col-md-3">
                     <asp:Label ID="lblResultadoC" runat="server" CssClass="control-label"></asp:Label>
@@ -50,7 +50,7 @@
                     <asp:DropDownList ID="ddlPeleP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnPele" runat="server" Text="Calcular" CssClass="btn btn-primary" />
+                    <asp:Button ID="btnPele" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnPele_Click" />
                 </div>
                 <div class="col-md-3">
                     <asp:Label ID="lblResultadoP" runat="server" CssClass="control-label"></asp:Label>
