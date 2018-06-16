@@ -42,8 +42,9 @@ namespace Fenogeno.WebUI
             ddlAnomaliaFP.DataBind();
         }
 
-        protected void btnSalvar_Click(object sender, EventArgs e)
+        private void Calcular()
         {
+
             string campo1 = ddlAnomalia.SelectedValue;
             string campo2 = ddlAnomaliaP.SelectedValue;
             string campo3 = ddlAnomaliaF.SelectedValue;
@@ -180,9 +181,13 @@ namespace Fenogeno.WebUI
                 lblResultado.Text = "Nenhuma combinação foi encontrada!";
             }
 
-
-
         }
+        protected void btnCalcular_Click(object sender, EventArgs e)
+        {
+            Calcular();
+        }
+
+       
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {

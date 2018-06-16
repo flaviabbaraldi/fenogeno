@@ -53,7 +53,11 @@ namespace Fenogeno.WebUI
         {
         }
 
-        protected void btnResultadoSangue_Click(object sender, EventArgs e)
+        protected void btnCalcularSangue_Click(object sender, EventArgs e)
+        {
+            CalcularSangue();
+        }
+        private void CalcularSangue()
         {
             string campo1 = ddlSangue.SelectedValue;
             string campo2 = ddlSangueP.SelectedValue;
@@ -61,7 +65,7 @@ namespace Fenogeno.WebUI
 
             if ((campo1 == "A") && (campo2 == "A"))
             {
-                lblResultadoS.Text = "Seu filho pode ser do grupo O ou A, não podendo ser do AB ou B";
+                lblResultadoS.Text = "Seu filho tem probabilidades de ser do grupo O ou A, não podendo ser do AB ou B";
             }
             else if ((campo1 == "A") && (campo2 == "AB"))
             {
@@ -129,31 +133,37 @@ namespace Fenogeno.WebUI
             }
         }
 
-        protected void btnResultadoRH_Click(object sender, EventArgs e)
+        protected void btnCalcularRH_Click(object sender, EventArgs e)
+        {
+            CalcularRh();
+        }
+
+        private void CalcularRh()
         {
             string campo3 = ddlRh.SelectedValue;
             string campo4 = ddlRhP.SelectedValue;
 
             if ((campo3 == "+") && (campo4 == "-"))
             {
-                lblResultadoR.Text = "Seu terá RH + ou -";
+                lblResultadoR.Text = "Seu filho poderá ter fator RH + ou -";
             }
             else if ((campo3 == "+") && (campo4 == "+"))
             {
-                lblResultadoR.Text = "Seu terá RH + ou -";
+                lblResultadoR.Text = "Seu filho poderá ter fator RH + ou -";
             }
             else if ((campo3 == "-") && (campo4 == "+"))
             {
-                lblResultadoR.Text = "Seu terá RH + ou -";
+                lblResultadoR.Text = "Seu filho poderá ter fator RH + ou -";
             }
             else if ((campo3 == "-") && (campo4 == "-"))
             {
-                lblResultadoR.Text = "Seu terá RH -";
+                lblResultadoR.Text = "Seu filho terá fator RH -";
             }
             else
             {
-                lblResultadoR.Text = "Nenhum resultado esperado!";
+                lblResultadoR.Text = "Nenhuma combinação foi encontrado!";
             }
+
         }
     }
 

@@ -67,12 +67,14 @@ namespace Fenogeno.WebUI
 
         }
 
-        protected void btnSalvar_Click(object sender, EventArgs e)
-        {
 
+
+        protected void btnCalcularOlhos_Click(object sender, EventArgs e)
+        {
+            CalcularOlhos();
         }
 
-        protected void btnOlhos_Click(object sender, EventArgs e)
+        private void CalcularOlhos()
         {
             string campo1 = ddlOlhos.SelectedValue;
             string campo2 = ddlOlhosP.SelectedValue;
@@ -80,52 +82,70 @@ namespace Fenogeno.WebUI
 
             if ((campo1 == "Azul") && (campo2 == "Castanho"))
             {
-                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% castanhos.";
+                lblResultadoO.Text = "Seu filho tem 50% de chances de ter olhos azuis e 50% castanhos.";
             }
             else if ((campo1 == "Azul") && (campo2 == "Verde"))
             {
-                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% verdes.";
+                lblResultadoO.Text = "Seu filho tem 50% de chances de ter olhos azuis e 50% verdes.";
             }
             else if ((campo1 == "Verde") && (campo2 == "Castanho"))
             {
-                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos castanhos, 37,5% de chance de serem verdes e 12,5% de serem azuis.";
+                lblResultadoO.Text = "Seu filho tem 50% de chances de ter olhos castanhos, 37,5% verdes e 12,5% azuis.";
             }
             else if ((campo1 == "Castanho") && (campo2 == "Castanho"))
             {
-                lblResultadoO.Text = "Seu filho tem 75% de chance de ter olhos castanhos, 18,75% de chance de serem verdes e 6,25% de serem azuis. ";
+                lblResultadoO.Text = "Seu filho tem 75% de chances de ter olhos castanhos, 18,75% verdes e 6,25% azuis. ";
             }
             else if ((campo1 == "Verde") && (campo2 == "Verde"))
             {
-                lblResultadoO.Text = "Seu filho tem 75% de chance de ter olhos verdes, 25% de chance de serem azuis e 1% de serem castanhos.";
+                lblResultadoO.Text = "Seu filho tem 75% de chances de ter olhos verdes, 25% azuis e 1% castanhos.";
             }
             else if ((campo1 == "Azul") && (campo2 == "Azul"))
             {
-                lblResultadoO.Text = "Seu filho tem 99% de chance de ter olhos azuis e 1% de serem verdes.";
+                lblResultadoO.Text = "Seu filho tem 99% de chances de ter olhos azuis e 1% verdes.";
             }
             else if ((campo1 == "Castanho") && (campo2 == "Azul"))
             {
-                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% castanhos.";
+                lblResultadoO.Text = "Seu filho tem 50% de chances de ter olhos azuis e 50% castanhos.";
             }
             else if ((campo1 == "Verde") && (campo2 == "Azul"))
             {
-                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos azuis e 50% verdes.";
+                lblResultadoO.Text = "Seu filho tem 50% de chances de ter olhos azuis e 50% verdes.";
             }
             else if ((campo1 == "Castanho") && (campo2 == "Verde"))
             {
-                lblResultadoO.Text = "Seu filho tem 50% de chance de ter olhos castanhos, 37,5% de chance de serem verdes e 12,5% de serem azuis.";
+                lblResultadoO.Text = "Seu filho tem 50% de chances de ter olhos castanhos, 37,5% verdes e 12,5% azuis.";
             }
             else
             {
-                lblResultadoO.Text = "Nenhuma combinação encontrada!";
+                lblResultadoO.Text = "Nenhuma combinação foi encontrada!";
             }
         }
 
+        //// private void LimparCampos()
+        // {
+        //     ddlCabelo.Text = string.Empty;
+        //     ddlCabeloP.Text = string.Empty;
+        //     ddlOlhos.Text = string.Empty;
+        //     ddlOlhosP.Text = string.Empty;
+        //     ddlPele.Text = string.Empty;
+        //     ddlPeleP.Text = string.Empty;
+
+        // }
+
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
+            //LimparCampos();
             Response.Redirect("~/Teste.aspx");
         }
 
-        protected void btnCabelo_Click(object sender, EventArgs e)
+        protected void btnCalcularCabelo_Click(object sender, EventArgs e)
+        {
+            CalcularCabelo();
+                
+        }
+
+        private void CalcularCabelo()
         {
             string campo3 = ddlCabelo.SelectedValue;
             string campo4 = ddlCabeloP.SelectedValue;
@@ -133,113 +153,117 @@ namespace Fenogeno.WebUI
 
             if ((campo3 == "Castanho") && (campo4 == "Castanho"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 25% preto, 3% ruivo, 11% loiro escuro e 11% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 25% preto, 3% ruivo, 11% loiro escuro e 11% loiro claro";
             }
             else if ((campo3 == "Castanho") && (campo4 == "Loiro Escuro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 0% preto, 8% ruivo, 25% loiro escuro e 17% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 0% preto, 8% ruivo, 25% loiro escuro e 17% loiro claro";
             }
             else if ((campo3 == "Castanho") && (campo4 == "Loiro Claro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 0% preto, 0% ruivo, 16% loiro escuro e 34% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 0% preto, 0% ruivo, 16% loiro escuro e 34% loiro claro";
             }
             else if ((campo3 == "Castanho") && (campo4 == "Preto"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 50% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 50% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Castanho") && (campo4 == "Ruivo"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 0% preto, 16% ruivo, 34% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 0% preto, 16% ruivo, 34% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Loiro Escuro") && (campo4 == "Castanho"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 0% preto, 8% ruivo, 25% loiro escuro e 17% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 0% preto, 8% ruivo, 25% loiro escuro e 17% loiro claro";
             }
             else if ((campo3 == "Loiro Escuro") && (campo4 == "Loiro Escuro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 25% ruivo, 50% loiro escuro e 25% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 25% ruivo, 50% loiro escuro e 25% loiro claro";
             }
             else if ((campo3 == "Loiro Escuro") && (campo4 == "Loiro Claro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 0% ruivo, 50% loiro escuro e 50% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 0% ruivo, 50% loiro escuro e 50% loiro claro";
             }
             else if ((campo3 == "Loiro Escuro") && (campo4 == "Preto"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Loiro Escuro") && (campo4 == "Ruivo"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 50% ruivo, 50% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 50% ruivo, 50% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Loiro Claro") && (campo4 == "Castanho"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 0% preto, 0% ruivo, 16% loiro escuro e 34% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 0% preto, 0% ruivo, 16% loiro escuro e 34% loiro claro";
             }
             else if ((campo3 == "Loiro Claro") && (campo4 == "Loiro Escuro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 0% ruivo, 50% loiro escuro e 50% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 0% ruivo, 50% loiro escuro e 50% loiro claro";
             }
             else if ((campo3 == "Loiro Claro") && (campo4 == "Loiro Claro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 100% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 100% loiro claro";
             }
             else if ((campo3 == "Loiro Claro") && (campo4 == "Preto"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Loiro Claro") && (campo4 == "Ruivo"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 100% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 100% loiro claro";
             }
             else if ((campo3 == "Preto") && (campo4 == "Castanho"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 50% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 50% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Preto") && (campo4 == "Loiro Escuro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Preto") && (campo4 == "Loiro Claro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Preto") && (campo4 == "Preto"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 100% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 100% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Preto") && (campo4 == "Ruivo"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Ruivo") && (campo4 == "Castanho"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 50% castanho, 0% preto, 16% ruivo, 34% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 50% castanho, 0% preto, 16% ruivo, 34% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Ruivo") && (campo4 == "Loiro Escuro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 50% ruivo, 50% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 50% ruivo, 50% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Ruivo") && (campo4 == "Loiro Claro"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 0% ruivo, 100% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 0% ruivo, 100% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Ruivo") && (campo4 == "Preto"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 100% castanho, 0% preto, 0% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else if ((campo3 == "Ruivo") && (campo4 == "Ruivo"))
             {
-                lblResultadoC.Text = "A cor do cabelo do seu filho pode ser 0% castanho, 0% preto, 100% ruivo, 0% loiro escuro e 0% loiro claro";
+                lblResultadoC.Text = "A cor do cabelo do seu filho tem probabilidades de ser 0% castanho, 0% preto, 100% ruivo, 0% loiro escuro e 0% loiro claro";
             }
             else
             {
-                lblResultadoC.Text = "Nenhuma combinação encontrada!";
+                lblResultadoC.Text = "Nenhuma combinação foi encontrada!";
             }
-
 
         }
 
-        protected void btnPele_Click(object sender, EventArgs e)
+        protected void btnCalcularPele_Click(object sender, EventArgs e)
+        {
+            CalcularPele();
+        }
+        
+        private void CalcularPele()
         {
             string campo5 = ddlPele.SelectedValue;
             string campo6 = ddlPeleP.SelectedValue;
@@ -250,11 +274,11 @@ namespace Fenogeno.WebUI
             }
             else if ((campo5 == "Pele Clara") && (campo6 == "Pele Escura"))
             {
-                lblResultadoP.Text = "Seu filho tem 50% de chance de ter pele clara e 50% de pele escura";
+                lblResultadoP.Text = "Seu filho tem 50% de chances de ter pele clara e 50% de pele escura";
             }
             else if ((campo5 == "Pele Escura") && (campo6 == "Pele Clara"))
             {
-                lblResultadoP.Text = "Seu filho tem 50% de chance de ter pele clara e 50% de pele escura";
+                lblResultadoP.Text = "Seu filho tem 50% de chances de ter pele clara e 50% de pele escura";
             }
             else if ((campo5 == "Pele Escura") && (campo6 == "Pele Escura"))
             {
@@ -262,7 +286,7 @@ namespace Fenogeno.WebUI
             }
             else
             {
-                lblResultadoP.Text = "Nenhuma combinação encontrada!";
+                lblResultadoP.Text = "Nenhuma combinação foi encontrada!";
             }
         }
     }

@@ -14,7 +14,7 @@
                     <asp:DropDownList ID="ddlOlhosP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnOlhos" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnOlhos_Click" />
+                    <asp:Button ID="btnOlhos" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcularOlhos_Click" />
                 </div>
                 <div class="col-md-3 text-center">
                     <asp:Label ID="lblResultadoO" runat="server" CssClass="control-label"></asp:Label>
@@ -32,7 +32,7 @@
                     <asp:DropDownList ID="ddlCabeloP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnCabelo" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCabelo_Click" />
+                    <asp:Button ID="btnCabelo" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcularCabelo_Click" />
                 </div>
                 <div class="col-md-3">
                     <asp:Label ID="lblResultadoC" runat="server" CssClass="control-label"></asp:Label>
@@ -50,7 +50,7 @@
                     <asp:DropDownList ID="ddlPeleP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnPele" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnPele_Click" />
+                    <asp:Button ID="btnPele" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcularPele_Click" />
                 </div>
                 <div class="col-md-3">
                     <asp:Label ID="lblResultadoP" runat="server" CssClass="control-label"></asp:Label>
@@ -72,7 +72,6 @@
                 </div>--%>
             <div class="form-group">
                 <div class="col-md-12 text-right">
-                    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" />
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" OnClick="btnCancelar_Click" />
                 </div>
             </div>

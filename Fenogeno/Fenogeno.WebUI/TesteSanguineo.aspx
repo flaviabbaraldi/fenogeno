@@ -15,7 +15,7 @@
                     <asp:DropDownList ID="ddlSangueP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnResultadoSangue" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnResultadoSangue_Click" />
+                    <asp:Button ID="btnResultadoSangue" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcularSangue_Click" />
                 </div>
                 <div class="col-md-3 text-center">
                     <asp:Label ID="lblResultadoS" runat="server" CssClass="control-label"></asp:Label>
@@ -33,7 +33,7 @@
                     <asp:DropDownList ID="ddlRhP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnResultadoRH" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnResultadoRH_Click" />
+                    <asp:Button ID="btnResultadoRH" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcularRH_Click" />
                 </div>
                 <div class="col-md-3 text-center">
                     <asp:Label ID="lblResultadoR" runat="server" CssClass="control-label"></asp:Label>
