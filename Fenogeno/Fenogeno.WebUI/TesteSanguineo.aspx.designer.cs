@@ -13,6 +13,15 @@ namespace Fenogeno.WebUI {
     public partial class TesteSanguineo {
         
         /// <summary>
+        /// lblGrupoS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGrupoS;
+        
+        /// <summary>
         /// ddlSangue control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.DropDownList ddlSangue;
         
         /// <summary>
+        /// lblGrupoSp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGrupoSp;
+        
+        /// <summary>
         /// ddlSangueP control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSangueP;
+        
+        /// <summary>
+        /// btnResultadoSangue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnResultadoSangue;
+        
+        /// <summary>
+        /// lblResultadoS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultadoS;
         
         /// <summary>
         /// ddlRh control.
@@ -49,6 +85,24 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.DropDownList ddlRhP;
         
         /// <summary>
+        /// btnResultadoRH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnResultadoRH;
+        
+        /// <summary>
+        /// lblResultadoR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultadoR;
+        
+        /// <summary>
         /// btnSalvar control.
         /// </summary>
         /// <remarks>
@@ -65,14 +119,5 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelar;
-        
-        /// <summary>
-        /// lblResultado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResultado;
     }
 }
