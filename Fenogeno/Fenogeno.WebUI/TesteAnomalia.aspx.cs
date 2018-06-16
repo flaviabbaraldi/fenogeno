@@ -57,12 +57,12 @@ namespace Fenogeno.WebUI
 
             else if (rdoAnomaliaSim.Checked && (campo1 == "Polidactilia" || campo1 == "Doença de Huntington" || campo1 == "Doença de Hippel") && rdoAnomaliaPNao.Checked && rdoAnomaliaFSim.Checked && (campo3 == "Polidactilia" || campo3 == "Doença de Huntington" || campo3 == "Doença de Hippel") && rdoAnomaliaFPNao.Checked)
             {
-                lblResultado.Text = "Wellington é um nome estranho2: " + campo1 + " e " + campo3;
+                lblResultado.Text = "Seu filho tem 25% de chances de nascer com: " + campo1 + " e " + campo3;
             }
 
             else if (rdoAnomaliaNao.Checked && rdoAnomaliaPSim.Checked && (campo2 == "Polidactilia" || campo2 == "Doença de Huntington" || campo2 == "Doença de Hippel") && rdoAnomaliaFNao.Checked && rdoAnomaliaFPSim.Checked && (campo4 == "Polidactilia" || campo4 == "Doença de Huntington" || campo4 == "Doença de Hippel"))
             {
-                lblResultado.Text = "Wellington é um nome estranho3: " + campo2 + " e " + campo4;
+                lblResultado.Text = "Seu filho tem 25% de chances de nascer com: " + campo2 + " e " + campo4;
             }
 
             else if (rdoAnomaliaNao.Checked && rdoAnomaliaPNao.Checked && rdoAnomaliaFSim.Checked && (campo3 == "Polidactilia" || campo3 == "Doença de Huntington" || campo3 == "Doença de Hippel") && rdoAnomaliaFPNao.Checked)
