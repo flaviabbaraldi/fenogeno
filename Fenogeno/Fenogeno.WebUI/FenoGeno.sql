@@ -25,7 +25,8 @@ CREATE TABLE CABELO(
 INSERT INTO CABELO
 VALUES
 ('Castanho'),
-('Loiro'),
+('Loiro Escuro'),
+('Loiro Claro'),
 ('Preto'),
 ('Ruivo');
 
@@ -38,8 +39,8 @@ CREATE TABLE PELE(
 
 INSERT INTO PELE
 VALUES
-('Pele clara'),
-('Pele escura');
+('Pele Clara'),
+('Pele Escura');
 
 SELECT * FROM PELE;
 
