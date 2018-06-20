@@ -9,7 +9,7 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="<%= ResolveUrl("~/Images/Logo Nsdfseoticia.jpg") %>" alt="First slide">
+                    <img src="<%= ResolveUrl("~/Images/PlanodefundoLogo.jpg") %>" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1></h1>
@@ -59,7 +59,7 @@
                 <p><a class="btn btn-danger" href="TesteCarcFisica.aspx" role="button">Clique aqui! &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <img class="img-circle" src="<%= ResolveUrl("~/Images/teste_doençasgeneticas.jpg") %>" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="<%= ResolveUrl("~/Images/Amomalia.jpg") %>" alt="Generic placeholder image" width="140" height="140">
                 <h2></h2>
                 <p>Quer saber quais as probabilidades que o seu filho tende a nascer com alguma anomalia genética?</p>
                 <p><a class="btn btn-danger" href="TesteAnomalia.aspx" role="button">Clique aqui! &raquo;</a></p>

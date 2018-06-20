@@ -137,8 +137,10 @@
     <Content Include="Content\jquery.cleditor.css" />
     <Content Include="DefaultAdm.aspx" />
     <Content Include="FenoGeno.sql" />
+    <Content Include="Images\Amomalia.jpg" />
     <Content Include="Images\avatar_100px.png" />
     <Content Include="Images\avatar_2x.png" />
+    <Content Include="Images\PlanodefundoLogo.jpg" />
     <Content Include="Scripts\jquery.cleditor.js" />
     <Content Include="Scripts\jquery.cleditor.min.js" />
     <Content Include="Scripts\meiomask.js" />
