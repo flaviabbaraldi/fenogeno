@@ -312,6 +312,12 @@ namespace Fenogeno.WebUI
 
         private void CalcularPele()
         {
+            if (string.IsNullOrWhiteSpace(ddlPele.SelectedValue) || ddlPele.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlPeleP.SelectedValue) || ddlPeleP.SelectedValue == "-- [SELECIONE] --")
+            {
+                pnlMsgP.Visible = true;
+                return;
+            }
+
             string campo5 = ddlPele.SelectedValue;
             string campo6 = ddlPeleP.SelectedValue;
 
