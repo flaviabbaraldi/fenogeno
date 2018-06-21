@@ -9,7 +9,7 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="<%= ResolveUrl("~/Images/PlanodefundoLogo.jpg") %>" alt="First slide">
+                    <img src="<%= ResolveUrl("~/Images/LogoHome.jpg") %>" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1></h1>
@@ -18,25 +18,10 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img class="second-slide" src="<%= ResolveUrl("~/Images/pediatra.jpg") %>" alt="Second slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Pediatria</h1>
-                            <p>
-                                Pediatria é a especialidade da Medicina dedicada ao cuidado da saúde de crianças, adolescentes e pré-adolescentes. Sua atuação abrange aspectos curativos, preventivos e de pesquisa.
-                                O pediatra, além de tratar da saúde infantil, pode orientar as famílias sobre sobre questões como alimentação, aleitamento materno, vacinação e prevenção de acidentes.
-                            </p>
-                        </div>
-                    </div>
+                    <img class="second-slide" src="<%= ResolveUrl("~/Images/Home2.png") %>" alt="Second slide">
                 </div>
                 <div class="item">
-                    <img class="third-slide" src="<%= ResolveUrl("~/Images/ENG.jpg") %>" alt="Third slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Engenharia Genética</h1>
-                            <p>Engenharia genética são as técnicas de manipulação e recombinação dos genes, através de um conjunto de conhecimentos científicos (genética, biologia molecular, bioquímica, entre outros), que reformulam, reconstituem, reproduzem e até criam seres vivos. </p>
-                        </div>
-                    </div>
+                    <img class="third-slide" src="<%= ResolveUrl("~/Images/Home3.png") %>" alt="Third slide">
                 </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -55,19 +40,18 @@
                 <img class="img-circle" src="<%= ResolveUrl("~/Images/teste_carcfisicas.jpg" )%>" alt="Generic placeholder image" width="140" height="140" />
                 <h2></h2>
                 <p>Quer saber qual as possíveis características físicas de seu filho? </p>
-                <br />
                 <p><a class="btn btn-danger" href="TesteCarcFisica.aspx" role="button">Clique aqui! &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <img class="img-circle" src="<%= ResolveUrl("~/Images/Amomalia.jpg") %>" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="<%= ResolveUrl("~/Images/TesteAnomaliaFoto.jpg") %>" alt="Generic placeholder image" width="140" height="140">
                 <h2></h2>
-                <p>Quer saber quais as probabilidades que o seu filho tende a nascer com alguma anomalia genética?</p>
+                <p>Quer saber quais as probabilidades que o seu filho tem de nascer com alguma anomalia genética?</p>
                 <p><a class="btn btn-danger" href="TesteAnomalia.aspx" role="button">Clique aqui! &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <img class="img-circle" src="<%= ResolveUrl("~/Images/teste_sang.jpg") %>" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="<%= ResolveUrl("~/Images/Sangue.jpg") %>" alt="Generic placeholder image" width="140" height="140">
                 <h2></h2>
-                <p>Quer saber qual será o tipo sanguíneo de seu filho?</p>
+                <p>Quer saber quais os possíveis tipos sanguíneos que o seu filho pode ter?</p>
                 <p><a class="btn btn-danger" href="TesteSanguineo.aspx" role="button">Clique aqui! &raquo;</a></p>
             </div>
         </div>
