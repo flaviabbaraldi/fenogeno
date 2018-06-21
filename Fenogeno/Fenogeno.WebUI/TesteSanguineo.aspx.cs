@@ -1,4 +1,5 @@
 ﻿using Fenogeno.DataAccess;
+using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,17 @@ namespace Fenogeno.WebUI
 
         private void CarregarGrupoSanguineo()
         {
-            var lstGrupoSanguineo = new GrupoSanguineoDAO().BuscarTodos();
+            //cria uma lista vazia
+            var lstGrupoSanguineo = new List<GrupoSanguineo>();
+
+            //adiciona um item default
+            lstGrupoSanguineo.Add(new GrupoSanguineo()
+            {
+                Descricao = "-- [SELECIONE] --"
+            });
+
+            //adiciona na lista os itens que vierem do banco de dados
+            lstGrupoSanguineo.AddRange(new GrupoSanguineoDAO().BuscarTodos());
 
             ddlSangue.DataTextField = "Descricao";
             ddlSangue.DataValueField = "Descricao";
@@ -35,8 +46,20 @@ namespace Fenogeno.WebUI
         }
 
         private void CarregarFatorRh()
+            
         {
-            var lstFatorRh = new FatorRhDAO().BuscarTodos();
+            //cria uma lista vazia
+            var lstFatorRh = new List<FatorRh>();
+
+            //adiciona um item default
+            lstFatorRh.Add(new FatorRh()
+            {
+                Descricao = "-- [SELECIONE] --"
+            });
+
+            //adiciona na lista os itens que vierem do banco de dados
+            lstFatorRh.AddRange(new FatorRhDAO().BuscarTodos());
+
 
             ddlRh.DataTextField = "Descricao";
             ddlRh.DataValueField = "Descricao";
@@ -57,11 +80,17 @@ namespace Fenogeno.WebUI
         {
             CalcularSangue();
         }
+
         private void CalcularSangue()
         {
+            if (string.IsNullOrWhiteSpace(ddlSangue.SelectedValue) || ddlSangue.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlSangueP.SelectedValue) || ddlSangueP.SelectedValue == "-- [SELECIONE] --")
+            {
+                pnlMsgGS.Visible = true;
+                return;
+            }
+
             string campo1 = ddlSangue.SelectedValue;
             string campo2 = ddlSangueP.SelectedValue;
-
 
             if ((campo1 == "A") && (campo2 == "A"))
             {
@@ -139,7 +168,14 @@ namespace Fenogeno.WebUI
         }
 
         private void CalcularRh()
+
         {
+
+            if (string.IsNullOrWhiteSpace(ddlRh.SelectedValue) || ddlRh.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlRhP.SelectedValue) || ddlRhP.SelectedValue == "-- [SELECIONE] --")
+            {
+                pnlMsgFR.Visible = true;
+                return;
+            }
             string campo3 = ddlRh.SelectedValue;
             string campo4 = ddlRhP.SelectedValue;
 
@@ -163,6 +199,11 @@ namespace Fenogeno.WebUI
             {
                 lblResultadoR.Text = "Nenhuma combinação foi encontrado!";
             }
+
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
 
         }
     }

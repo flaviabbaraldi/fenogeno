@@ -103,13 +103,22 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Label lblResultadoR;
         
         /// <summary>
-        /// btnSalvar control.
+        /// pnlMsgGS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSalvar;
+        protected global::System.Web.UI.WebControls.Panel pnlMsgGS;
+        
+        /// <summary>
+        /// pnlMsgFR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlMsgFR;
         
         /// <summary>
         /// btnCancelar control.

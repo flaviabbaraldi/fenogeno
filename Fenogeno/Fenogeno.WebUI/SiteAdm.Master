@@ -40,7 +40,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="Default.aspx">
-                        <img src="<%= ResolveUrl("~/Images/logo2.png") %>" style="width: 100px;" />
+                        <img src="<%= ResolveUrl("~/Images/Logo_Oficial.fw.png") %>" style="width: 70px;" />
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">

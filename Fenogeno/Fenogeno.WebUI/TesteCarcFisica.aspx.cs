@@ -1,4 +1,5 @@
 ﻿using Fenogeno.DataAccess;
+using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,18 @@ namespace Fenogeno.WebUI
 
         private void CarregarOlhos()
         {
-            var lstOlhos = new OlhoDAO().BuscarTodos();
+            //cria uma lista vazia
+            var lstOlhos = new List<Olho>();
+
+            //adiciona um item default
+            lstOlhos.Add(new Olho()
+            {
+                Descricao = "-- [SELECIONE] --"
+            });
+
+            //adiciona na lista os itens que vierem do banco de dados
+            lstOlhos.AddRange(new OlhoDAO().BuscarTodos());
+
 
             ddlOlhos.DataTextField = "Descricao";
             ddlOlhos.DataValueField = "Descricao";
@@ -38,7 +50,17 @@ namespace Fenogeno.WebUI
 
         private void CarregarCabelo()
         {
-            var lstCabelo = new CabeloDAO().BuscarTodos();
+            //cria uma lista vazia
+            var lstCabelo = new List<Cabelo>();
+
+            //adiciona um item default
+            lstCabelo.Add(new Cabelo()
+            {
+                Descricao = "-- [SELECIONE] --"
+            });
+
+            //adiciona na lista os itens que vierem do banco de dados
+            lstCabelo.AddRange(new CabeloDAO().BuscarTodos());
 
             ddlCabelo.DataTextField = "Descricao";
             ddlCabelo.DataValueField = "Descricao";
@@ -53,7 +75,17 @@ namespace Fenogeno.WebUI
 
         private void CarregarPele()
         {
-            var lstPele = new PeleDAO().BuscarTodos();
+            //cria uma lista vazia
+            var lstPele = new List<Pele>();
+
+            //adiciona um item default
+            lstPele.Add(new Pele()
+            {
+                Descricao = "-- [SELECIONE] --"
+            });
+
+            //adiciona na lista os itens que vierem do banco de dados
+            lstPele.AddRange(new PeleDAO().BuscarTodos());
 
             ddlPele.DataTextField = "Descricao";
             ddlPele.DataValueField = "Descricao";
@@ -76,6 +108,14 @@ namespace Fenogeno.WebUI
 
         private void CalcularOlhos()
         {
+
+
+            if (string.IsNullOrWhiteSpace(ddlOlhos.SelectedValue) || ddlOlhos.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlOlhosP.SelectedValue) || ddlOlhosP.SelectedValue == "-- [SELECIONE] --")
+            {
+                pnlMsgO.Visible = true;
+                return;
+            }
+
             string campo1 = ddlOlhos.SelectedValue;
             string campo2 = ddlOlhosP.SelectedValue;
 
@@ -142,11 +182,18 @@ namespace Fenogeno.WebUI
         protected void btnCalcularCabelo_Click(object sender, EventArgs e)
         {
             CalcularCabelo();
-                
+
         }
 
         private void CalcularCabelo()
         {
+            if (string.IsNullOrWhiteSpace(ddlCabelo.SelectedValue) || ddlCabelo.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlCabeloP.SelectedValue) || ddlCabeloP.SelectedValue == "-- [SELECIONE] --")
+            {
+                pnlMsgC.Visible = true;
+                return;
+            }
+
+
             string campo3 = ddlCabelo.SelectedValue;
             string campo4 = ddlCabeloP.SelectedValue;
 
@@ -262,7 +309,7 @@ namespace Fenogeno.WebUI
         {
             CalcularPele();
         }
-        
+
         private void CalcularPele()
         {
             string campo5 = ddlPele.SelectedValue;

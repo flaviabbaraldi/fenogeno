@@ -131,8 +131,8 @@
             </div>
             <div class="form-group">
                 <div class="col-md-12 text-right">
-                    <asp:Button ID="btnSalvar" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcular_Click" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" OnClick="btnCancelar_Click" />
+                    <asp:Button ID="btnSalvar" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcular_Click" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-black" OnClick="btnCancelar_Click" />
                 </div>
             </div>
             <div class="form-group">

@@ -16,12 +16,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <h5>Aqui você poderá saber as probabilidades em relação a cor dos olhos, cabelo, pele e altura que o seu filho(a) tende a nascer.</h5>
+                            <h5>Quer saber quais são as probabilidades em relação a cor dos olhos, cabelo, pele que o seu filho tem de nascer? Esse é o teste perfeito para você!</h5>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-primary" href="TesteCarcFisica.aspx">Ver mais...</a>
+                            <a class="btn btn-danger" href="TesteCarcFisica.aspx">Ver mais...</a>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
             <br />
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-responsive" src="Images/teste_sang.jpg" />
+                    <img class="img-responsive" src="Images/Sangue.jpg" />
                 </div>
                 <div class="col-md-8">
                     <div class="row">
@@ -39,12 +39,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <h5>Aqui você poderá saber as probabilidades em relação a tipagem sanguínea que o seu filho tende a nascer.</h5>
+                            <h5>Quer saber quais são os possíveis grupos sanguíneos que o seu filho pode pertencer? Esse é o teste perfeito para você!</h5>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-primary" href="TesteSanguineo.aspx">Ver mais...</a>
+                            <a class="btn btn-danger" href="TesteSanguineo.aspx">Ver mais...</a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
             <br />
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-responsive" src="Images/teste_doençasgeneticas.jpg" />
+                    <img class="img-responsive" src="Images/TesteAnomaliaFoto.jpg" />
                 </div>
                 <div class="col-md-8">
                     <div class="row">
@@ -62,12 +62,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <h5>Aqui você poderá saber as probabilidades que o seu filho tem de desenvolver algum tipo de doenças genéticas.</h5>
+                            <h5>Quer saber se o seu filho tem possibilidade de desenvolver alguma doença genética? Esse é o teste perfeito para você!</h5>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-primary" href="TesteAnomalia.aspx">Ver mais...</a>
+                            <a class="btn btn-danger" href="TesteAnomalia.aspx">Ver mais...</a>
                         </div>
                     </div>
                 </div>

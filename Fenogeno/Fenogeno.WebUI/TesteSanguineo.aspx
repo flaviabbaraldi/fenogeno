@@ -15,7 +15,7 @@
                     <asp:DropDownList ID="ddlSangueP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnResultadoSangue" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcularSangue_Click" />
+                    <asp:Button ID="btnResultadoSangue" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcularSangue_Click" />
                 </div>
                 <div class="col-md-3 text-center">
                     <asp:Label ID="lblResultadoS" runat="server" CssClass="control-label"></asp:Label>
@@ -33,17 +33,36 @@
                     <asp:DropDownList ID="ddlRhP" runat="server" CssClass="form-control" />
                 </div>
                 <div class="col-md-1" style="padding-top: 20px;">
-                    <asp:Button ID="btnResultadoRH" runat="server" Text="Calcular" CssClass="btn btn-primary" OnClick="btnCalcularRH_Click" />
+                    <asp:Button ID="btnResultadoRH" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcularRH_Click" />
                 </div>
                 <div class="col-md-3 text-center">
                     <asp:Label ID="lblResultadoR" runat="server" CssClass="control-label"></asp:Label>
                 </div>
             </div>
 
+            <asp:Panel ID="pnlMsgGS" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                            <strong>Alerta!</strong> Selecione o grupo sanguíneo!
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
+
+             <asp:Panel ID="pnlMsgFR" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                            <strong>Alerta!</strong> Selecione o fator RH!
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
+
             <div class="form-group">
                 <div class="col-md-12 text-right">
-                    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary"  />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-black"  />
                 </div>
             </div>
         </div>
