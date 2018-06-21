@@ -1,4 +1,5 @@
 ﻿using Fenogeno.DataAccess;
+using Fenogeno.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,19 @@ namespace Fenogeno.WebUI
 
         private void BuscarAnomalia()
         {
-            var lstAnomalia = new AnomaliaDAO().BuscarTodos();
+
+            //cria uma lista vazia
+            var lstAnomalia = new List<Anomalia>();
+
+            //adiciona um item default
+            lstAnomalia.Add(new Anomalia()
+            {
+                Descricao = "-- [SELECIONE] --"
+            });
+
+            //adiciona na lista os itens que vierem do banco de dados
+            lstAnomalia.AddRange(new AnomaliaDAO().BuscarTodos());
+
 
             ddlAnomalia.DataTextField = "Descricao";
             ddlAnomalia.DataValueField = "Descricao";
@@ -44,6 +57,12 @@ namespace Fenogeno.WebUI
 
         private void Calcular()
         {
+
+            if (string.IsNullOrWhiteSpace(ddlAnomalia.SelectedValue) || rdoAnomaliaSim.Checked || ddlAnomalia.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlAnomaliaF.SelectedValue) || rdoAnomaliaFSim.Checked || ddlAnomaliaF.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlAnomaliaFP.SelectedValue) || rdoAnomaliaFPSim.Checked || ddlAnomaliaFP.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlAnomaliaP.SelectedValue) || rdoAnomaliaPSim.Checked || ddlAnomaliaP.SelectedValue == "-- [SELECIONE] --")
+            {
+                pnlMsgA.Visible = true;
+                return;
+            }
 
             string campo1 = ddlAnomalia.SelectedValue;
             string campo2 = ddlAnomaliaP.SelectedValue;

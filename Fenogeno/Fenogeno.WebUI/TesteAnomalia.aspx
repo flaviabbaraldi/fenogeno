@@ -135,6 +135,17 @@
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-black" OnClick="btnCancelar_Click" />
                 </div>
             </div>
+
+               <asp:Panel ID="pnlMsgA" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                            <strong>Alerta!</strong> Preencha todos os campos!
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
+
             <div class="form-group">
                 <div class="col-md-12 text-center">
                     <asp:Label ID="lblResultado" runat="server" CssClass="control-label"></asp:Label>

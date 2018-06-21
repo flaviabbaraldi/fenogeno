@@ -91,6 +91,16 @@
                     </div>
                 </div>
             </asp:Panel>
+
+              <asp:Panel ID="pnlMsgP" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
+                            <strong>Alerta!</strong> Selecione a cor da pele!
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
             <div class="form-group">
                 <div class="col-md-12 text-right">
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-black" OnClick="btnCancelar_Click" />
