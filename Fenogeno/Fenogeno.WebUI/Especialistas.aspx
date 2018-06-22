@@ -92,7 +92,7 @@
                                 </div>--%>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <a href="<%# ResolveUrl(string.Format("~/VerEspecialista.aspx?id={0}", Eval("Cod"))) %>" class="btn btn-primary">Ver Mais...</a>
+                                    <a href="<%# ResolveUrl(string.Format("~/VerEspecialista.aspx?id={0}", Eval("Cod"))) %>" class="btn btn-danger">Ver Mais...</a>
                                 </div>
                             </div>
                         </div>

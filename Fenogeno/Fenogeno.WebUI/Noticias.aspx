@@ -29,7 +29,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a class="btn btn-primary" href="<%# ResolveUrl(string.Format("~/LerNoticia.aspx?id={0}", Eval("Cod"))) %>">Ver mais...</a>
+                                    <a class="btn btn-danger" href="<%# ResolveUrl(string.Format("~/LerNoticia.aspx?id={0}", Eval("Cod"))) %>">Ver mais...</a>
                                 </div>
                             </div>
                         </div>

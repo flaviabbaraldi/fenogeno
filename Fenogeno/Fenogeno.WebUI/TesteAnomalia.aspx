@@ -14,9 +14,9 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <asp:RadioButton ID="rdoAnomaliaSim" runat="server" GroupName="anomalia" />
+                            <asp:RadioButton ID="rdoAnomaliaSim" runat="server" GroupName="anomalia" OnCheckedChanged="rdoAnomaliaSim_CheckedChanged" />
                             Sim
-                                <asp:RadioButton ID="rdoAnomaliaNao" runat="server" GroupName="anomalia" />
+                                <asp:RadioButton ID="rdoAnomaliaNao" runat="server" GroupName="anomalia" OnCheckedChanged="rdoAnomaliaNao_CheckedChanged" />
                             Não
                         </div>
                         <div class="col-md-8">
@@ -136,7 +136,7 @@
                 </div>
             </div>
 
-               <asp:Panel ID="pnlMsgA" runat="server" Visible="false">
+            <asp:Panel ID="pnlMsgA" runat="server" Visible="false">
                 <div class="form-group">
                     <div class="col-md-12 text-center">
                         <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
@@ -148,7 +148,16 @@
 
             <div class="form-group">
                 <div class="col-md-12 text-center">
-                    <asp:Label ID="lblResultado" runat="server" CssClass="control-label"></asp:Label>
+                    <asp:Panel ID="pnlResp" runat="server" Visible="false">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                                    <asp:Label ID="lblResultado" runat="server" CssClass="control-label"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </asp:Panel>
+
                 </div>
             </div>
         </div>

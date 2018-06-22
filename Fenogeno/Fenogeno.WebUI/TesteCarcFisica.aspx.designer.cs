@@ -58,6 +58,15 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Button btnOlhos;
         
         /// <summary>
+        /// pnlRespO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlRespO;
+        
+        /// <summary>
         /// lblResultadoO control.
         /// </summary>
         /// <remarks>
@@ -112,6 +121,15 @@ namespace Fenogeno.WebUI {
         protected global::System.Web.UI.WebControls.Button btnCabelo;
         
         /// <summary>
+        /// pnlRespC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlRespC;
+        
+        /// <summary>
         /// lblResultadoC control.
         /// </summary>
         /// <remarks>
@@ -164,6 +182,15 @@ namespace Fenogeno.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPele;
+        
+        /// <summary>
+        /// pnlResP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlResP;
         
         /// <summary>
         /// lblResultadoP control.

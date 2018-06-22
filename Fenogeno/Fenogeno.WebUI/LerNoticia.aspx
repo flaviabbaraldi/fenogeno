@@ -62,8 +62,8 @@
 
         <div class="form-group">
             <div class="col-md-12 text-right">
-                <asp:Button ID="btnEnviar" runat="server" CssClass="btn btn-primary" Text="Enviar" OnClick="btnEnviar_Click" />
-                <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-primary" Text="Cancelar" OnClick="btnCancelar_Click" />
+                <asp:Button ID="btnEnviar" runat="server" CssClass="btn btn-danger" Text="Enviar" OnClick="btnEnviar_Click" />
+                <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-danger" Text="Cancelar" OnClick="btnCancelar_Click" />
             </div>
         </div>
     </div>

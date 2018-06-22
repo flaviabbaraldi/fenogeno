@@ -18,7 +18,16 @@
                     <asp:Button ID="btnResultadoSangue" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcularSangue_Click" />
                 </div>
                 <div class="col-md-3 text-center">
-                    <asp:Label ID="lblResultadoS" runat="server" CssClass="control-label"></asp:Label>
+                    <asp:Panel ID="pnlRespS" runat="server" Visible="false">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                                      <asp:Label ID="lblResultadoS" runat="server" CssClass="control-label"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                  
                 </div>
             </div>
             <div class="form-group">
@@ -36,7 +45,16 @@
                     <asp:Button ID="btnResultadoRH" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcularRH_Click" />
                 </div>
                 <div class="col-md-3 text-center">
-                    <asp:Label ID="lblResultadoR" runat="server" CssClass="control-label"></asp:Label>
+                    <asp:Panel ID="pnlRespR" runat="server" Visible="false">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                                     <asp:Label ID="lblResultadoR" runat="server" CssClass="control-label"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                
                 </div>
             </div>
 
@@ -62,7 +80,7 @@
 
             <div class="form-group">
                 <div class="col-md-12 text-right">
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-black"  />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-black" OnClick="btnCancelar_Click"  />
                 </div>
             </div>
         </div>

@@ -17,7 +17,16 @@
                     <asp:Button ID="btnOlhos" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcularOlhos_Click" />
                 </div>
                 <div class="col-md-3 text-center">
-                    <asp:Label ID="lblResultadoO" runat="server" CssClass="control-label"></asp:Label>
+                     <asp:Panel ID="pnlRespO" runat="server" Visible="false">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                                    <asp:Label ID="lblResultadoO" runat="server" CssClass="control-label"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    
                 </div>
             </div>
             <div class="form-group">
@@ -35,7 +44,16 @@
                     <asp:Button ID="btnCabelo" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcularCabelo_Click" />
                 </div>
                 <div class="col-md-3">
-                    <asp:Label ID="lblResultadoC" runat="server" CssClass="control-label"></asp:Label>
+                    <asp:Panel ID="pnlRespC" runat="server" Visible="false">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                                    <asp:Label ID="lblResultadoC" runat="server" CssClass="control-label"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    
                 </div>
             </div>
             <div class="form-group">
@@ -53,7 +71,15 @@
                     <asp:Button ID="btnPele" runat="server" Text="Calcular" CssClass="btn btn-danger" OnClick="btnCalcularPele_Click" />
                 </div>
                 <div class="col-md-3">
-                    <asp:Label ID="lblResultadoP" runat="server" CssClass="control-label"></asp:Label>
+                    <asp:Panel ID="pnlResP" runat="server" Visible="false">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <div class="alert alert-success" role="alert" style="margin-bottom: 0px !important;">
+                                    <asp:Label ID="lblResultadoP" runat="server" CssClass="control-label"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </asp:Panel>
                 </div>
             </div>
 
@@ -71,7 +97,7 @@
                     </div>
                 </div>--%>
 
-             <asp:Panel ID="pnlMsgO" runat="server" Visible="false">
+            <asp:Panel ID="pnlMsgO" runat="server" Visible="false">
                 <div class="form-group">
                     <div class="col-md-12 text-center">
                         <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
@@ -81,8 +107,8 @@
                 </div>
             </asp:Panel>
 
-            
-             <asp:Panel ID="pnlMsgC" runat="server" Visible="false">
+
+            <asp:Panel ID="pnlMsgC" runat="server" Visible="false">
                 <div class="form-group">
                     <div class="col-md-12 text-center">
                         <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
@@ -92,7 +118,7 @@
                 </div>
             </asp:Panel>
 
-              <asp:Panel ID="pnlMsgP" runat="server" Visible="false">
+            <asp:Panel ID="pnlMsgP" runat="server" Visible="false">
                 <div class="form-group">
                     <div class="col-md-12 text-center">
                         <div class="alert alert-danger" role="alert" style="margin-bottom: 0px !important;">
