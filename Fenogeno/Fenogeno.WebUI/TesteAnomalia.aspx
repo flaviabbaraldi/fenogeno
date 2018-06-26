@@ -14,9 +14,9 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <asp:RadioButton ID="rdoAnomaliaSim" runat="server" GroupName="anomalia" OnCheckedChanged="rdoAnomaliaSim_CheckedChanged" />
+                            <asp:RadioButton ID="rdoAnomaliaSim" runat="server" GroupName="anomalia"  />
                             Sim
-                                <asp:RadioButton ID="rdoAnomaliaNao" runat="server" GroupName="anomalia" OnCheckedChanged="rdoAnomaliaNao_CheckedChanged" />
+                                <asp:RadioButton ID="rdoAnomaliaNao" runat="server" GroupName="anomalia" />
                             Não
                         </div>
                         <div class="col-md-8">

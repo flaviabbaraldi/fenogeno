@@ -54,7 +54,7 @@ namespace Fenogeno.WebUI
             //adiciona um item default
             lstFatorRh.Add(new FatorRh()
             {
-                Descricao = "-- [SELECIONE] --"
+                Descricao = " [SELECIONE] "
             });
 
             //adiciona na lista os itens que vierem do banco de dados
@@ -190,7 +190,7 @@ namespace Fenogeno.WebUI
 
         {
 
-            if (string.IsNullOrWhiteSpace(ddlRh.SelectedValue) || ddlRh.SelectedValue == "-- [SELECIONE] --" || string.IsNullOrWhiteSpace(ddlRhP.SelectedValue) || ddlRhP.SelectedValue == "-- [SELECIONE] --")
+            if (string.IsNullOrWhiteSpace(ddlRh.SelectedValue) || ddlRh.SelectedValue == " [SELECIONE] " || string.IsNullOrWhiteSpace(ddlRhP.SelectedValue) || ddlRhP.SelectedValue == "[SELECIONE] ")
             {
                 pnlRespR.Visible = false;
                 pnlMsgFR.Visible = true;
