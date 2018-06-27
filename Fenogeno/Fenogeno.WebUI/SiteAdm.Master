@@ -10,6 +10,7 @@
     <meta name="description" content="FenóGeno" />
     <meta name="author" content="FenóGeno" />
     <title>FenóGeno</title>
+    <link rel="shortcut icon" href="<%= ResolveUrl("~/Images/favicon.ico") %>" type="image/x-icon" />
     <link href="<%= ResolveUrl("~/Content/bootstrap.min.css") %>" rel="stylesheet" />
     <link href="<%= ResolveUrl("~/Content/ie10-viewport-bug-workaround.css") %>" rel="stylesheet" />
     <link href="<%= ResolveUrl("~/Content/navbar-fixed-top.css") %>" rel="stylesheet" />
@@ -39,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="Default.aspx">
+                    <a class="navbar-brand" href="<%= ResolveUrl("~/DefaultAdm.aspx") %>">
                         <img src="<%= ResolveUrl("~/Images/Logo_Oficial.fw.png") %>" style="width: 70px;" />
                     </a>
                 </div>

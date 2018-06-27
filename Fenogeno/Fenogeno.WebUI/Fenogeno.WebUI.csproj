@@ -140,6 +140,8 @@
     <Content Include="Images\avatar_100px.png" />
     <Content Include="Images\avatar_2x.png" />
     <Content Include="Images\Bebê.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicon.png" />
     <Content Include="Images\Home2.png" />
     <Content Include="Images\Home3.png" />
     <Content Include="Images\LogoHome.jpg" />

@@ -10,6 +10,7 @@
     <meta name="description" content="FenóGeno" />
     <meta name="author" content="FenóGeno" />
     <title>FenóGeno</title>
+    <link rel="shortcut icon" href="<%= ResolveUrl("~/Images/favicon.ico") %>" type="image/x-icon" />
     <link href="<%= ResolveUrl("~/Content/bootstrap.min.css") %>" rel="stylesheet" />
     <link href="<%= ResolveUrl("~/Content/ie10-viewport-bug-workaround.css") %>" rel="stylesheet" />
     <link href="<%= ResolveUrl("~/Content/navbar-fixed-top.css") %>" rel="stylesheet" />
