@@ -21,7 +21,15 @@ namespace Fenogeno.DataAccess
                     cmd.Parameters.Add("@TITULO", SqlDbType.VarChar).Value = obj.Titulo;
                     cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = obj.Subtitulo;
                     cmd.Parameters.Add("@CORPO_TEXTO", SqlDbType.VarChar).Value = obj.Texto;
-                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto ?? string.Empty;
+                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto;
+
+                    foreach (SqlParameter parameter in cmd.Parameters)
+                    {
+                        if (parameter.Value == null)
+                        {
+                            parameter.Value = DBNull.Value;
+                        }
+                    }
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -34,7 +42,7 @@ namespace Fenogeno.DataAccess
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"UPDATE NOTICIA SET TITULO = @TITULO, DESCRICAO = @DESCRICAO, CORPO_TEXTO = @CORPO_TEXTO WHERE COD = @COD;";
+                string strSQL = @"UPDATE NOTICIA SET TITULO = @TITULO, DESCRICAO = @DESCRICAO, CORPO_TEXTO = @CORPO_TEXTO, FOTO = @FOTO WHERE COD = @COD;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
@@ -42,7 +50,16 @@ namespace Fenogeno.DataAccess
                     cmd.Parameters.Add("@TITULO", SqlDbType.VarChar).Value = obj.Titulo;
                     cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = obj.Subtitulo;
                     cmd.Parameters.Add("@CORPO_TEXTO", SqlDbType.VarChar).Value = obj.Texto;
+                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto;
                     cmd.Parameters.Add("@COD", SqlDbType.Int).Value = obj.Cod;
+
+                    foreach (SqlParameter parameter in cmd.Parameters)
+                    {
+                        if (parameter.Value == null)
+                        {
+                            parameter.Value = DBNull.Value;
+                        }
+                    }
 
                     conn.Open();
                     cmd.ExecuteNonQuery();

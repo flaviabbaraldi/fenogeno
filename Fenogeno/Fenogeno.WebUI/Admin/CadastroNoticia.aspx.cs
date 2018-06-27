@@ -84,6 +84,9 @@ namespace Fenogeno.WebUI
 
             if (fupArquivo.HasFile)
             {
+                if (!Directory.Exists(Server.MapPath("~/Uploads")))
+                    Directory.CreateDirectory(Server.MapPath("~/Uploads"));
+
                 var fileName = Path.GetFileName(fupArquivo.FileName);
                 fupArquivo.SaveAs(Server.MapPath(string.Format("~/Uploads/{0}", fileName)));
             }

@@ -19,22 +19,30 @@ namespace Fenogeno.DataAccess
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-                    cmd.Parameters.Add("@CRM", SqlDbType.VarChar).Value = obj.CRM ?? string.Empty;
-                    cmd.Parameters.Add("@CPF", SqlDbType.VarChar).Value = obj.CPF ?? string.Empty;
-                    cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = obj.Nome ?? string.Empty;
-                    cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = obj.Email ?? string.Empty;
-                    cmd.Parameters.Add("@TELEFONE", SqlDbType.VarChar).Value = obj.Telefone ?? string.Empty;
-                    cmd.Parameters.Add("@CURSO_F", SqlDbType.VarChar).Value = obj.Curso_f ?? string.Empty;
-                    cmd.Parameters.Add("@UNIVERSIDADE_C", SqlDbType.VarChar).Value = obj.Universidade_c ?? string.Empty;
-                    cmd.Parameters.Add("@DURACAO_C", SqlDbType.VarChar).Value = obj.Duracao_c ?? string.Empty;
+                    cmd.Parameters.Add("@CRM", SqlDbType.VarChar).Value = obj.CRM;
+                    cmd.Parameters.Add("@CPF", SqlDbType.VarChar).Value = obj.CPF;
+                    cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = obj.Nome;
+                    cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = obj.Email;
+                    cmd.Parameters.Add("@TELEFONE", SqlDbType.VarChar).Value = obj.Telefone;
+                    cmd.Parameters.Add("@CURSO_F", SqlDbType.VarChar).Value = obj.Curso_f;
+                    cmd.Parameters.Add("@UNIVERSIDADE_C", SqlDbType.VarChar).Value = obj.Universidade_c;
+                    cmd.Parameters.Add("@DURACAO_C", SqlDbType.VarChar).Value = obj.Duracao_c;
                     cmd.Parameters.Add("@ANO_INICIO_C", SqlDbType.Int).Value = obj.Ano_inicio_c;
                     cmd.Parameters.Add("@ANO_TERMINO_C", SqlDbType.Int).Value = obj.Ano_termino_c;
-                    cmd.Parameters.Add("@AREA_E", SqlDbType.VarChar).Value = obj.Area_e ?? string.Empty;
-                    cmd.Parameters.Add("@UNIVERSIDADE_E", SqlDbType.VarChar).Value = obj.Universidade_e ?? string.Empty;
+                    cmd.Parameters.Add("@AREA_E", SqlDbType.VarChar).Value = obj.Area_e;
+                    cmd.Parameters.Add("@UNIVERSIDADE_E", SqlDbType.VarChar).Value = obj.Universidade_e;
                     cmd.Parameters.Add("@DURACAO_E", SqlDbType.VarChar).Value = obj.Duracao_e;
                     cmd.Parameters.Add("@ANO_INICIO_E", SqlDbType.Int).Value = obj.Ano_inicio_e;
                     cmd.Parameters.Add("@ANO_TERMINO_E", SqlDbType.Int).Value = obj.Ano_termino_e;
-                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto ?? string.Empty;
+                    cmd.Parameters.Add("@FOTO", SqlDbType.VarChar).Value = obj.Foto;
+
+                    foreach (SqlParameter parameter in cmd.Parameters)
+                    {
+                        if (parameter.Value == null)
+                        {
+                            parameter.Value = DBNull.Value;
+                        }
+                    }
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
